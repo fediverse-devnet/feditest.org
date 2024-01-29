@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{   if .Params.class }}
+<main class="{{ .Params.class }}">
+{{   else }}
+<main>
+{{   end }}
+
+{{   partial "toc.html" . }}
+{{   partial "breadcrumbs.html" . }}
+
+ <section>
+
+{{   partial "title-et-al-main.html" . }}
+
+{{   if .Content }}
+  <div class="content">
+{{     .Content }}
+  </div>
+{{   end }}
+
+{{   $p := ( .Paginate ( where ( where .Pages "Params.display" "!=" "hide" ) "Params.display" "!=" "false" )) }}
+{{   partial "range-dl-summary.html" $p.Pages.ByWeight }}
+{{   partial "paginate-buttons.html" $p }}
+ </section>
+</main>
+{{ end }}
