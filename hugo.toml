@@ -1,0 +1,22 @@
+baseURL = "https://feditest.org"
+title = "FediTest"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+disableKinds = [ "taxonomy" ]
+enableRobotsTXT = true
+enableGitInfo = true
+
+[services.rss]
+limit = 42
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[params.author]
+name = "FediTest project"
+
+[sitemap]
+filename = "sitemap.xml"
