@@ -27,6 +27,12 @@ Fediverse.
 
 <div style="height: 3em"></div>
 
+Chat:
+
+* On Matrix: [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
+
+<div style="height: 3em"></div>
+
 Repos:
 
 * [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site
