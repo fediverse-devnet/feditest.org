@@ -1,0 +1,54 @@
+---
+title: About FediTest
+---
+
+<style>
+table.people {
+    width: 100%;
+}
+table.people td:nth-child(1) {
+    width: 30%;
+}
+table.people td:nth-child(2) {
+    width: 30%;
+    text-align: center;
+}
+table.support td:nth-child(1) {
+    width: 30%;
+    background: #404040;
+}
+table.support img {
+    max-width: 100%;
+}
+</style>
+
+FediTest is a collaborative open-source project to test interoperability in the
+Fediverse.
+
+<div style="height: 3em"></div>
+
+Repos:
+
+* [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site
+* More to come
+
+<div style="height: 3em"></div>
+
+We gratefully acknowledge support from the following organizations:
+
+<table class="support">
+ <tr>
+  <td>
+   <a href="https://nlnet.nl/core"><img src="/assets/NGI0Core_tag.svg"></a>
+   <a href="https://nlnet.nl/"><img src="/assets/nlnet-banner.png"></a>
+  </td>
+  <td>
+   This project was funded through the <a href="https://nlnet.nl/core">NGI0 Core</a>
+   Fund, a fund established by <a href="https://nlnet.nl/">NLnet</a>
+   with financial support from the European Commission's
+   <a href="https://ngi.eu/">Next Generation Internet</a> programme, under the
+   aegis of DG Communications Networks, Content and Technology under grant agreement
+   N<sup>o</sup> 101092990.
+  </td>
+ </tr>
+</table>

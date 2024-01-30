@@ -1,6 +1,7 @@
 ---
-Title: Hello, world!
-Date: 2024-01-29
+title: Hello, world!
+date: 2024-01-29
+author: Johannes Ernst
 ---
 
 * Need for a Fediverse Test suite? ✔ Check.

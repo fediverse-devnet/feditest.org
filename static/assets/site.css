@@ -161,7 +161,6 @@ nav#breadcrumbnav li.path a {
     color: var( --base-font-color );
 }
 
-p.main.author,
 p.main.source {
     display: none;
 }
