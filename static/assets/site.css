@@ -155,7 +155,7 @@ nav#breadcrumbnav li {
     padding: 0;
 }
 nav#breadcrumbnav li + li::before {
-    content: "\00BB";
+    content: " \00BB ";
 }
 nav#breadcrumbnav li.path a {
     color: var( --base-font-color );
