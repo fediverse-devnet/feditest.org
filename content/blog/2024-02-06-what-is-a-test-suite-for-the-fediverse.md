@@ -34,10 +34,10 @@ as possible. There are significant technical (and organizational, and resource) 
 to overcome to accomplish this (more about this later), but our goal is to get that
 coverage across all components as high as we can make it.
 
-The Fediverse, for our purposes here, is as a global network of communicating "Fediverse
-instances", i.e. running software applications, implemented and operated by a variety of
-parties. These instances interact with each other on a voluntary basis, based on set of
-agreed-upon protocols and conventions.
+The Fediverse, for our purposes here, we can define as a global network of communicating
+"Fediverse instances", i.e. running software applications, implemented and operated by a
+variety of parties. These instances interact with each other on a voluntary basis, based
+on set of agreed-upon protocols and conventions.
 
 Today's Fediverse is centered around the
 [ActivityStreams Core](https://www.w3.org/TR/activitystreams-core/),
@@ -61,7 +61,11 @@ only partially codified, such as:
 ... and more.
 
 So our scope here is not merely ActivityPub, but the set of all protocols and conventions
-that are used to make today's Fediverse work. Of course, the Fediverse is not a static
+that are used to make today's Fediverse work. Conversely, there are features in the
+relevant standards that aren't really used in the Fediverse today, so we won't spend
+much time on those.
+
+Of course, the Fediverse is not a static
 construct. Developers build new cool features all the time, which often require, or
 suggest extensions or improvements to some of the protocols and conventions currently
 in use. The Fediverse Test Suite is intended to be flexible in growing
