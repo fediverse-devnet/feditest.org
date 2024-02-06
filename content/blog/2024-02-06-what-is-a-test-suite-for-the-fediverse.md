@@ -28,6 +28,12 @@ This latter sentence is really important. One of our goals is to make it possibl
 for a range of parties (more about that later) to methodically test the Fediverse,
 which would be a significant advance over the state of the art.
 
+An important aspect of testing methodically is to get as much test coverage as possible,
+i.e. systematically tests as large of a percentage of the behaviors of the Fediverse
+as possible. There are significant technical (and organizational, and resource) challenges
+to overcome to accomplish this (more about this later), but our goal is to get that
+coverage across all components as high as we can make it.
+
 The Fediverse, for our purposes here, is as a global network of communicating "Fediverse
 instances", i.e. running software applications, implemented and operated by a variety of
 parties. These instances interact with each other on a voluntary basis, based on set of
