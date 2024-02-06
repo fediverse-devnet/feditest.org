@@ -9,7 +9,8 @@ layout: front
 This wants to become the website for the FediTest project, which builds a test suite for
 the Fediverse.
 
-**Pardon our early work in progress.**
+**Pardon our early work in progress.** There will be blog posts before we have much content
+for the rest of the site.
 
 <div style="height: 10em"></div>
 
