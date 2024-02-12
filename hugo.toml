@@ -16,8 +16,5 @@ unsafe = true
 [markup.highlight]
 noClasses = false
 
-[params.author]
-name = "FediTest project"
-
 [sitemap]
 filename = "sitemap.xml"

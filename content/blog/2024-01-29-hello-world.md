@@ -2,6 +2,7 @@
 title: Hello, world!
 date: 2024-01-29
 author: Johannes Ernst
+authorurl: https://j12t.org/
 ---
 
 * Need for a Fediverse Test suite? ✔ Check.
