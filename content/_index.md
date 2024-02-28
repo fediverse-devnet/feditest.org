@@ -12,7 +12,9 @@ the Fediverse.
 **Pardon our early work in progress.** There will be blog posts before we have much content
 for the rest of the site.
 
-<div style="height: 10em"></div>
+### Most recent posts
+
+* {{% pageref "/blog/2024-02-28-early-show-and-tell-and-feedback.md" %}}
 
 ### Follow us in the Fediverse
 
