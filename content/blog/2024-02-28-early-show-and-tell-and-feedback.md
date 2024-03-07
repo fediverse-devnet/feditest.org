@@ -22,3 +22,8 @@ To be clear, this is very early. Don't expect a full test suite. Don't expect th
 By that time, we'll also have some public code.
 
 There's no registration required. Meeting coordinates are [over at FediDevs.org](https://fedidevs.org/notes/2024-03-07/). Would love to get your input in particular if you disagree with me :-) ... otherwise how can we make it better?
+
+**Update March 7:** The code we'll be discussing is at:
+* [https://github.com/fediverse-devnet/feditest/, branch develop](https://github.com/fediverse-devnet/feditest/tree/develop): FediTest test framework
+* [https://github.com/fediverse-devnet/feditest-tests-fediverse/, branch develop](https://github.com/fediverse-devnet/feditest-tests-fediverse/tree/develop): A (small) set of the actual tests and example test plans
+
