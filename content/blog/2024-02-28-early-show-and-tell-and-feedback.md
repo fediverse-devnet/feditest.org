@@ -5,6 +5,12 @@ author: Johannes Ernst
 authorurl: https://j12t.org/
 ---
 
+{{% box %}}
+**Update**: the recording of the meeting and some notes are now online
+[here on the FediDevs.org site](https://fedidevs.org/notes/2024-03-07/). Some good questions and discussion.
+We seem to be going in roughly the right direction based on feedback, so we'll charge on!!
+{{% /box %}}
+
 Release early and often, they say.
 
 For some complex projects with complex requirements, it's also useful to show-and-tell early and often, and get direct, verbal feedback as soon as possible. FediTest is one of them.
@@ -22,3 +28,10 @@ To be clear, this is very early. Don't expect a full test suite. Don't expect th
 By that time, we'll also have some public code.
 
 There's no registration required. Meeting coordinates are [over at FediDevs.org](https://fedidevs.org/notes/2024-03-07/). Would love to get your input in particular if you disagree with me :-) ... otherwise how can we make it better?
+
+**Update March 7:** The code we'll be discussing is at:
+
+* [https://github.com/fediverse-devnet/feditest/, branch develop](https://github.com/fediverse-devnet/feditest/tree/develop): FediTest test framework
+* [https://github.com/fediverse-devnet/feditest-tests-fediverse/, branch develop](https://github.com/fediverse-devnet/feditest-tests-fediverse/tree/develop): A (small) set of the actual tests and example test plans
+
+And remember, we have a Matrix group specifically for FediTest at [https://matrix.to/#/#fediverse-testing:matrix.org](https://matrix.to/#/#fediverse-testing:matrix.org)
