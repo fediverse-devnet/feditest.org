@@ -14,6 +14,7 @@ for the rest of the site.
 
 ### Most recent posts
 
+* {{% pageref "/blog/2024-04-09-earliest-access.md" %}}
 * {{% pageref "/blog/2024-03-29-early-feedback.md" %}}
 * {{% pageref "/blog/2024-02-28-early-show-and-tell-and-feedback.md" %}}
 
