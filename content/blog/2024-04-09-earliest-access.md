@@ -119,7 +119,7 @@ and finally, the thing you have been waiting for:
 * To run a non-default test plan:
 
   ```
-  % ../feditest/venv/bin/feditest -v run --testplan example-testplans/testplan-sandbox.json
+  % ../feditest/venv/bin/feditest -v run --testplan example-testplans/feditest-sandbox.json
   ```
 
 For feedback, one more time: Reach out with problems at [@feditest@mastodon.social](https://mastodon.social/@feditest)
