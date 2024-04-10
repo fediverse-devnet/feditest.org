@@ -17,7 +17,9 @@ There are many disclaimers, as this is early work.
 
 * For now, you have to run it exactly in the configuration documented below.
 
-* Reach out with problems at [@feditest@mastodon.social](https://mastodon.social/@feditest)
+* Reach out with problems or feedback in our Matrix group at
+  [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org),
+  in the fediverse at [@feditest@mastodon.social](https://mastodon.social/@feditest)
   or file [isses against the FediTest framework](https://github.com/fediverse-devnet/feditest/issues/)
   or [issues against the tests themselves](https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/).
 
@@ -122,6 +124,8 @@ and finally, the thing you have been waiting for:
   % ../feditest/venv/bin/feditest -v run --testplan example-testplans/feditest-sandbox.json
   ```
 
-For feedback, one more time: Reach out with problems at [@feditest@mastodon.social](https://mastodon.social/@feditest)
+For feedback, one more time: Reach out with problems or feedback in our Matrix group at
+[#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org),
+in the fediverse at [@feditest@mastodon.social](https://mastodon.social/@feditest)
 or file [isses against the FediTest framework](https://github.com/fediverse-devnet/feditest/issues/)
 or [issues against the tests themselves](https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/).
