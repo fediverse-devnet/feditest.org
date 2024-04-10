@@ -20,5 +20,9 @@ for the rest of the site.
 
 ### Follow us in the Fediverse
 
-- <a rel="me" href="https://mastodon.social/@feditest">@feditest@mastodon.social</a>
+* <a rel="me" href="https://mastodon.social/@feditest">@feditest@mastodon.social</a>
  <link rel="me" href="https://mastodon.social/@feditest">
+
+### Join us on Matrix to discuss
+
+* [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
