@@ -25,20 +25,29 @@ table.support img {
 FediTest is a collaborative open-source project to test interoperability in the
 Fediverse.
 
-<div style="height: 3em"></div>
+<div style="height: 1em"></div>
+
+Repos:
+
+* [github.com/fediverse-devnet/feditest](https://github.com/fediverse-devnet/feditest/): the FediTest
+  test framework for testing [peer computing systems](https://peercomputing.org/)
+  (i.e. decentralized, heterogeneous systems based on symmetric interactions between the primary nodes)
+  such as the Fediverse.
+
+* [github.com/fediverse-devnet/feditest-tests-fediverse](https://github.com/fediverse-devnet/feditest-tests-fediverse/):
+  the actual tests testing various aspects of the Fediverse.
+
+* [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site.
+
+<div style="height: 1em"></div>
 
 Chat:
 
 * On Matrix: [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
 
-<div style="height: 3em"></div>
+Contributions welcome! Chat with us first so we don't duplicate work.
 
-Repos:
-
-* [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site
-* More to come
-
-<div style="height: 3em"></div>
+<div style="height: 1em"></div>
 
 We gratefully acknowledge support from the following organizations:
 
