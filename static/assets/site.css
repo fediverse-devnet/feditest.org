@@ -1,6 +1,42 @@
+aside.toc {
+    background: var(--background-color);
+}
 div.box {
     border: 1px solid #808080;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
+div.admonition {
+    border: 1px solid #808080;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+span.published {
+    display: block;
+}
+dl.range-dl-summary dt {
+    margin: 1.5em 0;
+}
+p.date.main {
+    margin: 0;
+}
+article h1 {
+    margin: 0 0 1ex 0;
+}
+nav#breadcrumbnav {
+    margin-bottom: 40px;
+}
+p.main.author {
+    display: unset;
+}
+div.content {
+    margin-top: 3em;
+}
+h2, h3 {
+    margin-top: 2em;
+}
+
+h1, h2, h3 {
+    color: var(--href-color);
+}

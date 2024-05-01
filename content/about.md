@@ -37,6 +37,9 @@ Repos:
 * [github.com/fediverse-devnet/feditest-tests-fediverse](https://github.com/fediverse-devnet/feditest-tests-fediverse/):
   the actual tests testing various aspects of the Fediverse.
 
+* [github.com/fediverse-devnet/feditest-tests-sandbox](https://github.com/fediverse-devnet/feditest-tests-sandbox/):
+  tests against a toy sandbox protocol. Helps with understanding FediTest and how to run it.
+
 * [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site.
 
 <div style="height: 1em"></div>
