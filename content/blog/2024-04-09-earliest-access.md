@@ -5,6 +5,11 @@ author: Johannes Ernst
 authorurl: https://j12t.org/
 ---
 
+{{% warning %}}
+Development has moved on since this blog post. Go to {{% pageref "/docs/quickstart/" %}}
+for current information.
+{{% /warning %}}
+
 If you are interested in running basically the same thing that was shown in
 the recent [FediTest show and tell](https://fedidevs.org/notes/2024-03-07/), here is how you
 do that.

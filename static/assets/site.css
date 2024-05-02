@@ -40,3 +40,11 @@ h2, h3 {
 h1, h2, h3 {
     color: var(--href-color);
 }
+
+div.warning p.admonition-title {
+    color: #ff8080;
+    font-size: 120%;
+}
+div.warning {
+    border-color: #ff8080;
+}
