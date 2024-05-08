@@ -1,0 +1,235 @@
+<style>
+       div.session {
+            margin-bottom: 2rem;
+        }
+        div.session > h3 {
+            font-weight: bold;
+            color: lightblue;
+        }
+        div.session > h3::before {
+            content: "Session: ";
+        }
+        div.constellation > h4::before {
+            content: "Constellation: ";
+        }
+        div.roles {
+            display: flex;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+        div.role {
+            border: 1px solid;
+            padding: 1rem;
+            border-color: var(--pico-table-border-color);
+        }
+        div.role > div.name {
+            font-weight: bold;
+
+        }
+        div.role > div.name::before {
+            content: "Role: ";
+        }
+        div.role > div.driver::before {
+            content: "Driver: ";
+        }
+        div.tests {
+            overflow: auto;
+            position: relative;
+        }
+        div.tests div.roles dd {
+            font-weight: normal;
+        }
+        .role > table.parameters {
+            font-size: 0.8rem;
+        }
+        dl.roles {
+            display: grid;
+            grid-template-columns: auto auto;
+            font-size: 70%;
+        }
+        dl.roles dt::after {
+            content: ": ";
+        }
+        dl.roles dd {
+            margin-left: 0;
+            font-weight: normal;
+        }
+        table.tests {
+            overflow: scroll;
+            border-collapse: collapse;
+        }
+        table.tests td:first-child,
+        table.tests th:first-child {
+                position: sticky;
+            left: 0;
+        }
+        table.tests col.session {
+            border: 2px solid black;
+        }
+        td.status input {
+            display: none;
+        }
+        pre.details {
+            display: none;
+            padding: 0.2rem;
+        }
+        input:checked + pre.details {
+            display: block;
+        }
+        td.status.passed {
+            color: #00c000;
+        }
+        td.status.failed {
+            color: #c00000;
+        }
+        td.status label {
+            color: inherit;
+        }
+        td.status label::after {
+            content: " ▼";
+            color: #000;
+        }
+        td.status label::after {
+            content: " ▼";
+            color: #000;
+        }
+</style>
+<h1>Feditest Report: Sandbox default test run</h1>
+<h2>Test Summary</h2>
+    <table class="summary">
+       <thead>
+            <tr>
+                <th>Status</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Passed</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Failed</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Skipped</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>6</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Test Results</h2>
+    <div class="tests">
+        <table class="tests">
+            <colgroup>
+                <col>
+                <col class="session">
+                <col class="session">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Test</th>
+                    <th>
+                        <div class="title"><a href="#Sandbox_default_test_run/0">Sandbox default test run/0</a>: A_vs_1</div>
+                        <dl class="roles">
+                            <dt>client</dt>
+                            <dd>sandbox.SandboxMultClientDriver_ImplementationA</dd>
+                            <dt>server</dt>
+                            <dd>sandbox.SandboxMultServerDriver_Implementation1</dd>
+                        </dl>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Sandbox_default_test_run/1">Sandbox default test run/1</a>: A_vs_2</div>
+                        <dl class="roles">
+                            <dt>client</dt>
+                            <dd>sandbox.SandboxMultClientDriver_ImplementationA</dd>
+                            <dt>server</dt>
+                            <dd>sandbox.SandboxMultServerDriver_Implementation2Faulty</dd>
+                        </dl>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="name">sandbox.example_test_with_classes::ExampleTest1</td>
+                    <td class="status passed">Passed</td>
+                    <td class="status passed">Passed</td>
+                </tr>
+                <tr>
+                    <td class="name">sandbox.example_test_with_functions::example_test1</td>
+                    <td class="status passed">Passed</td>
+                    <td class="status passed">Passed</td>
+                </tr>
+                <tr>
+                    <td class="name">sandbox.example_test_with_functions::example_test2</td>
+                    <td class="status passed">Passed</td>
+                    <td class="status failed">
+                        <label for="details-sandbox.example_test_with_functions::example_test2-Sandbox_default_test_run/1">Failed</label>
+                        <input id="details-sandbox.example_test_with_functions::example_test2-Sandbox_default_test_run/1" type="checkbox">
+                        <pre class="details">
+Expected: &lt;-56&gt;
+     but: was &lt;0&gt;
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Session Details</h2>
+    <div class="sessions">
+        <div class="session" id="Sandbox_default_test_run/0">
+            <h3 class="session">Sandbox default test run/0</h3>
+            <div class="constellation">
+                <h4 class="constellation">A_vs_1</h4>
+                <div class="roles">
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver">sandbox.SandboxMultClientDriver_ImplementationA</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">aaa</td>
+                                    <td class="value">bbb</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">ccc</td>
+                                    <td class="value">ddd</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver">sandbox.SandboxMultServerDriver_Implementation1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Sandbox_default_test_run/1">
+            <h3 class="session">Sandbox default test run/1</h3>
+            <div class="constellation">
+                <h4 class="constellation">A_vs_2</h4>
+                <div class="roles">
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver">sandbox.SandboxMultClientDriver_ImplementationA</div>
+                    </div>
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver">sandbox.SandboxMultServerDriver_Implementation2Faulty</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
