@@ -11,6 +11,7 @@ div.admonition {
     border: 1px solid #808080;
     padding: 10px 20px;
     border-radius: 10px;
+    display: flow-root;
 }
 span.published {
     display: block;
