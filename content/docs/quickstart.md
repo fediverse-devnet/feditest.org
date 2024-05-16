@@ -24,7 +24,7 @@ Get the FediTest framework:
 
 Get the tests that test the Fediverse:
 ```
-% git clone https://github.com/fediverse-devnet/feditest-tests-fediverse.git
+% git clone --recurse-submodules https://github.com/fediverse-devnet/feditest-tests-fediverse.git
 ```
 
 Get trivial tests for a trivial toy protocol in which a client invokes a server to
