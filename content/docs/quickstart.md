@@ -4,8 +4,11 @@ weight: 10
 ---
 
 {{% warning %}}
-This is early work in progress. Things are far from complete. And don't expect things
+This is early work in progress. Things are far from complete. Don't expect things
 to work and you won't be disappointed :-)
+
+In particular: we don't have a "releases"
+yet and so these instructions may be temporarily out of date.
 {{% /warning %}}
 
 ## Get a feel for it on your regular development machine
