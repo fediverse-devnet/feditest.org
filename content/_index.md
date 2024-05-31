@@ -12,6 +12,12 @@ the Fediverse.
 **Pardon our early work in progress.** There will be blog posts before we have much content
 for the rest of the site.
 
+{{% box %}}
+Next meetup: Wednesday, June 5th, 9am pacific. See [fedidevs.org](https://fedidevs.org/).
+
+We will review test results so far.
+{{% /box %}}
+
 ### Most recent posts
 
 * {{% pageref "/blog/2024-04-30-update/" %}}
