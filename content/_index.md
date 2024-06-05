@@ -20,6 +20,7 @@ We will review test results so far.
 
 ### Most recent posts
 
+* {{% pageref "/blog/2024-06-05-early-results-webfinger/" %}}
 * {{% pageref "/blog/2024-04-30-update/" %}}
 * {{% pageref "/blog/2024-04-18-iiw-feditest-architecture/" %}}
 * {{% pageref "/blog/2024-04-09-earliest-access.md" %}}

@@ -1,0 +1,5056 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feditest Test Report</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        >
+        <style>
+:root:not([data-theme="dark"]), [data-theme="light"] {
+	--feditest-background-color: #f8f8f8;
+	--feditest-h4-background-color: #e8e8e8;
+    --feditest-color-status: inherit;
+    --feditest-color-status-passed: #BBF5CA;
+    --feditest-color-status-hard: #F5B0A7;
+    --feditest-color-status-soft: #F5D4A4;
+    --feditest-color-status-degrade: #EDF593;
+    --feditest-color-status-skip: inherit;
+    --feditest-color-status-error: #F58171;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--feditest-background-color: #000;
+		--feditest-h4-background-color: #242c38;
+        --feditest-color-status: #000;
+        --feditest-color-status-passed: #BBF5CA;
+        --feditest-color-status-hard: #F5B0A7;
+        --feditest-color-status-soft: #F5D4A4;
+        --feditest-color-status-degrade: #EDF593;
+        --feditest-color-status-skip: inherit;
+        --feditest-color-status-error: #F58171;
+    }
+}
+
+:root {
+    --pico-font-size: 100%;
+}
+
+body {
+    padding: 2rem;
+	background: var(--feditest-background-color);
+}
+
+footer {
+    font-size: smaller;
+}
+
+div.feditest.title {
+    text-align: center;
+}
+div.feditest span.prefix,
+div.feditest span.prefix a {
+		color: var(--pico-muted-color);
+}
+
+div.feditest.title .id::before {
+	content: "TestRun ID: "
+}
+
+div.feditest.module {
+    background: var(--pico-background-color);
+    border-radius: 5px;
+    border: 1px solid var(--pico-table-border-color);
+    margin: 0 0 2rem 0;
+    padding: 2rem;
+}
+
+div.feditest.module.summary {
+    box-shadow: 0px 0px 5px var(--pico-table-border-color);
+}
+
+div.feditest.module.results {
+    box-shadow: 0px 0px 5px var(--pico-table-border-color);
+}
+
+div.feditest.session {
+    margin-bottom: 2rem;
+}
+
+div.feditest.session > h3 {
+    font-weight: bold;
+}
+
+div.feditest.session > h3::before {
+    content: "Session: ";
+	color: var(--pico-muted-color);
+}
+
+.feditest h4 {
+    background: var(--feditest-h4-background-color);
+}
+
+.feditest div.session + div.session {
+	padding-top: 2em;
+	margin-top: 2em;
+	border-top: 1px solid var(--pico-table-border-color);
+}
+
+.feditest div.constellation > h4::before {
+    content: "Constellation: ";
+	color: var(--pico-muted-color);
+}
+
+.feditest div.roles {
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.feditest div.role {
+    width: 30rem;
+    border: 1px solid;
+    padding: 1rem;
+    border-color: var(--pico-table-border-color);
+}
+
+.feditest div.role > div.name {
+    font-weight: bold;
+
+}
+
+.feditest div.role > div.name::before {
+    content: "Role: ";
+}
+
+.feditest div.role > div.driver::before {
+    content: "Node Driver: ";
+}
+
+.feditest div.role > div.app::before {
+    content: "App: ";
+}
+
+.feditest div.role > div.appversion::before {
+    content: "App version: ";
+}
+
+.feditest div.status {
+    color: var(--feditest-color-status);
+    padding: .5rem;
+}
+
+.feditest .status.passed {
+    background: var(--feditest-color-status-passed);
+}
+
+.feditest .status.hard {
+    background: var(--feditest-color-status-hard);
+}
+
+.feditest .status.soft {
+    background: var(--feditest-color-status-soft);
+}
+
+.feditest .status.degrade {
+    background: var(--feditest-color-status-degrade);
+}
+
+.feditest .status.skip {
+    background: var(--feditest-color-status-skip);
+}
+.feditest .status.error {
+    background: var(--feditest-color-status-error);
+}
+
+.feditest .status input {
+    display: none;
+}
+
+.feditest pre.stacktrace {
+    display: none;
+    padding: 1rem;
+}
+
+.feditest input:checked + pre.stacktrace {
+    display: block;
+}
+
+.feditest .status label {
+    color: inherit;
+}
+
+.feditest .status label::after {
+    content: " ▼";
+    color: inherit;
+}
+div.feditest.tests {
+    overflow: auto;
+    position: relative;
+}
+div.feditest.tests div.roles dd {
+    font-weight: normal;
+}
+
+div.feditest.tests .namedesc > span {
+    display: block;
+}
+div.feditest.tests .namedesc > span.name {
+    font-weight: bold;
+}
+
+.feditest .role > table.parameters {
+    font-size: 0.8rem;
+}
+
+.feditest dl.roles {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 70%;
+}
+
+.feditest dl.roles dt::after {
+    content: ": ";
+}
+
+.feditest dl.roles dd {
+    margin-left: 0;
+    font-weight: normal;
+}
+
+.feditest table.tests {
+    overflow: scroll;
+    border-collapse: collapse;
+}
+
+.feditest table.tests td:first-child,
+.feditest table.tests th:first-child {
+    position: sticky;
+    left: 0;
+}
+
+.feditest table.tests col.session {
+    border: 2px solid var(--pico-contast);
+}
+
+.feditest div.status {
+    max-width: 120px;
+    max-height: 150px;
+    overflow: auto;
+}
+        </style>
+    </head>
+    <body>
+<div class="feditest title">
+  <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Report:</span> Webfinger server tests of hosted Fediverse applications</h1>
+  <p class="id">feditest-run-2024-06-04T22-58-28.921140Z</p>
+</div>
+        <div class="feditest module summary">
+            <h2>Test Run Summary</h2>
+    <table class="feditest summary">
+       <thead>
+            <tr>
+                <th>Status</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Passed</th>
+                <td class="status passed">462</td>
+            </tr>
+            <tr>
+                <th>Failed (hard)</th>
+                <td class="status hard">105</td>
+            </tr>
+            <tr>
+                <th>Failed (soft)</th>
+                <td class="status soft">95</td>
+            </tr>
+            <tr>
+                <th>Failed (degrade)</th>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th>Skipped</th>
+                <td>0</td>
+            </tr>
+            <tr>
+                <th>Errors</th>
+                <td class="status error">1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>663</td>
+            </tr>
+        </tfoot>
+    </table>
+        </div>
+        <div class="feditest module results">
+
+            <h2>Test Results</h2>
+    <div class="feditest tests">
+        <table class="tests">
+            <colgroup>
+                <col>
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Test (alphabetical order)</th>
+                    <th>
+                        <div class="title"><a href="#Session_0">ActivityRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_1">Akkoma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_2">Bookwyrm</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_3">Bridgy-Fed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_4">BuzzRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_5">Cherrypick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_6">Drupal</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_7">Fedipage</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_8">Forgejo</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_9">Friendica</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_10">Funkwhale</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_11">Gancio</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_12">Gitea</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_13">GNU Social</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_14">GoToSocial</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_15">Hubzilla</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_16">kbin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_17">Lemmy</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_18">Mastodon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_19">Micro.blog</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_20">Microblogpub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_21">Misskey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_22">Mitra</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_23">Mobilizon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_24">NodeBB</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_25">Owncast</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_26">PeerTube</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_27">Pixelfed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_28">Pleroma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_29">Plume</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_30">Postmarks</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_31">Snac</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_32">Streams</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_33">Sutty</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_34">Takahē</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_35">Threads</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_36">Wildebeest</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_37">WordPress + ActivityPub plugin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="#Session_38">WriteFreely</a></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_1__2_parameter_ordering_not_significant<wbr>::parameter_ordering</span>
+                        <span class="description">Parameter ordering is not significant.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (2)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (7)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__14_must_only_redirect_to_https<wbr>::must_only_redirect_to_https</span>
+                        <span class="description">Test that if the server redirected, the final URL is an HTTPS URL.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__2_perform_query<wbr>::normal_query</span>
+                        <span class="description">Perform a normal, simple query on an existing account.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Link type not a valid media type: "template"</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (2)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (7)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong HTTP content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__3_requires_resource_uri<wbr>::requires_resource_uri_http_status</span>
+                        <span class="description">Do not accept requests with missing resource parameter: HTTP status.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 400.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__3_requires_resource_uri<wbr>::requires_resource_uri_jrd</span>
+                        <span class="description">Do not accept requests with missing resource parameter: JRD content.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Returns JRD content.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::double_equals_http_status</span>
+                        <span class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::double_equals_jrd</span>
+                        <span class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::requires_valid_resource_uri_http_status</span>
+                        <span class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 400</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 4xx.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::requires_valid_resource_uri_jrd</span>
+                        <span class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Returns JRD content.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__5_status_404_for_nonexisting_resources<wbr>::status_404_for_nonexisting_resources</span>
+                        <span class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__9_content_type<wbr>::returns_jrd_in_response_to_https</span>
+                        <span class="description">Test that a query over HTTPS produces a JRD.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not HTTP status 200.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Wrong content type.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_5__1_any_uri_scheme_for_resource_identifiers<wbr>::any_uri_scheme_for_resource_identifiers</span>
+                        <span class="description">The server must accept resource identifiers provided in the query that use any scheme.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status soft">Not HTTP status 404.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_combined_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status error">[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (2)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (7)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not same or subset of links.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_known_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (2)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (7)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not same or subset of links.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Not same or subset of links.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_unknown_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (2)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (7)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">WebFinger errors (3)</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__3_only_returns_jrd_in_response_to_https_requests<wbr>::does_not_return_jrd_in_response_to_http</span>
+                        <span class="description">Test that a query over HTTP does not produce a JRD.</span>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">HTTP status 200.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">HTTP status 200.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.5_1_cors_header_required<wbr>::cors_header_required</span>
+                        <span class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</span>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status hard">Missing CORS header.</div>
+                    </td>
+                    <td class="status">
+
+<div class="status passed">Passed</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+        <div class="feditest module session-details">
+            <h2>Session Details</h2>
+
+    <div class="feditest sessions">
+        <div class="session" id="Session_0">
+            <h3 class="session">ActivityRelay</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">ActivityRelay</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">ActivityRelay</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">relay.darmstadt.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:relay@relay.darmstadt.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@relay.darmstadt.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_1">
+            <h3 class="session">Akkoma</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Akkoma</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Akkoma</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">akkoma.meows.gay</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:eris@akkoma.meows.gay</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@akkoma.meows.gay</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_2">
+            <h3 class="session">Bookwyrm</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Bookwyrm</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Bookwyrm</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">bookwyrm.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:mouse@bookwyrm.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@bookwyrm.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_3">
+            <h3 class="session">Bridgy-Fed</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Bridgy-Fed</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Bridgy-Fed</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">fed.brid.gy</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:fed.brid.gy@fed.brid.gy</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does.not.exist@fed.brid.gy</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_4">
+            <h3 class="session">BuzzRelay</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">BuzzRelay</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">BuzzRelay</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">relay.fedi.buzz</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:tag-activitypub@relay.fedi.buzz</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@relay.fedi.buzz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_5">
+            <h3 class="session">Cherrypick</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Cherrypick</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Cherrypick</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">stella.place</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:instance.actor@stella.place</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@stella.place</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_6">
+            <h3 class="session">Drupal</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Drupal</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Drupal</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">realize.be</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:swentel@realize.be</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@realize.be</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_7">
+            <h3 class="session">Fedipage</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Fedipage</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Fedipage</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">jeffreyfreeman.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:freemo@jeffreyfreeman.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@jeffreyfreeman.me</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_8">
+            <h3 class="session">Forgejo</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Forgejo</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Forgejo</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">git.exozy.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:exozyme@git.exozy.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@git.exozy.me</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_9">
+            <h3 class="session">Friendica</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Friendica</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Friendica</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">friendi.ca</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:tobias@friendi.ca</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@friendi.ca</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_10">
+            <h3 class="session">Funkwhale</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Funkwhale</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Funkwhale</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">open.audio</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:publiccode@open.audio</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@open.audio</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_11">
+            <h3 class="session">Gancio</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Gancio</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Gancio</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">gancio.cisti.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:gancio@gancio.cisti.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@gancio.cisti.org</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_12">
+            <h3 class="session">Gitea</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Gitea</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Gitea</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">gitea.moe</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:av18@gitea.moe</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@gitea.moe</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_13">
+            <h3 class="session">GNU Social</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">GNU Social</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">GNU Social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">gnusocial.net</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:administrator@gnusocial.net</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@gnusocial.net</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_14">
+            <h3 class="session">GoToSocial</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">GoToSocial</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">GoToSocial</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">gotosocial.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:followbot@gotosocial.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@gotosocial.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_15">
+            <h3 class="session">Hubzilla</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Hubzilla</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Hubzilla</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">authorship.studio</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:scott@authorship.studio</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@authorship.studio</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_16">
+            <h3 class="session">kbin</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">kbin</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">kbin</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">kbin.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:simple@kbin.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@kbin.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_17">
+            <h3 class="session">Lemmy</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Lemmy</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Lemmy</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">lemmy.ml</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:lemmy_support@lemmy.ml</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@lemmy.ml</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_18">
+            <h3 class="session">Mastodon</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Mastodon</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Mastodon</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">mastodon.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:gargron@mastodon.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@mastodon.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_19">
+            <h3 class="session">Micro.blog</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Micro.blog</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">manton.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Micro.blog</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:manton@manton.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@manton.org</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_20">
+            <h3 class="session">Microblogpub</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Microblogpub</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Microblogpub</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">bow.st</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:c@bow.st</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@bow.st</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_21">
+            <h3 class="session">Misskey</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Misskey</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Misskey</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">misskey.io</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:syuilo@misskey.io</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@misskey.io</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_22">
+            <h3 class="session">Mitra</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Mitra</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Mitra</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">filly.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:filly.social@filly.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@filly.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_23">
+            <h3 class="session">Mobilizon</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Mobilizon</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Mobilizon</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">mobilizon.fr</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:framasoft@mobilizon.fr</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@mobilizon.fr</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_24">
+            <h3 class="session">NodeBB</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">NodeBB</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">NodeBB</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">community.nodebb.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:baris@community.nodebb.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@community.nodebb.org</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_25">
+            <h3 class="session">Owncast</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Owncast</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Owncast</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">owncast.small-web.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:fedi@owncast.small-web.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@owncast.small-web.org</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_26">
+            <h3 class="session">PeerTube</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">PeerTube</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">PeerTube</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">framapiaf.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:peertube@framapiaf.org</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@framapiaf.org</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_27">
+            <h3 class="session">Pixelfed</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Pixelfed</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Pixelfed</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">pixelfed.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:dansup@pixelfed.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@pixelfed.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_28">
+            <h3 class="session">Pleroma</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Pleroma</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Pleroma</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">stereophonic.space</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:karolat@stereophonic.space</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@stereophonic.space</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_29">
+            <h3 class="session">Plume</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Plume</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Plume</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">fediverse.blog</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:actapopuli@fediverse.blog</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@fediverse.blog</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_30">
+            <h3 class="session">Postmarks</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Postmarks</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Postmarks</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">postmarks.glitch.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:updates@postmarks.glitch.me</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@postmarks.glitch.me</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_31">
+            <h3 class="session">Snac</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Snac</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Snac</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">snac.bsd.cafe</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:fedops@snac.bsd.cafe</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@snac.bsd.cafe</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_32">
+            <h3 class="session">Streams</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Streams</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Streams</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">macgirvin.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:mike@macgirvin.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@macgirvin.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_33">
+            <h3 class="session">Sutty</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Sutty</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Sutty</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">sutty.nl</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:sutty@sutty.nl</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@sutty.nl</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_34">
+            <h3 class="session">Takahē</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Takahē</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Takahē</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">gotosocial.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:admin@gotosocial.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@gotosocial.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_35">
+            <h3 class="session">Threads</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Threads</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Threads</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">threads.net</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:mosseri@threads.net</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@threads.net</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_36">
+            <h3 class="session">Wildebeest</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">Wildebeest</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">Wildebeest</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">cloudflare.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:cloudflare@cloudflare.social</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@cloudflare.social</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_37">
+            <h3 class="session">WordPress + ActivityPub plugin</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">WordPress + ActivityPub plugin</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">WordPress + ActivityPub plugin</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">fediblogs.wordpress.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:fediblogs.wordpress.com@fediblogs.wordpress.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@fediblogs.wordpress.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="session" id="Session_38">
+            <h3 class="session">WriteFreely</h3>
+            <div class="constellation">
+                <div class="roles">
+
+                    <div class="role">
+                        <div class="name">client</div>
+                        <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+                        <div class="app">Imp</div>
+                        <div class="appversion">0.0.2</div>
+                    </div>
+
+                    <div class="role">
+                        <div class="name">server</div>
+                        <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+                        <div class="app">WriteFreely</div>
+                        <div class="appversion">?</div>
+                        <table class="parameters">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Parameters:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="key">app</td>
+                                    <td class="value">WriteFreely</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">hostname</td>
+                                    <td class="value">write.as</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">existing-account-uri</td>
+                                    <td class="value">acct:matt@write.as</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">nonexisting-account-uri</td>
+                                    <td class="value">acct:does-not-exist@write.as</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <div class="feditest module metadata">
+            <h2>Test Run Metadata</h2>
+<div class="feditest metadata">
+    <table>
+        <tbody>
+            <tr>
+                <th>Started</th>
+                <td>2024-06-04T22-58-28.932122Z</td>
+            </tr>
+            <tr>
+                <th>Ended</th>
+                <td>2024-06-04T23-07-49.844323Z (total: 0:09:20.912201)</td>
+            </tr>
+            <tr>
+                <th>Platform</th>
+                <td>macOS-14.5-arm64-arm-64bit</td>
+            </tr>
+            <tr>
+                <th>Feditest&nbsp;version</th>
+                <td>0.0.2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    <footer>
+        <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+           <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+    </footer>
+    </body>
+</html>

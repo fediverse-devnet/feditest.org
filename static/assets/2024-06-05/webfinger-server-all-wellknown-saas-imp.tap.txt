@@ -1,0 +1,3158 @@
+TAP version 14
+# test plan: Webfinger server tests of hosted Fediverse applications
+# started: 2024-06-04 22:58:28.932122+00:00
+# ended: 2024-06-04 23:07:49.844323+00:00
+# platform: macOS-14.5-arm64-arm-64bit
+# session: ActivityRelay
+# constellation: ActivityRelay
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: ActivityRelay
+#       app_version: ?
+ok 1 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 2 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 3 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger?resource=acct%3Arelay%40relay.darmstadt.social". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 4 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger".
+    Expected: <400>
+         but: was <500>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 5 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 6 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger?resource==acct%3Arelay%40relay.darmstadt.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 7 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 8 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger?resource=relay@relay.darmstadt.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 9 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 10 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 11 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger?resource=acct%3Arelay%40relay.darmstadt.social".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 12 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 13 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 14 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 15 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 16 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 17 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://relay.darmstadt.social/.well-known/webfinger?resource=acct%3Arelay%40relay.darmstadt.social".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Akkoma
+# constellation: Akkoma
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Akkoma
+#       app_version: ?
+ok 18 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 19 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 20 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource=acct%3Aeris%40akkoma.meows.gay". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 21 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 22 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 23 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource==acct%3Aeris%40akkoma.meows.gay".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 24 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource==acct%3Aeris%40akkoma.meows.gay".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 25 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource=eris@akkoma.meows.gay".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 26 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource=eris@akkoma.meows.gay".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 27 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 28 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://akkoma.meows.gay/.well-known/webfinger?resource=acct%3Aeris%40akkoma.meows.gay".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 29 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+not ok 30 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: ConnectError (error)
+  message:
+    [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 119
+    /opt/homebrew/Cellar/python@3.12/3.12.2_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py 158
+  ...
+ok 31 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 32 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 33 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 34 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Bookwyrm
+# constellation: Bookwyrm
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Bookwyrm
+#       app_version: ?
+ok 35 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 36 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 37 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger?resource=acct%3Amouse%40bookwyrm.social". -> "application/json"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 38 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 39 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 40 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger?resource==acct%3Amouse%40bookwyrm.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 41 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 42 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger?resource=mouse@bookwyrm.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 43 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 44 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 45 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger?resource=acct%3Amouse%40bookwyrm.social".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 46 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 47 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 48 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 49 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 50 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 51 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://bookwyrm.social/.well-known/webfinger?resource=acct%3Amouse%40bookwyrm.social".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Bridgy-Fed
+# constellation: Bridgy-Fed
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Bridgy-Fed
+#       app_version: ?
+ok 52 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 53 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 54 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://fed.brid.gy/.well-known/webfinger?resource=acct%3Afed.brid.gy%40fed.brid.gy".
+    0: Link rel value not absolute URI nor registered relation type: "canonical_uri"
+    1: Link rel value not absolute URI nor registered relation type: "inbox"
+    2: Link rel value not absolute URI nor registered relation type: "sharedInbox"
+    Expected: None
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 55 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 56 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 57 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 58 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 59 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://fed.brid.gy/.well-known/webfinger?resource=fed.brid.gy@fed.brid.gy".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+ok 60 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 61 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fed.brid.gy/.well-known/webfinger?resource=acct%3Adoes.not.exist%40fed.brid.gy".
+    Expected: <404>
+         but: was <504>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 62 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 63 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fed.brid.gy/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 64 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 65 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 66 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 67 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 68 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: BuzzRelay
+# constellation: BuzzRelay
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: BuzzRelay
+#       app_version: ?
+ok 69 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 70 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 71 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger?resource=acct%3Atag-activitypub%40relay.fedi.buzz". -> "application/json"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 72 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 73 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 74 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger?resource==acct%3Atag-activitypub%40relay.fedi.buzz".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 75 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 76 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger?resource=tag-activitypub@relay.fedi.buzz".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 77 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 78 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 79 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger?resource=acct%3Atag-activitypub%40relay.fedi.buzz".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 80 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 81 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 82 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 83 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 84 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 85 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://relay.fedi.buzz/.well-known/webfinger?resource=acct%3Atag-activitypub%40relay.fedi.buzz".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Cherrypick
+# constellation: Cherrypick
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Cherrypick
+#       app_version: ?
+ok 86 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 87 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 88 - webfinger.server.4_2__2_perform_query::normal_query
+ok 89 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 90 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 91 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://stella.place/.well-known/webfinger?resource==acct%3Ainstance.actor%40stella.place".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 92 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 93 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://stella.place/.well-known/webfinger?resource=instance.actor@stella.place".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 94 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://stella.place/.well-known/webfinger?resource=instance.actor@stella.place".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 95 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 96 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 97 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://stella.place/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <422>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 98 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 99 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 100 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 101 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 102 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Drupal
+# constellation: Drupal
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Drupal
+#       app_version: ?
+ok 103 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 104 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 105 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Link type not a valid media type: "template"
+    Accessed URI: "https://realize.be/.well-known/webfinger?resource=acct%3Aswentel%40realize.be".
+    Expected: None
+         but: was <Link type not a valid media type: "template">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 106 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://realize.be/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+not ok 107 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://realize.be/.well-known/webfinger".
+    Expected: not ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: but was 'application/jrd+json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 57
+  ...
+not ok 108 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://realize.be/.well-known/webfinger?resource==acct%3Aswentel%40realize.be".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+not ok 109 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://realize.be/.well-known/webfinger?resource==acct%3Aswentel%40realize.be".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 110 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://realize.be/.well-known/webfinger?resource=swentel@realize.be".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+ok 111 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 112 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 113 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+ok 114 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 115 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 116 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 117 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+not ok 118 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    HTTP status 200.
+    Accessed URI: "http://realize.be/.well-known/webfinger?resource=acct%3Aswentel%40realize.be".
+    Expected: not <200>
+         but: but was <200>
+  where:
+    tests/webfinger/server/4__3_only_returns_jrd_in_response_to_https_requests.py 28
+  ...
+ok 119 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Fedipage
+# constellation: Fedipage
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Fedipage
+#       app_version: ?
+ok 120 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 121 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 122 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 123 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger".
+    Expected: <400>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+not ok 124 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger".
+    Expected: not ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: but was 'application/jrd+json'
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 57
+  ...
+not ok 125 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource==acct%3Afreemo%40jeffreyfreeman.me".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 126 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource==acct%3Afreemo%40jeffreyfreeman.me".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 127 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource=freemo@jeffreyfreeman.me".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 128 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource=freemo@jeffreyfreeman.me".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+not ok 129 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource=acct%3Adoes-not-exist%40jeffreyfreeman.me".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 130 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 131 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://jeffreyfreeman.me/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 132 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 133 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 134 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 135 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 136 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Forgejo
+# constellation: Forgejo
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Forgejo
+#       app_version: ?
+ok 137 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 138 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 139 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://git.exozy.me/.well-known/webfinger?resource=acct%3Aexozyme%40git.exozy.me". -> "application/json;charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json;charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 140 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 141 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 142 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 143 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 144 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 145 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 146 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 147 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://git.exozy.me/.well-known/webfinger?resource=acct%3Aexozyme%40git.exozy.me".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json;charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 148 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://git.exozy.me/.well-known/webfinger?resource=foo%3A//git.exozy.me".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 149 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 150 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 151 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 152 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 153 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Friendica
+# constellation: Friendica
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Friendica
+#       app_version: ?
+ok 154 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 155 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 156 - webfinger.server.4_2__2_perform_query::normal_query
+ok 157 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 158 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 159 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://friendi.ca/.well-known/webfinger?resource==acct%3Atobias%40friendi.ca".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 160 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 161 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://friendi.ca/.well-known/webfinger?resource=tobias@friendi.ca".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 162 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://friendi.ca/.well-known/webfinger?resource=tobias@friendi.ca".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 163 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 164 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 165 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://friendi.ca/.well-known/webfinger?resource=foo%3A//friendi.ca".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 166 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 167 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 168 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+not ok 169 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    HTTP status 200.
+    Accessed URI: "http://friendi.ca/.well-known/webfinger?resource=acct%3Atobias%40friendi.ca".
+    Expected: not <200>
+         but: but was <200>
+  where:
+    tests/webfinger/server/4__3_only_returns_jrd_in_response_to_https_requests.py 28
+  ...
+ok 170 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Funkwhale
+# constellation: Funkwhale
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Funkwhale
+#       app_version: ?
+ok 171 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 172 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 173 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://open.audio/.well-known/webfinger?resource=acct%3Apubliccode%40open.audio". -> "application/json"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 174 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 175 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 176 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 177 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 178 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 179 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 180 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://open.audio/.well-known/webfinger?resource=acct%3Adoes-not-exist%40open.audio".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+not ok 181 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://open.audio/.well-known/webfinger?resource=acct%3Apubliccode%40open.audio".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 182 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://open.audio/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 183 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 184 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 185 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 186 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 187 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Gancio
+# constellation: Gancio
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Gancio
+#       app_version: ?
+ok 188 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 189 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 190 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://gancio.cisti.org/.well-known/webfinger?resource=acct%3Agancio%40gancio.cisti.org". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 191 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 192 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 193 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://gancio.cisti.org/.well-known/webfinger?resource==acct%3Agancio%40gancio.cisti.org".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 194 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://gancio.cisti.org/.well-known/webfinger?resource==acct%3Agancio%40gancio.cisti.org".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+ok 195 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 196 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 197 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 198 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://gancio.cisti.org/.well-known/webfinger?resource=acct%3Agancio%40gancio.cisti.org".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 199 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gancio.cisti.org/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 200 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 201 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 202 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 203 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 204 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Gitea
+# constellation: Gitea
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Gitea
+#       app_version: ?
+not ok 205 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (2)
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+    0: Wrong HTTP content type.
+     -> "application/json;charset=utf-8"
+    1: Alias not absolute URI: "mailto:"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (2 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py 29
+  ...
+ok 206 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 207 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (2)
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe".
+    0: Wrong HTTP content type.
+     -> "application/json;charset=utf-8"
+    1: Alias not absolute URI: "mailto:"
+    Expected: None
+         but: was <WebFinger errors (2 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 208 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 209 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 210 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 211 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 212 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 213 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 214 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 215 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json;charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 216 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=foo%3A//gitea.moe".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+not ok 217 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (2)
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe".
+    0: Wrong HTTP content type.
+     -> "application/json;charset=utf-8"
+    1: Alias not absolute URI: "mailto:"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (2 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 120
+  ...
+not ok 218 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (2)
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe".
+    0: Wrong HTTP content type.
+     -> "application/json;charset=utf-8"
+    1: Alias not absolute URI: "mailto:"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (2 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 59
+  ...
+not ok 219 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (2)
+    Accessed URI: "https://gitea.moe/.well-known/webfinger?resource=acct%3Aav18%40gitea.moe".
+    0: Wrong HTTP content type.
+     -> "application/json;charset=utf-8"
+    1: Alias not absolute URI: "mailto:"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (2 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 90
+  ...
+ok 220 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 221 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: GNU Social
+# constellation: GNU Social
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: GNU Social
+#       app_version: ?
+not ok 222 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (7)
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+    0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+    2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+    3: Link type not a valid media type: "RSA"
+    4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+    5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+    6: Link rel value not absolute URI nor registered relation type: "salmon"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (7 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py 29
+  ...
+ok 223 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 224 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (7)
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+    0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+    2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+    3: Link type not a valid media type: "RSA"
+    4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+    5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+    6: Link rel value not absolute URI nor registered relation type: "salmon"
+    Expected: None
+         but: was <WebFinger errors (7 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 225 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger".
+    Expected: <400>
+         but: was <500>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 226 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 227 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 228 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 229 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=administrator@gnusocial.net".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+ok 230 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 231 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Adoes-not-exist%40gnusocial.net".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 232 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 233 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <500>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+not ok 234 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (7)
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+    0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+    2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+    3: Link type not a valid media type: "RSA"
+    4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+    5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+    6: Link rel value not absolute URI nor registered relation type: "salmon"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (7 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 120
+  ...
+not ok 235 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (7)
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+    0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+    2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+    3: Link type not a valid media type: "RSA"
+    4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+    5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+    6: Link rel value not absolute URI nor registered relation type: "salmon"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (7 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 59
+  ...
+not ok 236 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (7)
+    Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+    0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+    2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+    3: Link type not a valid media type: "RSA"
+    4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+    5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+    6: Link rel value not absolute URI nor registered relation type: "salmon"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (7 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 90
+  ...
+ok 237 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 238 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: GoToSocial
+# constellation: GoToSocial
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: GoToSocial
+#       app_version: ?
+ok 239 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 240 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 241 - webfinger.server.4_2__2_perform_query::normal_query
+ok 242 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 243 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 244 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 245 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 246 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=followbot@gotosocial.social".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 247 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=followbot@gotosocial.social".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 248 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 249 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 250 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 251 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 252 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 253 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 254 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 255 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Hubzilla
+# constellation: Hubzilla
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Hubzilla
+#       app_version: ?
+not ok 256 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+    0: Link type not a valid media type: ""
+    1: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    2: Link href not a URI: "data:application/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py 29
+  ...
+ok 257 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 258 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio".
+    0: Link type not a valid media type: ""
+    1: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    2: Link href not a URI: "data:application/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB"
+    Expected: None
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 259 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 260 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 261 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 262 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 263 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 264 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 265 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Adoes-not-exist%40authorship.studio".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 266 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 267 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+not ok 268 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio".
+    0: Link type not a valid media type: ""
+    1: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    2: Link href not a URI: "data:application/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 120
+  ...
+not ok 269 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio".
+    0: Link type not a valid media type: ""
+    1: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    2: Link href not a URI: "data:application/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 59
+  ...
+not ok 270 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio".
+    0: Link type not a valid media type: ""
+    1: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+    2: Link href not a URI: "data:application/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB"
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 90
+  ...
+ok 271 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 272 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: kbin
+# constellation: kbin
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: kbin
+#       app_version: ?
+ok 273 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 274 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 275 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 276 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://kbin.social/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+not ok 277 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://kbin.social/.well-known/webfinger".
+    Expected: not ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: but was 'application/jrd+json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 57
+  ...
+not ok 278 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://kbin.social/.well-known/webfinger?resource==acct%3Asimple%40kbin.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+not ok 279 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://kbin.social/.well-known/webfinger?resource==acct%3Asimple%40kbin.social".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 280 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://kbin.social/.well-known/webfinger?resource=simple@kbin.social".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+ok 281 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 282 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 283 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+ok 284 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 285 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 286 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 287 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 288 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 289 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Lemmy
+# constellation: Lemmy
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Lemmy
+#       app_version: ?
+ok 290 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 291 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 292 - webfinger.server.4_2__2_perform_query::normal_query
+ok 293 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+not ok 294 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://lemmy.ml/.well-known/webfinger".
+    Expected: (Expected a callable raising <class 'RuntimeError'> or Expected a callable raising <class 'json.decoder.JSONDecodeError'>)
+         but: was <hamcrest.core.core.raises.DeferredCallable object at 0x1034b6ed0>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 65
+  ...
+ok 295 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 296 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 297 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 298 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 299 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 300 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 301 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://lemmy.ml/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 302 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 303 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 304 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 305 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 306 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Mastodon
+# constellation: Mastodon
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Mastodon
+#       app_version: ?
+ok 307 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 308 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 309 - webfinger.server.4_2__2_perform_query::normal_query
+ok 310 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 311 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 312 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://mastodon.social/.well-known/webfinger?resource==acct%3Agargron%40mastodon.social".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 313 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 314 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://mastodon.social/.well-known/webfinger?resource=gargron@mastodon.social".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 315 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://mastodon.social/.well-known/webfinger?resource=gargron@mastodon.social".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 316 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 317 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 318 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://mastodon.social/.well-known/webfinger?resource=foo%3A//mastodon.social".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 319 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 320 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 321 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 322 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 323 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Micro.blog
+# constellation: Micro.blog
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Micro.blog
+#       app_version: ?
+not ok 324 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+    0: Wrong HTTP status code.
+     -> 404
+    1: Wrong HTTP content type.
+     -> "None"
+    2: Expecting value: line 1 column 1 (char 0)
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py 29
+  ...
+ok 325 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 326 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org".
+    0: Wrong HTTP status code.
+     -> 404
+    1: Wrong HTTP content type.
+     -> "None"
+    2: Expecting value: line 1 column 1 (char 0)
+    Expected: None
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+not ok 327 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://manton.org/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 328 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 329 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource==acct%3Amanton%40manton.org".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 330 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 331 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=manton@manton.org".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 332 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 333 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 334 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 200.
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org".
+    Expected: <200>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 21
+  ...
+ok 335 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+not ok 336 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org".
+    0: Wrong HTTP status code.
+     -> 404
+    1: Wrong HTTP content type.
+     -> "None"
+    2: Expecting value: line 1 column 1 (char 0)
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 120
+  ...
+not ok 337 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not same or subset of links.
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org&rel=self" with rel self vs none.
+    Expected: Links must be the same or a subset.JRD: {"subject": "acct:manton@manton.org", "links": [{"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://manton.org/activitypub/manton"}, {"rel": "self", "type": "application/activity+json", "href": "https://manton.org/activitypub/manton"}, {"rel": "http://ostatus.org/schema/1.0/subscribe", "template": "https://micro.blog/mastodon/follow?url={uri}"}]}
+         but: was <None>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 71
+  ...
+not ok 338 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://manton.org/.well-known/webfinger?resource=acct%3Amanton%40manton.org".
+    0: Wrong HTTP status code.
+     -> 404
+    1: Wrong HTTP content type.
+     -> "None"
+    2: Expecting value: line 1 column 1 (char 0)
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 90
+  ...
+ok 339 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 340 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Microblogpub
+# constellation: Microblogpub
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Microblogpub
+#       app_version: ?
+ok 341 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 342 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 343 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 344 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://bow.st/.well-known/webfinger".
+    Expected: <400>
+         but: was <422>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 345 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 346 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://bow.st/.well-known/webfinger?resource==acct%3Ac%40bow.st".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 347 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 348 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://bow.st/.well-known/webfinger?resource=c@bow.st".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 349 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 350 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 351 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+ok 352 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 353 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 354 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 355 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 356 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 357 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Misskey
+# constellation: Misskey
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Misskey
+#       app_version: ?
+not ok 358 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    WebFinger errors (3)
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=acct%3Asyuilo%40misskey.io&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+    0: Wrong HTTP status code.
+     -> 403
+    1: Wrong HTTP content type.
+     -> "text/html; charset=UTF-8"
+    2: Expecting value: line 1 column 1 (char 0)
+    Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+         but: was <WebFinger errors (3 sub-exceptions)>
+  where:
+    tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py 29
+  ...
+ok 359 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 360 - webfinger.server.4_2__2_perform_query::normal_query
+ok 361 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 362 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 363 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource==acct%3Asyuilo%40misskey.io".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 364 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 365 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=syuilo@misskey.io".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 366 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=syuilo@misskey.io".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 367 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 368 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 369 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <422>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+not ok 370 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not same or subset of links.
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=acct%3Asyuilo%40misskey.io&rel=something-else&rel=http%3A//webfinger.net/rel/profile-page" with rels something-else and http://webfinger.net/rel/profile-page vs none.
+    Expected: Links must be the same or a subset.JRD: {"subject": "acct:syuilo@misskey.io", "links": [{"rel": "self", "type": "application/activity+json", "href": "https://misskey.io/users/7rkrarq81i"}, {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://misskey.io/@syuilo"}, {"rel": "http://ostatus.org/schema/1.0/subscribe", "template": "https://misskey.io/authorize-follow?acct={uri}"}]}
+         but: was <None>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 134
+  ...
+not ok 371 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not same or subset of links.
+    Accessed URI: "https://misskey.io/.well-known/webfinger?resource=acct%3Asyuilo%40misskey.io&rel=http%3A//webfinger.net/rel/profile-page" with rel http://webfinger.net/rel/profile-page vs none.
+    Expected: Links must be the same or a subset.JRD: {"subject": "acct:syuilo@misskey.io", "links": [{"rel": "self", "type": "application/activity+json", "href": "https://misskey.io/users/7rkrarq81i"}, {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://misskey.io/@syuilo"}, {"rel": "http://ostatus.org/schema/1.0/subscribe", "template": "https://misskey.io/authorize-follow?acct={uri}"}]}
+         but: was <None>
+  where:
+    tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py 71
+  ...
+ok 372 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 373 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 374 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Mitra
+# constellation: Mitra
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Mitra
+#       app_version: ?
+ok 375 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 376 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 377 - webfinger.server.4_2__2_perform_query::normal_query
+ok 378 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 379 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 380 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 381 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 382 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 383 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 384 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 385 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 386 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://filly.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 387 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 388 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 389 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 390 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 391 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Mobilizon
+# constellation: Mobilizon
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Mobilizon
+#       app_version: ?
+ok 392 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 393 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 394 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 395 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 396 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 397 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource==acct%3Aframasoft%40mobilizon.fr".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 398 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource==acct%3Aframasoft%40mobilizon.fr".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 399 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource=framasoft@mobilizon.fr".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 400 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource=framasoft@mobilizon.fr".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 401 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 402 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 403 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 404 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 405 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 406 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 407 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 408 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: NodeBB
+# constellation: NodeBB
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: NodeBB
+#       app_version: ?
+ok 409 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 410 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 411 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 412 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 413 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 414 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 415 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 416 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 417 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 418 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 419 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 420 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://community.nodebb.org/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 421 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 422 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 423 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 424 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 425 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Owncast
+# constellation: Owncast
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Owncast
+#       app_version: ?
+ok 426 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 427 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 428 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 429 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger".
+    Expected: <400>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 430 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 431 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource==acct%3Afedi%40owncast.small-web.org".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 432 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource==acct%3Afedi%40owncast.small-web.org".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 433 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource=fedi@owncast.small-web.org".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 434 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource=fedi@owncast.small-web.org".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 435 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 436 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 437 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource=foo%3A//owncast.small-web.org".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 438 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 439 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 440 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 441 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 442 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://owncast.small-web.org/.well-known/webfinger?resource=acct%3Afedi%40owncast.small-web.org".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: PeerTube
+# constellation: PeerTube
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: PeerTube
+#       app_version: ?
+ok 443 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 444 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 445 - webfinger.server.4_2__2_perform_query::normal_query
+ok 446 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 447 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 448 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://framapiaf.org/.well-known/webfinger?resource==acct%3Apeertube%40framapiaf.org".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 449 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 450 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://framapiaf.org/.well-known/webfinger?resource=peertube@framapiaf.org".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 451 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://framapiaf.org/.well-known/webfinger?resource=peertube@framapiaf.org".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 452 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 453 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 454 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://framapiaf.org/.well-known/webfinger?resource=foo%3A//framapiaf.org".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 455 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 456 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 457 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 458 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 459 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Pixelfed
+# constellation: Pixelfed
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Pixelfed
+#       app_version: ?
+ok 460 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 461 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 462 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=acct%3Adansup%40pixelfed.social". -> "application/json"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 463 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 464 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 465 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 466 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 467 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=dansup@pixelfed.social".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 468 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=dansup@pixelfed.social".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+not ok 469 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=acct%3Adoes-not-exist%40pixelfed.social".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+not ok 470 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=acct%3Adansup%40pixelfed.social".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 471 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://pixelfed.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 472 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 473 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 474 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 475 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 476 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Pleroma
+# constellation: Pleroma
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Pleroma
+#       app_version: ?
+ok 477 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 478 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 479 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource=acct%3Akarolat%40stereophonic.space". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 480 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 481 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 482 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource==acct%3Akarolat%40stereophonic.space".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 483 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource==acct%3Akarolat%40stereophonic.space".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 484 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource=karolat@stereophonic.space".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 485 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource=karolat@stereophonic.space".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 486 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+not ok 487 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://stereophonic.space/.well-known/webfinger?resource=acct%3Akarolat%40stereophonic.space".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+ok 488 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 489 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 490 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 491 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 492 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 493 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Plume
+# constellation: Plume
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Plume
+#       app_version: ?
+ok 494 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 495 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 496 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 497 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 498 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 499 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger?resource==acct%3Aactapopuli%40fediverse.blog".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 500 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 501 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger?resource=actapopuli@fediverse.blog".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+ok 502 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 503 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger?resource=acct%3Adoes-not-exist%40fediverse.blog".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 504 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 505 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 506 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 507 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 508 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 509 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 510 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://fediverse.blog/.well-known/webfinger?resource=acct%3Aactapopuli%40fediverse.blog".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Postmarks
+# constellation: Postmarks
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Postmarks
+#       app_version: ?
+ok 511 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 512 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 513 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource=acct%3Aupdates%40postmarks.glitch.me". -> "application/json; charset=utf-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=utf-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 514 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 515 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 516 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource==acct%3Aupdates%40postmarks.glitch.me".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 517 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource==acct%3Aupdates%40postmarks.glitch.me".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+ok 518 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 519 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 520 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource=acct%3Adoes-not-exist%40postmarks.glitch.me".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+not ok 521 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource=acct%3Aupdates%40postmarks.glitch.me".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=utf-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 522 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://postmarks.glitch.me/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 523 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 524 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 525 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 526 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 527 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Snac
+# constellation: Snac
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Snac
+#       app_version: ?
+ok 528 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 529 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 530 - webfinger.server.4_2__2_perform_query::normal_query
+ok 531 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 532 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 533 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://snac.bsd.cafe/.well-known/webfinger?resource==acct%3Afedops%40snac.bsd.cafe".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 534 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 535 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://snac.bsd.cafe/.well-known/webfinger?resource=fedops@snac.bsd.cafe".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 536 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 537 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 538 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+ok 539 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 540 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 541 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 542 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 543 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 544 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Streams
+# constellation: Streams
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Streams
+#       app_version: ?
+ok 545 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 546 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 547 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 548 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://macgirvin.com/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 549 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 550 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 551 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 552 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 553 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 554 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://macgirvin.com/.well-known/webfinger?resource=acct%3Adoes-not-exist%40macgirvin.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 555 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 556 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://macgirvin.com/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 557 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 558 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 559 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 560 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 561 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Sutty
+# constellation: Sutty
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Sutty
+#       app_version: ?
+ok 562 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 563 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 564 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 565 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger".
+    Expected: <400>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+not ok 566 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger".
+    Expected: not ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: but was 'application/jrd+json'
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 57
+  ...
+not ok 567 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource==acct%3Asutty%40sutty.nl".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 87
+  ...
+not ok 568 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource==acct%3Asutty%40sutty.nl".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 117
+  ...
+not ok 569 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource=sutty@sutty.nl".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 570 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource=sutty@sutty.nl".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+not ok 571 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource=acct%3Adoes-not-exist%40sutty.nl".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+ok 572 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 573 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://sutty.nl/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 574 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 575 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 576 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 577 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 578 - webfinger.server.5_1_cors_header_required::cors_header_required
+# session: Takahē
+# constellation: Takahē
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Takahē
+#       app_version: ?
+ok 579 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 580 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 581 - webfinger.server.4_2__2_perform_query::normal_query
+ok 582 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 583 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 584 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 585 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 586 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=admin@gotosocial.social".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 587 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=admin@gotosocial.social".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 588 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 589 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 590 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 591 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 592 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 593 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 594 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 595 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://gotosocial.social/.well-known/webfinger?resource=acct%3Aadmin%40gotosocial.social".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Threads
+# constellation: Threads
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Threads
+#       app_version: ?
+ok 596 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 597 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 598 - webfinger.server.4_2__2_perform_query::normal_query
+not ok 599 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 400.
+    Accessed URI: "https://threads.net/.well-known/webfinger".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 33
+  ...
+ok 600 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+not ok 601 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://threads.net/.well-known/webfinger?resource==acct%3Amosseri%40threads.net".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 602 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 603 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://threads.net/.well-known/webfinger?resource=mosseri@threads.net".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 34
+  ...
+ok 604 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 605 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 606 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+ok 607 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+ok 608 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 609 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 610 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 611 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 612 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://threads.net/.well-known/webfinger?resource=acct%3Amosseri%40threads.net".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: Wildebeest
+# constellation: Wildebeest
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: Wildebeest
+#       app_version: ?
+ok 613 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 614 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 615 - webfinger.server.4_2__2_perform_query::normal_query
+ok 616 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+ok 617 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+ok 618 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 619 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 620 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 621 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+ok 622 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 623 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 624 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 625 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 626 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 627 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 628 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 629 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: WordPress + ActivityPub plugin
+# constellation: WordPress + ActivityPub plugin
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: WordPress + ActivityPub plugin
+#       app_version: ?
+ok 630 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 631 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+not ok 632 - webfinger.server.4_2__2_perform_query::normal_query
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong HTTP content type.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger?resource=acct%3Afediblogs.wordpress.com%40fediblogs.wordpress.com". -> "application/json; charset=UTF-8"
+    Expected: None
+         but: was <Wrong HTTP content type.
+     -> "application/json; charset=UTF-8">
+  where:
+    tests/webfinger/server/4_2__2_perform_query.py 19
+  ...
+ok 633 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+not ok 634 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger".
+    Expected: (Expected a callable raising <class 'RuntimeError'> or Expected a callable raising <class 'json.decoder.JSONDecodeError'>)
+         but: was <hamcrest.core.core.raises.DeferredCallable object at 0x103563230>
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 65
+  ...
+ok 635 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+ok 636 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+ok 637 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+ok 638 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+not ok 639 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger?resource=acct%3Adoes-not-exist%40fediblogs.wordpress.com".
+    Expected: <404>
+         but: was <200>
+  where:
+    tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py 20
+  ...
+not ok 640 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Wrong content type.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger?resource=acct%3Afediblogs.wordpress.com%40fediblogs.wordpress.com".
+    Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: was 'application/json; charset=UTF-8'
+  where:
+    tests/webfinger/server/4_2__9_content_type.py 25
+  ...
+not ok 641 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 642 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 643 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 644 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 645 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+not ok 646 - webfinger.server.5_1_cors_header_required::cors_header_required
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Missing CORS header.
+    Accessed URI: "https://fediblogs.wordpress.com/.well-known/webfinger?resource=acct%3Afediblogs.wordpress.com%40fediblogs.wordpress.com".
+    Not present: "access-control-allow-origin".
+  where:
+    tests/webfinger/server/5_1_cors_header_required.py 19
+  ...
+# session: WriteFreely
+# constellation: WriteFreely
+#   roles:
+#     - name: client
+#       driver: imp.ImpInProcessNodeDriver
+#       app: Imp
+#       app_version: 0.0.2
+#     - name: server
+#       driver: saas.SaasFediverseNodeDriver
+#       app: WriteFreely
+#       app_version: ?
+ok 647 - webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering
+ok 648 - webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https
+ok 649 - webfinger.server.4_2__2_perform_query::normal_query
+ok 650 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status
+not ok 651 - webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd
+  ---
+  problem: HardAssertionFailure (hard)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://write.as/.well-known/webfinger".
+    Expected: not ('application/jrd+json' or a string starting with 'application/jrd+json;')
+         but: but was 'application/jrd+json'
+  where:
+    tests/webfinger/server/4_2__3_requires_resource_uri.py 57
+  ...
+not ok 652 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 400
+    Accessed URI: "https://write.as/.well-known/webfinger?resource==acct%3Amatt%40write.as".
+    Expected: <400>
+         but: was <404>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 93
+  ...
+ok 653 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd
+not ok 654 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 4xx.
+    Accessed URI: "https://write.as/.well-known/webfinger?resource=matt@write.as".
+    Expected: (a value greater than or equal to <400> and a value less than <500>)
+         but: a value greater than or equal to <400> was <200>
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 28
+  ...
+not ok 655 - webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Returns JRD content.
+    Accessed URI: "https://write.as/.well-known/webfinger?resource=matt@write.as".
+  where:
+    tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py 59
+  ...
+ok 656 - webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources
+ok 657 - webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https
+not ok 658 - webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers
+  ---
+  problem: SoftAssertionFailure (soft)
+  message:
+    Not HTTP status 404.
+    Accessed URI: "https://write.as/.well-known/webfinger?resource=foo%3A//write.as".
+    Expected: <404>
+         but: was <400>
+  where:
+    tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py 25
+  ...
+ok 659 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query
+ok 660 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query
+ok 661 - webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query
+ok 662 - webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http
+ok 663 - webfinger.server.5_1_cors_header_required::cors_header_required
+1..663
+# test run summary:
+#   total: 663
+#   passed: 462
+#   failed: 200
+#   skipped: 0
+#   errors: 1
