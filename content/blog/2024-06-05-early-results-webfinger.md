@@ -48,6 +48,8 @@ Best avenue for feedback: [file an issue on framework and reporting](https://git
 or [file an issue on the actual tests](https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/new).
 Also: [Matrix group](https://matrix.to/#/#fediverse-testing:matrix.org).
 
+**Update 2024-06-07**: Recording of the (most of the) call at: https://diode.zone/w/j2fXb58GYMe6n6iFJZYGYs
+
 {{% box %}}
 This is active work in progress, and before the first named release. Documentation on
 this is site is likely inconsistent. Official release coming soon.
