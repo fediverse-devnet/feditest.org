@@ -1,5 +1,6 @@
 ---
 title: "FediTest first draft WebFinger results (for FediDevs meetup today)"
+breadcrumbtitle: "First draft WebFinger results"
 date: 2024-06-05
 author: Johannes Ernst
 authorurl: https://j12t.org/
