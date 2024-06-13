@@ -4,33 +4,44 @@ breadcrumbtitle: Home
 layout: front
 ---
 
-## FediTest
+{{% box "landing" %}}
+{{%   box "graphic" %}}
+![Illustration](/assets/front.png)
+{{%   /box %}}
+{{%   box "title" %}}
+# FediTest
+Testing distributed, heterogeneous systems...
 
-This wants to become the website for the FediTest project, which builds a test suite for
-the Fediverse.
+...with complex protocols
 
-**Pardon our early work in progress.** There will be blog posts before we have much content
-for the rest of the site.
-
-{{% box %}}
-Next meetup: Wednesday, June 5th, 9am pacific. See [fedidevs.org](https://fedidevs.org/).
-
-We will review test results so far.
+...such as the Fediverse.
+{{%   /box %}}
 {{% /box %}}
 
-### Most recent posts
+{{% box "news section" %}}
+## News
 
-* {{% pageref "/blog/2024-06-05-early-results-webfinger/" %}}
-* {{% pageref "/blog/2024-04-30-update/" %}}
-* {{% pageref "/blog/2024-04-18-iiw-feditest-architecture/" %}}
-* {{% pageref "/blog/2024-04-09-earliest-access.md" %}}
-* {{% pageref "/blog/2024-03-29-early-feedback.md" %}}
+{{% recentposts 4 %}}
+{{% /box %}}
 
-### Follow us in the Fediverse
+{{% box "section" %}}
+## Getting started
 
-* <a rel="me" href="https://mastodon.social/@feditest">@feditest@mastodon.social</a>
- <link rel="me" href="https://mastodon.social/@feditest">
+* If you are a developer of a Fediverse/ActivityPub application and want to use FediTest
+  to test it: {{% pageref "/docs/quickstart/fediverse-developer/" "start here" %}}.
 
-### Join us on Matrix to discuss
+* If you want to test some protocol other than the protocols that comprise the
+  ActivityPub-based Fediverse (WebFinger, ActivityPub, HTTP Signatures etc): coming soon.
+{{% /box %}}
 
-* [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
+{{% box "section" %}}
+## Contribute or get in touch:
+
+* On the Fediverse: <a rel="me" href="https://mastodon.social/@feditest">@feditest@mastodon.social</a>
+  <link rel="me" href="https://mastodon.social/@feditest">
+
+* Matrix discussion group for FediTest: [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
+
+* Code and issues on Github: [FediTest framework](https://github.com/fediverse-devnet/feditest/),
+  [FediTest tests for the Fediverse](https://github.com/fediverse-devnet/feditest-tests-fediverse/).
+{{% /box %}}

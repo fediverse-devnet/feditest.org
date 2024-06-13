@@ -1,5 +1,6 @@
 ---
 title: About FediTest
+weight: 10
 ---
 
 <style>

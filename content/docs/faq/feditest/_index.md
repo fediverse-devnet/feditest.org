@@ -1,5 +1,5 @@
 ---
 title: FAQ on the FediTest testing framework
-breadcrumbtitle: FAQ FediTest
+breadcrumbtitle: FediTest
 weight: 1000
 ---

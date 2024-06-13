@@ -2,7 +2,8 @@
 title: Node
 plural: Nodes
 summary: An instance of an application that communicates with other Nodes during testing.
-seealso: [
+seealsoterm: [
+    'Constellation',
     'NodeDriver'
 ]
 ---

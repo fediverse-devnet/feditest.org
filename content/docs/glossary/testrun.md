@@ -1,7 +1,7 @@
 ---
-title: TestRun
-summary: The execution of a particular TestPlan
-seealso: [
+title: Test Run
+summary: The execution of a particular Test Plan
+seealsoterm: [
     'TestPlan'
 ]
 ---

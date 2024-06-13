@@ -1,28 +1,20 @@
 ---
-title: Quickstart
+title: Quickstart for Fediverse developers wanting to test their own application
+breadcrumbtitle: For Fediverse developers
 weight: 10
 ---
 
 {{% warning %}}
 This is early work in progress. Things are far from complete. Don't expect things
 to work and you won't be disappointed :-)
-
-In particular: we don't have a "releases"
-yet and so these instructions may be temporarily out of date.
 {{% /warning %}}
 
-## Get a feel for it on your regular development machine
+### Simplest setup: test Fediverse applications at wubli
 
-For automated provisioning and unprovisioning of Fediverse applications such as
-Mastodon you need to run a virtual machine (this is described below). If you don't
-have time right now to install it, continue here.
-
-### Get the code
-
-Get the FediTest framework:
+Get the FediTest framework for the Fediverse:
 
 ```
-% git clone https://github.com/fediverse-devnet/feditest.git
+% pip install feditest-fediverse
 ```
 
 Get the tests that test the Fediverse:
