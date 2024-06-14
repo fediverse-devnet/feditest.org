@@ -5,9 +5,15 @@ weight: 10
 ---
 
 {{% warning %}}
-This is early work in progress. Things are far from complete. Don't expect things
-to work and you won't be disappointed :-)
+This describes the FediTest 0.2 release. Given that version number, don't expect
+things to be polished.
 {{% /warning %}}
+
+{{% note %}}
+FediTest has a lot of power and flexibility. For this Quickstart, we are going to hide
+that from you so you can get some results quickly and with minimal configuration.
+You can override the Quickstart defaults later.
+{{% /note %}}
 
 ### Simplest setup: test Fediverse applications at wubli
 

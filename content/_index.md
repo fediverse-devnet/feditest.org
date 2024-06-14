@@ -28,7 +28,7 @@ Testing distributed, heterogeneous systems...
 ## Getting started
 
 * If you are a developer of a Fediverse/ActivityPub application and want to use FediTest
-  to test it: {{% pageref "/docs/quickstart/fediverse-developer/" "start here" %}}.
+  to test it: {{% pageref "/docs/quickstart/fediverse-developer/" "start here" "big" %}}.
 
 * If you want to test some protocol other than the protocols that comprise the
   ActivityPub-based Fediverse (WebFinger, ActivityPub, HTTP Signatures etc): coming soon.

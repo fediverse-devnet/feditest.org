@@ -1,6 +1,6 @@
 ---
 title: Some tentative decisions about FediTest
-date: 2024-06-11
+date: 2024-06-13
 author: Johannes Ernst
 authorurl: https://j12t.org/
 ---

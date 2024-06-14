@@ -45,6 +45,12 @@ div.news > h2 {
     margin-top: 1ex;
 }
 
+a.big {
+    margin: 0 1ex;
+    padding: 1ex;
+    border: 1px solid var(--href-color);
+    border-radius: 16px;
+}
 @media screen and (max-width: 905px) {
     div.landing {
         flex-direction: column;
