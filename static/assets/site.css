@@ -11,8 +11,9 @@ div.landing {
     align-content: stretch;
 }
 div.landing > div.graphic {
-    padding: 20px;
     width: 50%;
+    text-align: center;
+    padding: 10px;
     background: rgba(0, 0, 0, 50%);
 }
 

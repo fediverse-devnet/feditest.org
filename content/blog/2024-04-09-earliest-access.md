@@ -6,7 +6,7 @@ authorurl: https://j12t.org/
 ---
 
 {{% warning %}}
-Development has moved on since this blog post. Go to {{% pageref "/docs/quickstart/" %}}
+Development has moved on since this blog post. Go to {{% pageref "/quickstart/" %}}
 for current information.
 {{% /warning %}}
 

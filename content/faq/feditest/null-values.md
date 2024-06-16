@@ -1,5 +1,5 @@
 ---
-title: FediTest emits many "null" values in the generated JSON files
+title: FediTest emits many "null" values in the generated JSON files. Why is that?
 ---
 
 That's a side effect of the [`msgspec` JSON library](https://jcristharif.com/msgspec/)

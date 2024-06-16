@@ -15,4 +15,5 @@ Nope, FediTest is a general framework for testing distributed systems, in partic
 * with non-trivial distributed state, i.e. where just getting the (decentralized) system
   into the state necessary before a test can be run is not so simple.
 
-This is also a reason why we keep the actual tests in a different Git repository.
+This is also a reason why we keep the Fediverse tests in a different Git repository than
+the FediTest framework.

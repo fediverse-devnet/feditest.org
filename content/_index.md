@@ -27,12 +27,20 @@ Testing distributed, heterogeneous systems...
 {{% box "section" %}}
 ## Getting started
 
-* If you are a developer of a Fediverse/ActivityPub application and want to use FediTest
-  to test it: {{% pageref "/docs/quickstart/fediverse-developer/" "start here" "big" %}}.
+* If you are just **investigating FediTest** and want to get a taste for it:
+  {{% pageref "/quickstart/evaluate/" "start here" "big" %}}
 
-* If you want to test some protocol other than the protocols that comprise the
+* If you are a **developer of a Fediverse/ActivityPub application** and want to use FediTest
+  to test it: {{% pageref "/quickstart/fediverse-developer/" "start here" "big" %}}
+
+* If you want to test **some other protocol** that not one of the protocols that comprise the
   ActivityPub-based Fediverse (WebFinger, ActivityPub, HTTP Signatures etc): coming soon.
 {{% /box %}}
+
+{{% note %}}
+FediTest is at version 0.2. Given this version number, expect functionality to be missing.
+And of what exists, do not expect everything to be particularly polished or complete.
+{{% /note %}}
 
 {{% box "section" %}}
 ## Contribute or get in touch:

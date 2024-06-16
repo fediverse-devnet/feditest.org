@@ -23,8 +23,8 @@ Fediverse applications, such as:
   machine. This is also very useful for testing if you want to run several
   {{% gls Node %}} against each other.
 
-To use features, you need to run [UBOS Linux](https://ubos.net/docs/glossary/linux/),
-typically in a virtual machine or Linux container, and run FediTest in that VM.
+To use these features, you need to run [UBOS Linux](https://ubos.net/docs/glossary/linux/),
+typically in a virtual machine or Linux container.
 
 However, the use of UBOS is entirely optional. You can alternatively run FediTest on
 your PC or Mac or other Linux distro without touching UBOS. Then you won't get the
