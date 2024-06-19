@@ -1,0 +1,7467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feditest Test Report</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        >
+        <link rel="stylesheet" href="feditest.css">
+    </head>
+    <body>
+<div class="feditest title">
+  <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Report:</span> Webfinger server tests of hosted Fediverse applications</h1>
+  <p class="id">feditest-run-2024-06-16T22-41-50.971358Z</p>
+</div>
+        <nav class="matrix">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#metadata">Metadata</a></li>
+            </ul>
+        </nav>
+        <div id="summary" class="feditest module summary">
+            <h2>Test Run Summary</h2>
+    <table class="feditest summary">
+       <thead>
+            <tr>
+                <th>Status</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Passed</th>
+                <td class="status passed">
+                    <div>945</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Failed</th>
+                <td class="status failed">
+                    <table class="failed">
+                        <thead>
+                            <tr>
+                                <td colspan="2" rowspan="2"></td>
+                                <th colspan="5">Interoperability</th>
+                            </tr>
+                            <tr>
+                                <th>Compromised</th>
+                                <th>Degraded</th>
+                                <th>Unaffected</th>
+                                <th>Unknown</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="5">Conformance</th>
+                                <th>Must</th>
+                                <td class="status must problem moreinfo">
+                                    <div>341</div>
+                                </td>
+                                <td class="status must degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status must unaffected moreinfo">
+                                    <div>322</div>
+                                </td>
+                                <td class="status must unknown moreinfo">
+                                    <div>2</div>
+                                </td>
+                                <td class="status must total">
+                                    <div>665</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Should</th>
+                                <td class="status should problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Implied</th>
+                                <td class="status implied problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Unspecified</th>
+                                <td class="status unspecified problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td class="status problem total">
+                                    <div>341</div>
+                                </td>
+                                <td class="status degraded total">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unaffected total">
+                                    <div>322</div>
+                                </td>
+                                <td class="status unknown total">
+                                    <div>2</div>
+                                </td>
+                                <td class="status total">
+                                    <div>665</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Skipped</th>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Errors</th>
+                <td class="status error">
+                    <div>5</div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>
+                    <div>1615</div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+        </div>
+        <div id="results" class="feditest module results">
+
+            <h2>Test Results</h2>
+
+
+    <div class="feditest tests">
+        <table class="tests">
+            <colgroup>
+                <col>
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+                <col class="session">
+            </colgroup>
+            <thead>
+                
+                <tr>
+                    <th>Test (alphabetical order)</th>
+                    <th>
+                        <div class="title"><a href="index.activity-relay.html">activity-relay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.ActivityRelay.html">ActivityRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Akkoma.html">Akkoma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.aoderelay.html">aoderelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.apogee.html">apogee</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.archivedon.html">archivedon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.birdsitelive.html">birdsitelive</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.bonfire.html">bonfire</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bookwyrm.html">Bookwyrm</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.bovine.html">bovine</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bridgy-Fed.html">Bridgy-Fed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.brighteon.html">brighteon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bugle.html">Bugle</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.BuzzRelay.html">BuzzRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.calckey.html">calckey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.capubara.html">capubara</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.castling.club.html">castling.club</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.catnip.html">catnip</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.catodon.html">catodon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Cherrypick.html">Cherrypick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Codename Merp.html">Codename Merp</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Comal.html">Comal</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.dailyrucks.html">dailyrucks</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Drupal.html">Drupal</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Emissary.html">Emissary</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.fedibird.html">fedibird</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Fedipage.html">Fedipage</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.firefish.html">firefish</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.fishkey.html">fishkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Forgejo.html">Forgejo</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.foundkey.html">foundkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Friendica.html">Friendica</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Funkwhale.html">Funkwhale</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Gancio.html">Gancio</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Gitea.html">Gitea</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.glitchcafe.html">glitchcafe</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.GNU Social.html">GNU Social</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.goblin.html">goblin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.GoToSocial.html">GoToSocial</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Guppe Groups.html">Guppe Groups</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.hometown.html">hometown</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Hubzilla.html">Hubzilla</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.iceshrimp.html">iceshrimp</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Immers Space.html">Immers Space</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.incestoma.html">incestoma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Juick.html">Juick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kbin.html">kbin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kitsune.html">kitsune</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kmyblue.html">kmyblue</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kroeg.html">kroeg</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Lemmy.html">Lemmy</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.lockpick.html">lockpick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.magnetar.html">magnetar</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mammuthus (Experimental).html">Mammuthus (Experimental)</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mastodon.html">Mastodon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.mbin.html">mbin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.meisskey.html">meisskey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Menzoberranzan.html">Menzoberranzan</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Micro.blog.html">Micro.blog</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Microblogpub.html">Microblogpub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Misskey.html">Misskey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mitra.html">Mitra</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mobilizon.html">Mobilizon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.momostr.html">momostr</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.moon-eyed.html">moon-eyed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.mostr.html">mostr</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.NodeBB.html">NodeBB</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.notestock.html">notestock</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.openlink-virtuoso.html">openlink-virtuoso</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Owncast.html">Owncast</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.p3k.html">p3k</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.paul.kinlan.me.html">paul.kinlan.me</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.PeerTube.html">PeerTube</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.pelican-activitypub.html">pelican-activitypub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.PieFed.html">PieFed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Pixelfed.html">Pixelfed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Pleroma.html">Pleroma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Plume.html">Plume</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Postmarks.html">Postmarks</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.shrimpkey.html">shrimpkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.shuttlecraft.html">shuttlecraft</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Simple Social Network.html">Simple Social Network</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Snac.html">Snac</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.socialhome.html">socialhome</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Streams.html">Streams</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Sutty.html">Sutty</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Takahē.html">Takahē</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Threads.html">Threads</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Transit Fedilerts.html">Transit Fedilerts</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.wafrn.html">wafrn</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Wildebeest.html">Wildebeest</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.WordPress + ActivityPub plugin.html">WordPress + ActivityPub plugin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.WriteFreely.html">WriteFreely</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.wxwClub.html">wxwClub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.zap.html">zap</a></div>
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_1__2_parameter_ordering_not_significant<wbr>::parameter_ordering</span>
+                        <span class="description">Parameter ordering is not significant.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link type not a valid media type: "template"</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Response 2 not same.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (2)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (7)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__14_must_only_redirect_to_https<wbr>::must_only_redirect_to_https</span>
+                        <span class="description">Test that if the server redirected, the final URL is an HTTPS URL.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo">
+    <div>[Errno 60] Operation timed out</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__2_perform_query<wbr>::normal_query</span>
+                        <span class="description">Perform a normal, simple query on an existing account.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link type not a valid media type: "template"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (2)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (7)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__3_requires_resource_uri<wbr>::requires_resource_uri_http_status</span>
+                        <span class="description">Do not accept requests with missing resource parameter: HTTP status.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400.</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__3_requires_resource_uri<wbr>::requires_resource_uri_jrd</span>
+                        <span class="description">Do not accept requests with missing resource parameter: JRD content.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::double_equals_http_status</span>
+                        <span class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</span>
+                    </td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::double_equals_jrd</span>
+                        <span class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::requires_valid_resource_uri_http_status</span>
+                        <span class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</span>
+                    </td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 400</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 4xx.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__4_do_not_accept_malformed_resource_parameters<wbr>::requires_valid_resource_uri_jrd</span>
+                        <span class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Returns JRD content.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__5_status_404_for_nonexisting_resources<wbr>::status_404_for_nonexisting_resources</span>
+                        <span class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_2__9_content_type<wbr>::returns_jrd_in_response_to_https</span>
+                        <span class="description">Test that a query over HTTPS produces a JRD.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4_5__1_any_uri_scheme_for_resource_identifiers<wbr>::any_uri_scheme_for_resource_identifiers</span>
+                        <span class="description">The server must accept resource identifiers provided in the query that use any scheme.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>Not HTTP status 404.</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_combined_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link type not a valid media type: "template"</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo">
+    <div>'links'</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (2)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (7)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not same or subset of links.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not same or subset of links.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_known_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link type not a valid media type: "template"</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo">
+    <div>'links'</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (2)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (7)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not same or subset of links.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not same or subset of links.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo">
+    <div>'links'</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__1_accepts_all_link_rels_in_query<wbr>::accepts_unknown_link_rels_in_query</span>
+                        <span class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link type not a valid media type: "template"</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo">
+    <div>'links'</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (2)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (7)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>WebFinger errors (3)</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Not same or subset of links.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Link rel value not absolute URI nor registered relation type: "salmon"</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Wrong HTTP content type.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.4__3_only_returns_jrd_in_response_to_https_requests<wbr>::does_not_return_jrd_in_response_to_http</span>
+                        <span class="description">Test that a query over HTTP does not produce a JRD.</span>
+                    </td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unaffected moreinfo">
+    <div>HTTP status 200.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+                <tr>
+                    <td class="namedesc">
+                        <span class="name">webfinger<wbr>.server<wbr>.5_1_cors_header_required<wbr>::cors_header_required</span>
+                        <span class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</span>
+                    </td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must problem moreinfo">
+    <div>Missing CORS header.</div>
+</td>
+
+<td class="status passed">
+    <div>Passed</div>
+</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                
+                <tr>
+                    <th>Test (alphabetical order)</th>
+                    <th>
+                        <div class="title"><a href="index.activity-relay.html">activity-relay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.ActivityRelay.html">ActivityRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Akkoma.html">Akkoma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.aoderelay.html">aoderelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.apogee.html">apogee</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.archivedon.html">archivedon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.birdsitelive.html">birdsitelive</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.bonfire.html">bonfire</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bookwyrm.html">Bookwyrm</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.bovine.html">bovine</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bridgy-Fed.html">Bridgy-Fed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.brighteon.html">brighteon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Bugle.html">Bugle</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.BuzzRelay.html">BuzzRelay</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.calckey.html">calckey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.capubara.html">capubara</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.castling.club.html">castling.club</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.catnip.html">catnip</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.catodon.html">catodon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Cherrypick.html">Cherrypick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Codename Merp.html">Codename Merp</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Comal.html">Comal</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.dailyrucks.html">dailyrucks</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Drupal.html">Drupal</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Emissary.html">Emissary</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.fedibird.html">fedibird</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Fedipage.html">Fedipage</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.firefish.html">firefish</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.fishkey.html">fishkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Forgejo.html">Forgejo</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.foundkey.html">foundkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Friendica.html">Friendica</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Funkwhale.html">Funkwhale</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Gancio.html">Gancio</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Gitea.html">Gitea</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.glitchcafe.html">glitchcafe</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.GNU Social.html">GNU Social</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.goblin.html">goblin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.GoToSocial.html">GoToSocial</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Guppe Groups.html">Guppe Groups</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.hometown.html">hometown</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Hubzilla.html">Hubzilla</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.iceshrimp.html">iceshrimp</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Immers Space.html">Immers Space</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.incestoma.html">incestoma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Juick.html">Juick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kbin.html">kbin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kitsune.html">kitsune</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kmyblue.html">kmyblue</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.kroeg.html">kroeg</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Lemmy.html">Lemmy</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.lockpick.html">lockpick</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.magnetar.html">magnetar</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mammuthus (Experimental).html">Mammuthus (Experimental)</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mastodon.html">Mastodon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.mbin.html">mbin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.meisskey.html">meisskey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Menzoberranzan.html">Menzoberranzan</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Micro.blog.html">Micro.blog</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Microblogpub.html">Microblogpub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Misskey.html">Misskey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mitra.html">Mitra</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Mobilizon.html">Mobilizon</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.momostr.html">momostr</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.moon-eyed.html">moon-eyed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.mostr.html">mostr</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.NodeBB.html">NodeBB</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.notestock.html">notestock</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.openlink-virtuoso.html">openlink-virtuoso</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Owncast.html">Owncast</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.p3k.html">p3k</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.paul.kinlan.me.html">paul.kinlan.me</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.PeerTube.html">PeerTube</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.pelican-activitypub.html">pelican-activitypub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.PieFed.html">PieFed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Pixelfed.html">Pixelfed</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Pleroma.html">Pleroma</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Plume.html">Plume</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Postmarks.html">Postmarks</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.shrimpkey.html">shrimpkey</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.shuttlecraft.html">shuttlecraft</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Simple Social Network.html">Simple Social Network</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Snac.html">Snac</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.socialhome.html">socialhome</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Streams.html">Streams</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Sutty.html">Sutty</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Takahē.html">Takahē</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Threads.html">Threads</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Transit Fedilerts.html">Transit Fedilerts</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.wafrn.html">wafrn</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.Wildebeest.html">Wildebeest</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.WordPress + ActivityPub plugin.html">WordPress + ActivityPub plugin</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.WriteFreely.html">WriteFreely</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.wxwClub.html">wxwClub</a></div>
+                    </th>
+                    <th>
+                        <div class="title"><a href="index.zap.html">zap</a></div>
+                    </th>
+                </tr>
+
+            </thead>
+        </table>
+    </div>
+
+        </div>
+        <div id="metadata" class="feditest module metadata">
+            <h2>Test Run Metadata</h2>
+<div class="feditest metadata">
+    <table>
+        <tbody>
+            <tr>
+                <th>Started</th>
+                <td>2024-06-16T22:41:50.982776+00:00</td>
+            </tr>
+            <tr>
+                <th>Ended</th>
+                <td>2024-06-16T22:58:18.506613+00:00 (total: 0:16:27.523837)</td>
+            </tr>
+            <tr>
+                <th>Platform</th>
+                <td>macOS-14.5-arm64-arm-64bit</td>
+            </tr>
+            <tr>
+                <th>Feditest&nbsp;version</th>
+                <td>0.0.2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    <footer>
+        <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+           <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>pelican-activitypub | Feditest</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        >
+        <!-- The page will be in sessions/(session).html -->
+        <link rel="stylesheet" href="feditest.css">
+    </head>
+    <body>
+
+<header class="feditest title" style="text-align: center">
+  <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a>:</span> pelican-activitypub</h1>
+  <p class="id">feditest-run-2024-06-16T22-41-50.971358Z [<a href="index.html">Test Matrix</a>] </p>
+</header>
+        <nav class="matrix">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#metadata">Metadata</a></li>
+            </ul>
+        </nav>
+        <div id="summary" class="feditest module summary">
+            <h2>Test Run Summary</h2>
+    <table class="feditest summary">
+       <thead>
+            <tr>
+                <th>Status</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Passed</th>
+                <td class="status passed">
+                    <div>2</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Failed</th>
+                <td class="status failed">
+                    <table class="failed">
+                        <thead>
+                            <tr>
+                                <td colspan="2" rowspan="2"></td>
+                                <th colspan="5">Interoperability</th>
+                            </tr>
+                            <tr>
+                                <th>Compromised</th>
+                                <th>Degraded</th>
+                                <th>Unaffected</th>
+                                <th>Unknown</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="5">Conformance</th>
+                                <th>Must</th>
+                                <td class="status must problem moreinfo">
+                                    <div>9</div>
+                                </td>
+                                <td class="status must degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status must unaffected moreinfo">
+                                    <div>5</div>
+                                </td>
+                                <td class="status must unknown moreinfo">
+                                    <div>1</div>
+                                </td>
+                                <td class="status must total">
+                                    <div>15</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Should</th>
+                                <td class="status should problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Implied</th>
+                                <td class="status implied problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Unspecified</th>
+                                <td class="status unspecified problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td class="status problem total">
+                                    <div>9</div>
+                                </td>
+                                <td class="status degraded total">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unaffected total">
+                                    <div>5</div>
+                                </td>
+                                <td class="status unknown total">
+                                    <div>1</div>
+                                </td>
+                                <td class="status total">
+                                    <div>15</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Skipped</th>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Errors</th>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>
+                    <div>17</div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+        </div>
+        <div id="results" class="feditest module results">
+
+    <h2>Constellation</h2>
+    <div class="roles">
+
+        <div class="role">
+            <div class="name">client</div>
+            <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+            <div class="app">Imp</div>
+            <div class="appversion">0.0.2</div>
+        </div>
+
+        <div class="role">
+            <div class="name">server</div>
+            <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+            <div class="app">pelican-activitypub</div>
+            <div class="appversion">?</div>
+            <table class="parameters">
+                <thead>
+                    <tr>
+                        <th colspan="2">Parameters:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="key">app</td>
+                        <td class="value">pelican-activitypub</td>
+                    </tr>
+                    <tr>
+                        <td class="key">hostname</td>
+                        <td class="value">s3lph.me</td>
+                    </tr>
+                    <tr>
+                        <td class="key">existing-account-uri</td>
+                        <td class="value">acct:s3lph@s3lph.me</td>
+                    </tr>
+                    <tr>
+                        <td class="key">nonexisting-account-uri</td>
+                        <td class="value">acct:does-not-exist@s3lph.me</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>Test Results</h2>
+    <div class="feditest tests">
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+            <div class="description">Parameter ordering is not significant.</div>
+            <p class="when">Started 2024-06-16T22:55:18.792460+00:00, ended 2024-06-16T22:55:19.618174+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-510">Wrong HTTP content type.</label>
+    <input id="details-510" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong HTTP content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self". -> "application/json; charset=utf-8"
+Expected: None
+     but: was <Wrong HTTP content type.
+ -> "application/json; charset=utf-8">
+../feditest-tests-fediverse//tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:30</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+            <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+            <p class="when">Started 2024-06-16T22:55:19.619317+00:00, ended 2024-06-16T22:55:20.229230+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+            <div class="description">Perform a normal, simple query on an existing account.</div>
+            <p class="when">Started 2024-06-16T22:55:20.229292+00:00, ended 2024-06-16T22:55:20.810399+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-511">Wrong HTTP content type.</label>
+    <input id="details-511" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong HTTP content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me". -> "application/json; charset=utf-8"
+Expected: None
+     but: was <Wrong HTTP content type.
+ -> "application/json; charset=utf-8">
+../feditest-tests-fediverse//tests/webfinger/server/4_2__2_perform_query.py:19</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+            <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+            <p class="when">Started 2024-06-16T22:55:20.811237+00:00, ended 2024-06-16T22:55:21.415665+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-512">Not HTTP status 400.</label>
+    <input id="details-512" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 400.
+Accessed URI: "https://s3lph.me/.well-known/webfinger".
+Expected: <400>
+     but: was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__3_requires_resource_uri.py:32</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+            <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+            <p class="when">Started 2024-06-16T22:55:21.416818+00:00, ended 2024-06-16T22:55:22.048632+00:00</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-513">Returns JRD content.</label>
+    <input id="details-513" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Returns JRD content.
+Accessed URI: "https://s3lph.me/.well-known/webfinger".
+../feditest-tests-fediverse//tests/webfinger/server/4_2__3_requires_resource_uri.py:71</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+            <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+            <p class="when">Started 2024-06-16T22:55:22.050122+00:00, ended 2024-06-16T22:55:22.622638+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-514">Not HTTP status 4xx.</label>
+    <input id="details-514" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 4xx.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource==acct%3As3lph%40s3lph.me".
+Expected: (a value greater than or equal to <400> and a value less than <500>)
+     but: a value greater than or equal to <400> was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:95</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+            <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+            <p class="when">Started 2024-06-16T22:55:22.623870+00:00, ended 2024-06-16T22:55:23.227296+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-515">Returns JRD content.</label>
+    <input id="details-515" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Returns JRD content.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource==acct%3As3lph%40s3lph.me".
+../feditest-tests-fediverse//tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:129</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+            <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+            <p class="when">Started 2024-06-16T22:55:23.228523+00:00, ended 2024-06-16T22:55:23.835921+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-516">Not HTTP status 4xx.</label>
+    <input id="details-516" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 4xx.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=s3lph@s3lph.me".
+Expected: (a value greater than or equal to <400> and a value less than <500>)
+     but: a value greater than or equal to <400> was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:28</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+            <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+            <p class="when">Started 2024-06-16T22:55:23.841514+00:00, ended 2024-06-16T22:55:24.415206+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-517">Returns JRD content.</label>
+    <input id="details-517" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Returns JRD content.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=s3lph@s3lph.me".
+../feditest-tests-fediverse//tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:63</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+            <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+            <p class="when">Started 2024-06-16T22:55:24.416355+00:00, ended 2024-06-16T22:55:25.033463+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-518">HTTP status 200.</label>
+    <input id="details-518" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: HTTP status 200.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3Adoes-not-exist%40s3lph.me".
+Expected: (a value greater than or equal to <300> or a value less than <200>)
+     but: was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:21</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+            <div class="description">Test that a query over HTTPS produces a JRD.</div>
+            <p class="when">Started 2024-06-16T22:55:25.034796+00:00, ended 2024-06-16T22:55:25.627657+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-519">Wrong content type.</label>
+    <input id="details-519" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me".
+Expected: ('application/jrd+json' or a string starting with 'application/jrd+json;' or a string starting with 'application/xml')
+     but: was 'application/json; charset=utf-8'
+../feditest-tests-fediverse//tests/webfinger/server/4_2__9_content_type.py:28</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+            <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+            <p class="when">Started 2024-06-16T22:55:25.628855+00:00, ended 2024-06-16T22:55:26.284005+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-520">HTTP status 200.</label>
+    <input id="details-520" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: HTTP status 200.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+Expected: (a value greater than or equal to <300> or a value less than <200>)
+     but: was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:26</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+            <p class="when">Started 2024-06-16T22:55:26.284966+00:00, ended 2024-06-16T22:55:26.898326+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-521">Wrong HTTP content type.</label>
+    <input id="details-521" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong HTTP content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me". -> "application/json; charset=utf-8"
+Expected: None
+     but: was <Wrong HTTP content type.
+ -> "application/json; charset=utf-8">
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:149</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+            <p class="when">Started 2024-06-16T22:55:26.899456+00:00, ended 2024-06-16T22:55:27.479946+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-522">Wrong HTTP content type.</label>
+    <input id="details-522" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong HTTP content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me". -> "application/json; charset=utf-8"
+Expected: None
+     but: was <Wrong HTTP content type.
+ -> "application/json; charset=utf-8">
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:66</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+            <p class="when">Started 2024-06-16T22:55:27.481095+00:00, ended 2024-06-16T22:55:28.049618+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-523">Wrong HTTP content type.</label>
+    <input id="details-523" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Wrong HTTP content type.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me". -> "application/json; charset=utf-8"
+Expected: None
+     but: was <Wrong HTTP content type.
+ -> "application/json; charset=utf-8">
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:108</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+            <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+            <p class="when">Started 2024-06-16T22:55:28.050282+00:00, ended 2024-06-16T22:55:28.426171+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+            <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+            <p class="when">Started 2024-06-16T22:55:28.426215+00:00, ended 2024-06-16T22:55:28.993458+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-524">Missing CORS header.</label>
+    <input id="details-524" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Missing CORS header.
+Accessed URI: "https://s3lph.me/.well-known/webfinger?resource=acct%3As3lph%40s3lph.me".
+Not present: "access-control-allow-origin".
+../feditest-tests-fediverse//tests/webfinger/server/5_1_cors_header_required.py:19</pre>
+</div>
+        </div>
+    </div>
+        </div>
+        <div id="metadata" class="feditest module metadata">
+            <h2>Test Run Metadata</h2>
+<div class="feditest metadata">
+    <table>
+        <tbody>
+            <tr>
+                <th>Started</th>
+                <td>2024-06-16T22:55:18.792409+00:00</td>
+            </tr>
+            <tr>
+                <th>Ended</th>
+                <td>2024-06-16T22:55:28.994597+00:00 (total: 0:00:10.202188)</td>
+            </tr>
+            <tr>
+                <th>Platform</th>
+                <td>macOS-14.5-arm64-arm-64bit</td>
+            </tr>
+            <tr>
+                <th>Feditest&nbsp;version</th>
+                <td>0.0.2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    <footer>
+        <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+           <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+    </footer>
+    </body>
+</html>

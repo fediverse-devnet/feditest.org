@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>GNU Social | Feditest</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        >
+        <!-- The page will be in sessions/(session).html -->
+        <link rel="stylesheet" href="feditest.css">
+    </head>
+    <body>
+
+<header class="feditest title" style="text-align: center">
+  <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a>:</span> GNU Social</h1>
+  <p class="id">feditest-run-2024-06-16T22-41-50.971358Z [<a href="index.html">Test Matrix</a>] </p>
+</header>
+        <nav class="matrix">
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#metadata">Metadata</a></li>
+            </ul>
+        </nav>
+        <div id="summary" class="feditest module summary">
+            <h2>Test Run Summary</h2>
+    <table class="feditest summary">
+       <thead>
+            <tr>
+                <th>Status</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Passed</th>
+                <td class="status passed">
+                    <div>8</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Failed</th>
+                <td class="status failed">
+                    <table class="failed">
+                        <thead>
+                            <tr>
+                                <td colspan="2" rowspan="2"></td>
+                                <th colspan="5">Interoperability</th>
+                            </tr>
+                            <tr>
+                                <th>Compromised</th>
+                                <th>Degraded</th>
+                                <th>Unaffected</th>
+                                <th>Unknown</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="5">Conformance</th>
+                                <th>Must</th>
+                                <td class="status must problem moreinfo">
+                                    <div>5</div>
+                                </td>
+                                <td class="status must degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status must unaffected moreinfo">
+                                    <div>4</div>
+                                </td>
+                                <td class="status must unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status must total">
+                                    <div>9</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Should</th>
+                                <td class="status should problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status should total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Implied</th>
+                                <td class="status implied problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status implied total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Unspecified</th>
+                                <td class="status unspecified problem moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified degraded moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unaffected moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified unknown moreinfo">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unspecified total">
+                                    <div>0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td class="status problem total">
+                                    <div>5</div>
+                                </td>
+                                <td class="status degraded total">
+                                    <div>0</div>
+                                </td>
+                                <td class="status unaffected total">
+                                    <div>4</div>
+                                </td>
+                                <td class="status unknown total">
+                                    <div>0</div>
+                                </td>
+                                <td class="status total">
+                                    <div>9</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Skipped</th>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+            <tr>
+                <th>Errors</th>
+                <td>
+                    <div>0</div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>
+                    <div>17</div>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+        </div>
+        <div id="results" class="feditest module results">
+
+    <h2>Constellation</h2>
+    <div class="roles">
+
+        <div class="role">
+            <div class="name">client</div>
+            <div class="driver"><span title="imp.ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+            <div class="app">Imp</div>
+            <div class="appversion">0.0.2</div>
+        </div>
+
+        <div class="role">
+            <div class="name">server</div>
+            <div class="driver"><span title="saas.SaasFediverseNodeDriver">SaasFediverseNodeDriver</span></div>
+            <div class="app">GNU Social</div>
+            <div class="appversion">?</div>
+            <table class="parameters">
+                <thead>
+                    <tr>
+                        <th colspan="2">Parameters:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="key">app</td>
+                        <td class="value">GNU Social</td>
+                    </tr>
+                    <tr>
+                        <td class="key">hostname</td>
+                        <td class="value">gnusocial.net</td>
+                    </tr>
+                    <tr>
+                        <td class="key">existing-account-uri</td>
+                        <td class="value">acct:administrator@gnusocial.net</td>
+                    </tr>
+                    <tr>
+                        <td class="key">nonexisting-account-uri</td>
+                        <td class="value">acct:does-not-exist@gnusocial.net</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>Test Results</h2>
+    <div class="feditest tests">
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+            <div class="description">Parameter ordering is not significant.</div>
+            <p class="when">Started 2024-06-16T22:48:49.456739+00:00, ended 2024-06-16T22:48:50.375370+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-272">WebFinger errors (7)</label>
+    <input id="details-272" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: WebFinger errors (7)
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self".
+0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+3: Link type not a valid media type: "RSA"
+4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+6: Link rel value not absolute URI nor registered relation type: "salmon"
+Expected: None
+     but: was <WebFinger errors (7 sub-exceptions)>
+../feditest-tests-fediverse//tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:30</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+            <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+            <p class="when">Started 2024-06-16T22:48:50.376600+00:00, ended 2024-06-16T22:48:51.121518+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+            <div class="description">Perform a normal, simple query on an existing account.</div>
+            <p class="when">Started 2024-06-16T22:48:51.121555+00:00, ended 2024-06-16T22:48:51.826084+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-273">WebFinger errors (7)</label>
+    <input id="details-273" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: WebFinger errors (7)
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+3: Link type not a valid media type: "RSA"
+4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+6: Link rel value not absolute URI nor registered relation type: "salmon"
+Expected: None
+     but: was <WebFinger errors (7 sub-exceptions)>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__2_perform_query.py:19</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+            <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+            <p class="when">Started 2024-06-16T22:48:51.828197+00:00, ended 2024-06-16T22:48:52.506758+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-274">Not HTTP status 400.</label>
+    <input id="details-274" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 400.
+Accessed URI: "https://gnusocial.net/.well-known/webfinger".
+Expected: <400>
+     but: was <500>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__3_requires_resource_uri.py:32</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+            <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+            <p class="when">Started 2024-06-16T22:48:52.508227+00:00, ended 2024-06-16T22:48:53.169390+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+            <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+            <p class="when">Started 2024-06-16T22:48:53.169426+00:00, ended 2024-06-16T22:48:53.864029+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+            <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+            <p class="when">Started 2024-06-16T22:48:53.864128+00:00, ended 2024-06-16T22:48:54.555008+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+            <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+            <p class="when">Started 2024-06-16T22:48:54.555092+00:00, ended 2024-06-16T22:48:55.256778+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-275">Not HTTP status 4xx.</label>
+    <input id="details-275" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 4xx.
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=administrator@gnusocial.net".
+Expected: (a value greater than or equal to <400> and a value less than <500>)
+     but: a value greater than or equal to <400> was <200>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:28</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+            <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+            <p class="when">Started 2024-06-16T22:48:55.258542+00:00, ended 2024-06-16T22:48:55.919461+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+            <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+            <p class="when">Started 2024-06-16T22:48:55.919506+00:00, ended 2024-06-16T22:48:56.632596+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-276">Not HTTP status 404.</label>
+    <input id="details-276" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 404.
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Adoes-not-exist%40gnusocial.net".
+Expected: <404>
+     but: was <400>
+../feditest-tests-fediverse//tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:30</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+            <div class="description">Test that a query over HTTPS produces a JRD.</div>
+            <p class="when">Started 2024-06-16T22:48:56.634818+00:00, ended 2024-06-16T22:48:57.280278+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+            <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+            <p class="when">Started 2024-06-16T22:48:57.280374+00:00, ended 2024-06-16T22:48:57.976670+00:00</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-277">Not HTTP status 404.</label>
+    <input id="details-277" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: Not HTTP status 404.
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=mailto%3Aabc%40def.com".
+Expected: <404>
+     but: was <500>
+../feditest-tests-fediverse//tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:35</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+            <p class="when">Started 2024-06-16T22:48:57.978761+00:00, ended 2024-06-16T22:48:58.641933+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-278">WebFinger errors (7)</label>
+    <input id="details-278" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: WebFinger errors (7)
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+3: Link type not a valid media type: "RSA"
+4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+6: Link rel value not absolute URI nor registered relation type: "salmon"
+Expected: None
+     but: was <WebFinger errors (7 sub-exceptions)>
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:149</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+            <p class="when">Started 2024-06-16T22:48:58.644002+00:00, ended 2024-06-16T22:48:59.317113+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-279">WebFinger errors (7)</label>
+    <input id="details-279" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: WebFinger errors (7)
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+3: Link type not a valid media type: "RSA"
+4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+6: Link rel value not absolute URI nor registered relation type: "salmon"
+Expected: None
+     but: was <WebFinger errors (7 sub-exceptions)>
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:66</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+            <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+            <p class="when">Started 2024-06-16T22:48:59.319068+00:00, ended 2024-06-16T22:48:59.988493+00:00</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-280">WebFinger errors (7)</label>
+    <input id="details-280" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: WebFinger errors (7)
+Accessed URI: "https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net".
+0: Link rel value not absolute URI nor registered relation type: "magic-public-key"
+1: Link href not a URI: "data:application/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB"
+2: Link rel value not absolute URI nor registered relation type: "diaspora-public-key"
+3: Link type not a valid media type: "RSA"
+4: Link href not a URI: "LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0="
+5: Link href not a URI: "a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982"
+6: Link rel value not absolute URI nor registered relation type: "salmon"
+Expected: None
+     but: was <WebFinger errors (7 sub-exceptions)>
+../feditest-tests-fediverse//tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:108</pre>
+</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+            <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+            <p class="when">Started 2024-06-16T22:48:59.992280+00:00, ended 2024-06-16T22:49:00.403041+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+        <div class="test">
+            <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+            <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+            <p class="when">Started 2024-06-16T22:49:00.403121+00:00, ended 2024-06-16T22:49:01.074676+00:00</p>
+<div class="status passed">Passed</div>
+        </div>
+    </div>
+        </div>
+        <div id="metadata" class="feditest module metadata">
+            <h2>Test Run Metadata</h2>
+<div class="feditest metadata">
+    <table>
+        <tbody>
+            <tr>
+                <th>Started</th>
+                <td>2024-06-16T22:48:49.456682+00:00</td>
+            </tr>
+            <tr>
+                <th>Ended</th>
+                <td>2024-06-16T22:49:01.074720+00:00 (total: 0:00:11.618038)</td>
+            </tr>
+            <tr>
+                <th>Platform</th>
+                <td>macOS-14.5-arm64-arm-64bit</td>
+            </tr>
+            <tr>
+                <th>Feditest&nbsp;version</th>
+                <td>0.0.2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    <footer>
+        <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+           <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+    </footer>
+    </body>
+</html>
