@@ -10,7 +10,6 @@ But we may link to some interesting results produced by the community here.
 Have some? {{% pageref "/" "Catch us" %}} in the Fediverse or on Matrix.
 
 * Jun 16, 2024, Steve Bate and Johannes Ernst:
-  **[WebFinger Server tests of 39 Fediverse SaaS applications](/contrib/results/2024-06-16/)**.
-
+  **[WebFinger Server tests of 95 Fediverse SaaS applications](/contrib/results/2024-06-16/)**.
 
 
