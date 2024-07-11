@@ -23,12 +23,16 @@ table.support img {
 }
 </style>
 
-FediTest is a collaborative open-source project to test interoperability in the
-Fediverse.
+## Core developers
 
-<div style="height: 1em"></div>
+* [Johannes Ernst](https://j12t.org/)
+* [Steve Bate](https://www.stevebate.net/)
 
-Repos:
+## Contributors
+
+tbd
+
+## Repositories
 
 * [github.com/fediverse-devnet/feditest](https://github.com/fediverse-devnet/feditest/): the FediTest
   test framework for testing [peer computing systems](https://peercomputing.org/)
@@ -43,15 +47,13 @@ Repos:
 
 * [github.com/fediverse-devnet/feditest.org](https://github.com/fediverse-devnet/feditest.org/): this site.
 
-<div style="height: 1em"></div>
-
-Chat:
+## Chat
 
 * On Matrix: [#fediverse-testing:matrix.org](https://matrix.to/#/%23fediverse-testing:matrix.org)
 
 Contributions welcome! Chat with us first so we don't duplicate work.
 
-<div style="height: 1em"></div>
+## Support
 
 We gratefully acknowledge support from the following organizations:
 
