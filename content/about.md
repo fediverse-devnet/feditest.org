@@ -30,7 +30,7 @@ table.support img {
 
 ## Contributors
 
-tbd
+* [Matthew Exon](https://mat.exon.name/)
 
 ## Repositories
 
