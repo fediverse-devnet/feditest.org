@@ -30,13 +30,17 @@ table.support img {
 
 ## Contributors
 
+* [Ryan Barrett](https://snarfed.org/)
+* Tim Chambers
+* [Matthias Pfefferle](https://pfefferle.dev/)
 * [Matthew Exon](https://mat.exon.name/)
+
+(reach out if you contributed and would like to be listed here)
 
 ## Repositories
 
 * [github.com/fediverse-devnet/feditest](https://github.com/fediverse-devnet/feditest/): the FediTest
-  test framework for testing [peer computing systems](https://peercomputing.org/)
-  (i.e. decentralized, heterogeneous systems based on symmetric interactions between the primary nodes)
+  test framework for testing distributed, heterogeneous systems with complex protocols
   such as the Fediverse.
 
 * [github.com/fediverse-devnet/feditest-tests-fediverse](https://github.com/fediverse-devnet/feditest-tests-fediverse/):
