@@ -34,6 +34,7 @@ table.support img {
 * Tim Chambers
 * [Matthias Pfefferle](https://pfefferle.dev/)
 * [Matthew Exon](https://mat.exon.name/)
+* [André Jaenisch](https://jaenis.ch/)
 
 (reach out if you contributed and would like to be listed here)
 
