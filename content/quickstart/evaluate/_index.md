@@ -25,7 +25,7 @@ you just opened in directory `tests/webfinger/server`.
 ## If you have 60-90 minutes ...
 
 {{% warning %}}
-Coming soon past version 0.2. The documentation is ahead of the code! When has that ever happened?
+Coming soon past version ~~0.2~~ 0.3. The documentation is ahead of the code! When has that ever happened?
 But here we are.
 {{% /warning %}}
 
