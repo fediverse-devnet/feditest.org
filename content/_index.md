@@ -38,7 +38,7 @@ Testing distributed, heterogeneous systems...
 {{% /box %}}
 
 {{% note %}}
-FediTest is at version 0.2. Given this version number, expect functionality to be missing.
+FediTest is at version 0.3. Given this version number, expect functionality to be missing.
 And of what exists, do not expect everything to be particularly polished or complete.
 {{% /note %}}
 
