@@ -1,5 +1,6 @@
 ---
 title: The various JSON files used by FediTest
+weight: 10
 ---
 
 FediTest makes use of a number of types of JSON files for different purposes. This page
