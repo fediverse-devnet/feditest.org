@@ -10,6 +10,8 @@ attempts to explain them.
   {{% gl NodeDriver %}} and potentially a number of addition parameters, such as
   names of accounts on that {{% gl Node %}} or its hostname.
 
+  Syntax for how to {{% pageref "json-files/node.md" "define Nodes" %}}.
+
 * **Constellation Definition**: A JSON file that includes one ore more {{% gl Node %}}
   definition JSON files, and arranges them into a {{% gl Constellation %}} definition
   that can be used for a {{% gl TestPlanSession %}}.
