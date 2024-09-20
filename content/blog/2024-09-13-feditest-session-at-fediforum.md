@@ -11,9 +11,11 @@ authorurl: https://j12t.org/
 Fediverse forward". It took place for the fourth time September 12-14, 2024, online.
  (Disclaimer: I'm an organizer.)
 
-Naturally, I ran a session on FediTest there. We had a number of Fediverse developers
-there, including [Ryan Barrett](https://snarfed.org) and
-[Jesse Karmani](https://github.com/jesseplusplus). (There were others but following
+Naturally, I ran a session on FediTest there. [Steve Bate](https://www.stevebate.net/) was
+there as well.
+
+We had a number of Fediverse developers there, including [Ryan Barrett](https://snarfed.org)
+and [Jesse Karmani](https://github.com/jesseplusplus). (There were others but following
 FediForum conventions, I don't want to publish their names as they didn't add their
 names to the public attendee list of the session.)
 
