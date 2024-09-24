@@ -2,10 +2,10 @@
 title: What's the role of UBOS in Feditest?
 ---
 
-[UBOS](https://ubos.net/) has some unique features that are very helpful for testing
-Fediverse applications, such as:
+[UBOS](https://ubos.net/) -- specifically UBOS Gears -- has some unique features that are
+very helpful for testing Fediverse applications, such as:
 
-* UBOS knows how to install and configure complex server-side applications with a
+* UBOS Gears knows how to install and configure complex server-side applications with a
   single command. For example, a single `ubos-admin deploy` can deploy Mastodon,
   configure the web server, set up TLS, provision a database, start the required
   background daemons, hook it all up and create an admin user etc. So setting up a

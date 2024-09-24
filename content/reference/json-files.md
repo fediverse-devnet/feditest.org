@@ -41,10 +41,13 @@ attempts to explain them.
 
   A {{% gl TestRun %}} transcript is produced by `feditest run`.
 
-* **Reports** can be produced in various formats with `feditest convert-transcript` from
+* **Report**: a {{% gl report %}} can be produced in various formats with `feditest convert-transcript` from
   any {{% gl TestRun %}} Transcript.
 
 This flow is shown graphically below:
 
 {{% img style="text-align: center" src="/assets/reference/json-data-flow.png" alt="JSON data flow" %}}
 
+While it is useful to be able to run these commands separately, and for understanding
+FediTest, "later" commands now also understand the options of the "earlier" ones, so
+several steps can be run as one command.

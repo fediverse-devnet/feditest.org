@@ -4,7 +4,7 @@ breadcrumbtitle: Getting a taste
 weight: 10
 ---
 
-## If you have 10 minutes...
+## If you have 10-15 minutes...
 
 {{% include-md file="includes/install/local.md" %}}
 
@@ -12,10 +12,14 @@ weight: 10
 permission, such as your own Mastodon account.
 
   ```
-  $ feditest run --testplan examples/testplans/webfinger-server-imp-vs-saas-any.json --html quickstart-results.html
+  $ feditest run \
+    --testplan examples/testplans/webfinger-server-imp-vs-saas-any.json \
+    --html quickstart-results.html
   ```
 
-  It will ask you a few questions (you are running a generic {{% gl TestPlan %}} after all).
+  It will ask you a few questions (you are running a {{% gl TestPlan %}} that doesn't know
+  anything about which {{% gl app %}} you are testing at which hostname with which accounts,
+  so it needs to ask).
   Make sure to enter account identifiers with an `acct:` scheme, such as `acct:myaccount@example.com`.
 
 * Open the generated HTML file `quickstart-results.html`. You find the tests whose results
@@ -23,11 +27,6 @@ you just opened in directory `tests/webfinger/server`.
 
 
 ## If you have 60-90 minutes ...
-
-{{% warning %}}
-Coming soon past version ~~0.2~~ 0.3. The documentation is ahead of the code! When has that ever happened?
-But here we are.
-{{% /warning %}}
 
 ... then we can do better than just one-sided WebFinger tests. Instead we will test
 how Mastodon interacts with WordPress's ActivityPub support with brand-new instances
@@ -41,7 +40,9 @@ optimized for automating installation and configuration of web applications.
   Mastodon and WordPress with the ActivityPub plugin, and then executes a series of tests.
 
   ```
-  $ feditest run --testplan examples/testplans/fediverse-follow-mastodon-local-ubos-vs-wordpress-local-ubos.js --html quickstart-results.html
+  $ feditest run \
+    --testplan examples/testplans/fediverse-follow-mastodon-local-ubos-vs-wordpress-local-ubos.json \
+    --html quickstart-results.html
   ```
 
 * Open the generated HTML file `quickstart-results.html`. You can use pre-installed

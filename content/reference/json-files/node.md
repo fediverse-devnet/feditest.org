@@ -44,7 +44,8 @@ Field `accounts`:
 : Lists the accounts that already exist on this {{% gl Node %}} and that FediTest may
   use without having to create them first. This field is optional. This is useful if
   you want to use an already-running {{% gl SaaS %}} {{% gl Node %}} for testing on which
-  you manually created certain accounts that can be used for testing.
+  you manually created certain accounts that can be used for testing, and you don't want
+  to have to re-enter them into FediTest on every run.
 
 Field `non_existing_accounts`:
 : Lists some "accounts" that do not exist on this {{% gl Node %}} but could. This is useful

@@ -19,7 +19,7 @@
   </div>
 {{   end }}
 
-{{   $p := ( .Paginate ( where ( where .Pages "Params.display" "!=" "hide" ) "Params.display" "!=" "false" )) }}
+{{   $p := ( .Paginate ( where ( where .Pages "Params.display" "!=" "hide" ) "Params.display" "!=" "false" ) 20 ) }}
 {{   partial "paginate-buttons.html" $p }}
 {{   partial "range-ul-date.html" $p.Pages.ByWeight }}
 {{   partial "paginate-buttons.html" $p }}

@@ -19,3 +19,5 @@ at different virtual hostnames, but all using standard ports.
 It also allows you to easily add TLS certificates to your setup as you can simply
 add them to your webserver's configuration.
 
+P.S. Sounds anything but simple? It actually is quite straightforward once you have
+done it once. In doubt, find us [in chat](/about/#chat).
