@@ -17,3 +17,5 @@ Here are some examples that FediTest considers an App in our terminology:
 
 Note: Our use of the term App is not restricted to mobile apps, or apps on desktop-class
 or laptop-class computers.
+
+For the purposes of FediTest, an App runs on a {{% gl Node %}}.

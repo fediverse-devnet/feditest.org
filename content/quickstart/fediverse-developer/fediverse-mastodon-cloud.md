@@ -1,13 +1,11 @@
 ---
-title: Run some ActivityPub tests with a Mastodon partner node and your application in the cloud
+title: Run some ActivityPub tests with a Mastodon partner node and your application in the cloud (future)
 breadcrumbtitle: Run ActivityPub tests with cloud Mastodon
-weight: 20
+weight: 40
 ---
 
-{{% warning %}}
-Coming soon past version 0.2. The documentation is ahead of the code! When has that ever happened?
-But here we are.
-{{% /warning %}}
+{{% warning %}} Coming soon past version 0.4. The documentation is ahead of the code! When
+has that ever happened? But here we are. P.S: this page will likely change, too.{{% /warning %}}
 
 Other than WebFinger, for almost anything interesting to happen in the Fediverse, we need
 at least two servers that can perform HTTPS operations on each other. For example, a "follow"
@@ -24,14 +22,17 @@ This makes the FediTest setup more complicated. Here is one setup with moderate 
   This could be because you have it installed on some server that's accessible for the
   internet, or you tunnel a public DNS name to localhost.
 
-* You (perhaps temporarily) run an {{% gl ubosserver %}} that is also publicly accessible.
+* You (perhaps temporarily) run a server with {{% gl ubosgears %}} that is also publicly accessible.
   Setting this up takes only a few minutes by clicking through the Amazon EC2 wizard that is
   described and linked to from [here](https://ubos.net/docs/operation/installation/x86_ec2/).
 
-* Set up a an official DNS hostname for that {{% gl ubosserver %}} and make sure you wait
+* Set up a an official DNS hostname for that server and make sure you wait
   long enough for DNS information to propagate.
 
 ## Create a TestPlan that uses your {{% gl Constellation %}}
+
+The {{% gl Constellation %}} for the example here consists of two {{% gls Node %}}, one running your
+own {{% gl app %}} and one running Mastodon in the cloud.
 
 * Copy a suitable {{% gl TestPlan %}} as a point of departure, such as:
 

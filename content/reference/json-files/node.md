@@ -3,7 +3,7 @@ title: Node definition syntax
 ---
 
 A {{% gl Node %}} definition captures everything FediTest needs to know to interact
-with, and --potentially -- provision and deprovision an {{% gl app %}}.
+with, and -- potentially -- provision and deprovision an {{% gl app %}}.
 
 The syntax is as follows:
 

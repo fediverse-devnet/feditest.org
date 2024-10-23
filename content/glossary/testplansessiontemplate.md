@@ -1,10 +1,10 @@
 ---
 title: Test Plan Session Template
 plural: Test Plan Session Templates
-summary: A sequence of tests to run with no assigned Constellation.
+summary: A sequence of tests to run without specifying the Constellation.
 seealsoterm: [
     'Constellation',
-    'TestPlanSession'
+    'TestRun'
 ]
 ---
 

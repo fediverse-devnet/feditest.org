@@ -14,21 +14,20 @@ attempts to explain them.
 
 * **Constellation Definition**: A JSON file that includes one ore more {{% gl Node %}}
   definition JSON files, and arranges them into a {{% gl Constellation %}} definition
-  that can be used for a {{% gl TestPlanSession %}}.
+  that can be used in a {{% gl TestPlan %}}.
 
   A {{% gl Constellation %}} definition can be created from {{% gl Node %}} definition
   JSON files with `feditest create-constellation`.
 
-* **Test Plan Session Template**: A JSON file that contains a list of tests to run,
-  and information about the structure of the the {{% gl Constellation %}} required to
-  run those tests. The {{% gl TestPlanSessionTemplate %}} does not yet assign
-  an actual {{% gl Constellation %}} to it.
+* **Test Plan Session Template**: A JSON file that contains a list of tests to run.
+  The {{% gl TestPlanSessionTemplate %}} does assign a {{% gl Constellation %}} to it.
 
   A {{% gl TestPlanSessionTemplate %}} JSON file can be created from tests found by
   FediTest with `feditest create-session-template`.
 
-* **Test Plan**: A JSON file that defines a sequence of {{% gls TestPlanSession %}},
-  each of which is a sequence of tests to run against a particular {{% gl Constellation %}}.
+* **Test Plan**: A JSON file that combines a {{% gl TestPlanSessionTemplate %}} with
+  one or more {{% gl Constellation %}} definitions, so the tests in the
+  {{% gl TestPlanSessionTemplate %}} are run once with each {{% gl Constellation %}}.
 
   A {{% gl TestPlan %}} JSON file can be created from a {{% gl TestPlanSessionTemplate %}}
   JSON file and one more more {{% gl Constellation %}} JSON files with

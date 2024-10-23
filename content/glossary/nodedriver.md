@@ -9,9 +9,9 @@ seealsoterm: [
 
 Node Drivers have been implemented in various ways already, from the entirely manual
 ("Dear user, please now install application X somewhere and enter its DNS name") to
-the automated (see {{% gl ubosserver %}}).
+the automated (via {{% gl ubosgears %}}).
 
-In the code, there are actually two abstractions:
+In the code, there are two key abstractions:
 
 * `NodeDriver`: knows how to provision and unprovision {{% gls Node %}}, i.e. set up
   and tear down {{% gl app %}} instances.

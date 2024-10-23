@@ -15,8 +15,8 @@ to decide otherwise if somebody's reasoning is better than our own.
 We have no current plans to do so.
 
 **Reasoning:** The percentage of tests that we can fully automate is small as a fraction of
-all interesting tests. We can automate some of it. For example, we can automate WebFinger
-server tests as we have already, and we can use the
+all interesting tests. We already automate some of them. For example, we can automate
+WebFinger server tests as we have already, and we can use the
 Mastodon client API to "script" certain actions for a Mastodon instance to take, like
 follow another account or make a post. Many of the so far about 100 Fediverse
 applications we have identified do not have an equivalent API. Even if they did, we cannot
@@ -38,37 +38,12 @@ perhaps even on the [feditest.org](https://feditest.org/) website.
 Some of us on the FediTest project will likely do that, but there isn't a commitment
 by the FediTest project itself to do this, in particular on a particular schedule.
 
-### Which Fediverse instances will be tested, using which accounts? Do you have their permission?
+### So how do I use FediTest to test interoperability of my code with some other application?
 
-We prefer to test locally installed Fediverse instances, followed by instances and accounts
-volunteered by the respective application developers.
+It's up to you to find an instance of that other application that you are able (and
+permitted to) test against. Once you do -- whether that instance is locally installed
+or somewhere public in the cloud -- you
+{{% pageref "/reference/json-files/node.md" "define a Node" %}} in your {{% gl TestPlan %}}
+that points to that instance and FediTest will run against it.
 
-**Reasoning:** locally installed Fediverse instances do not cost somebody (who is not the
-tester) any resources, and they are great from a test isolation perspective. Debugging
-why a test failed is also much simpler.
-
-This is why we already have
-[UbosNodeDriver](https://github.com/fediverse-devnet/feditest/blob/develop/src/feditest/ubos/__init__.py),
-which uses [UBOS Gears](https://ubos.net/docs/development/reference-gears/understanding/deploy/)
-to automate the installation/provisioning and configuration of Fediverse applications such as
-Mastodon and WordPress+AP on a local (usually virtualized) device. (We welcome other
-implementations of the `NodeDriver` abstraction.)
-
-But not everything can be installed locally. For example, some Fediverse software only
-exists as SaaS. Other software installations require extra work by the tester (if manual
-installation) or provisioning automation, like when newly packaging an application as a
-[UBOS app](https://ubos.net/docs/glossary/app/). (We welcome more Fediverse software as
-UBOS apps, here is [documentation](https://ubos.net/docs/development/tutorials-gears/toyapps/)
-for how to package it.)
-
-So when local installation is not possible, we use hosted instances
-and accounts that their administrators have volunteered.
-
-If we cannot automate the local installation and no suitable SaaS instance has been
-volunteered, we do not include the respective application in FediTest setup.
-
-### So I can't use FediTest to test interoperability of my code with some other application?
-
-We are only saying that we won't have a predefined configuration for you. If you find
-an instance that you can use, we'll give you instructions how to use FediTest with that
-instance.
+**Updated** October 2024.

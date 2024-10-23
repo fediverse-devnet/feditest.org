@@ -2,16 +2,19 @@
 title: How do I test my application with malformed messages?
 ---
 
-The bad news is that this is currently not supported out of the box.
+Unfortunately, this is not yet supported out of the box.
 
 Sorry about that, we are trying to find the resources to make it possible. (Have some?
 Get in touch!)
 
 What we need to do is create a special-purpose {{% gl app %}} that can be run as at
 a {{% gl Node %}}, and that can be instructed to do various terrible things, such
-as emitting malformed messages.
+as emitting malformed messages. We tentatively call this {{% gl app %}} the
+"Hungarian Babelbox" (think of it as Douglas Adams'
+[Babelfish](https://hitchhikers.fandom.com/wiki/Babel_Fish) using Monty Python's
+[Hungarian Phrasebook](https://www.youtube.com/watch?v=grA5XmBRC6g)
 
-This {{% gl app %}} would essentially:
+It would essentially:
 
 * Be a full implementation of the entire Fediverse protocols stack including commonly
   implemented variations. Such as, for example, being able to deal with {{% gls Node %}}
