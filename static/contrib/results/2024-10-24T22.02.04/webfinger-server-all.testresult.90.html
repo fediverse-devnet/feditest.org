@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 90</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>10 <span class="percentage">(55.6%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>6</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">Wildebeest</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:21:14.064780Z, ended 2024:10:24-22:21:14.467583Z (duration: 0:00:00.402803)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-545">AssertionFailure (Must, Problem): Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self":</label>
+    <input id="details-545" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&quot;:
+0: Wrong HTTP status code.
+ -&gt; 500
+1: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+2: Invalid key: error
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:14 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=qbjncFu5DEXdJMeFgg1g13gUt7MWAJQ0fO1jt2lbl1XKz7fGU5yIupWQwQZ44ySaeQnBHeyT%2BQ2Audm5blizEbXMKII7NzWQaXAjEH2xK2Rnaxk%2B55xjRZmoVi%2BvZ6o42hvECw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5bd3b9e867f1-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0xffffa7a13790&gt;, &#x27;Invalid key: error&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:21:14.474854Z, ended 2024:10:24-22:21:14.803153Z (duration: 0:00:00.328299)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:21:14.803231Z, ended 2024:10:24-22:21:15.141340Z (duration: 0:00:00.338109)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-546">AssertionFailure (Must, Problem): Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social":</label>
+    <input id="details-546" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&quot;:
+0: Wrong HTTP status code.
+ -&gt; 500
+1: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+2: Invalid key: error
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:15 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=t3ZmzJaYST%2FM%2F8%2BBaw7mZEwLpFBEAhXkidZZXSrvu7pmd5LyzTX3OPLDY%2F%2BY2%2BrYqBNMWhGtYUE%2BfL8pZI8sMaIAN%2BSVV5ukL2HhFskars6bkJEGYGny%2FcNPWksjFFkmv32dKw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5bd7ef93173a-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:15 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=t3ZmzJaYST%2FM%2F8%2BBaw7mZEwLpFBEAhXkidZZXSrvu7pmd5LyzTX3OPLDY%2F%2BY2%2BrYqBNMWhGtYUE%2BfL8pZI8sMaIAN%2BSVV5ukL2HhFskars6bkJEGYGny%2FcNPWksjFFkmv32dKw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5bd7ef93173a-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0xffffa7855e50&gt;, &#x27;Invalid key: error&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:21:15.144577Z, ended 2024:10:24-22:21:15.455258Z (duration: 0:00:00.310681)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:21:15.455347Z, ended 2024:10:24-22:21:15.745137Z (duration: 0:00:00.289790)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:21:15.745487Z, ended 2024:10:24-22:21:16.040460Z (duration: 0:00:00.294973)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:21:16.040557Z, ended 2024:10:24-22:21:16.325813Z (duration: 0:00:00.285256)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:21:16.325910Z, ended 2024:10:24-22:21:16.598462Z (duration: 0:00:00.272552)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:21:16.598502Z, ended 2024:10:24-22:21:16.880762Z (duration: 0:00:00.282260)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:21:16.880808Z, ended 2024:10:24-22:21:17.212148Z (duration: 0:00:00.331340)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-547">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-547" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Adoes-not-exist%40cloudflare.social&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;500&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:21:17.215122Z, ended 2024:10:24-22:21:17.562454Z (duration: 0:00:00.347332)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-548">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-548" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&quot;.
+Expected: &lt;200&gt;
+     but: was &lt;500&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:21:17.564393Z, ended 2024:10:24-22:21:17.827057Z (duration: 0:00:00.262664)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-549">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-549" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=mailto%3Aabc%40def.com&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:38</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:21:17.828703Z, ended 2024:10:24-22:21:18.145159Z (duration: 0:00:00.316456)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-550">AssertionFailure (Must, Problem): Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social":</label>
+    <input id="details-550" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&quot;:
+0: Wrong HTTP status code.
+ -&gt; 500
+1: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+2: Invalid key: error
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:18 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=3xAHk0W1FIIXeD5nSTg9pDePhrnORF6e5sSlXszw%2F7zqafR27GSa7u8YEBHwmsUtnpWxIHXZ7o7HS1SA07EBuD50n3xULCtZMgg0xQ4aeuizr7bZqF5V6fnIjlnPkOgeZ4Lepw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5beadcb6cfc4-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0xffffa79fb490&gt;, &#x27;Invalid key: error&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:160</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:21:18.148577Z, ended 2024:10:24-22:21:18.473752Z (duration: 0:00:00.325175)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-551">AssertionFailure (Must, Problem): Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social":</label>
+    <input id="details-551" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&quot;:
+0: Wrong HTTP status code.
+ -&gt; 500
+1: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+2: Invalid key: error
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:18 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=5pg1HsQvuBrI98u9GmxoHMB4IVJVIEXcJSQBUSwMV0Le4mz7UbxxGfbYQSHZFFxZe9YAeZG7ry5fp9Ks2w7eQhlcS3eI%2B3n%2BapZrT1f6sRRTDHmAqJuohCQ0rbMRBITutZAdTQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5beceda79870-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0xffffa7850750&gt;, &#x27;Invalid key: error&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:21:18.478257Z, ended 2024:10:24-22:21:18.802003Z (duration: 0:00:00.323746)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-552">AssertionFailure (Must, Problem): Accessed URI: "https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social":</label>
+    <input id="details-552" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social&quot;:
+0: Wrong HTTP status code.
+ -&gt; 500
+1: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+2: Invalid key: error
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://cloudflare.social/.well-known/webfinger?resource=acct%3Acloudflare%40cloudflare.social), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=500, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:21:18 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;102&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-allow-headers&#x27;: &#x27;content-type, authorization, idempotency-key&#x27;, &#x27;access-control-allow-methods&#x27;: &#x27;GET, PUT, POST, DELETE&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=AHbiFFnufYfwvwTfs%2Fjt2IPXESC1iuhJ%2FIgWTCpoxzN3wzycyH30zqa6abPPNbYTcUobJNnwunsXqC3q3%2BUFvaSMPjRfha0Ycn%2BVAwK6d609TN0aI78EdKKcRmTsUt%2BO1V6vNA%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding&#x27;, &#x27;cf-cache-status&#x27;: &#x27;DYNAMIC&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d5bef3f06cfcc-SJC&#x27;)&gt;, payload=b&#x27;{&quot;error&quot;:&quot;Internal Server Error. If the problem persists please contact your instance administrator.&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0xffffa79f6090&gt;, &#x27;Invalid key: error&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:115</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:21:18.807596Z, ended 2024:10:24-22:21:18.933514Z (duration: 0:00:00.125918)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:21:18.933621Z, ended 2024:10:24-22:21:19.285084Z (duration: 0:00:00.351463)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:21:19.285446Z, ended 2024:10:24-22:21:19.639700Z (duration: 0:00:00.354254)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:21:14.064440Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:21:19.639921Z (total: 0:00:05.575481)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

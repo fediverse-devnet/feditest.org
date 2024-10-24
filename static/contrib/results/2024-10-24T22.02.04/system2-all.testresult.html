@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="system2-all.testresult.css">
+  <title>Two-Node Fediverse System Tests | Feditest</title>
+ </head>
+ <body>
+  <header class="feditest title">
+   <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Summary Report:</span> Two-Node Fediverse System Tests</h1>
+   <p class="id">feditest-run-20241024-222150</p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>6 <span class="percentage">(21.4%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>10</div>
+       </td>
+       <td class="status must total">
+        <div>
+10
+         <span class="percentage">(35.7%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+3
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+3
+         <span class="percentage">(10.7%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+3
+         <span class="percentage">(10.7%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+10
+         <span class="percentage">(35.7%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+13
+         <span class="percentage">(46.4%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td class="status error">
+    <div>
+9
+     <span class="percentage">(32.1%)</span>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>28</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+
+   <h2>Test Results</h2>
+
+
+    <div class="feditest tests">
+     <table class="tests">
+      <colgroup>
+       <col>
+       <col class="session">
+       <col class="session">
+       <col class="session">
+       <col class="session">
+      </colgroup>
+      <thead>
+
+       <tr>
+        <th>7 tests in 4 sessions (alphabetical order)</th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.0.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.1.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.2.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.3.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+       </tr>
+
+      </thead>
+      <tbody>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.delete_single_hop<wbr>::DeleteSingleHopTest</span>
+         <span class="description">Test single-hop delete.
+    See also: https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/3</span>
+        </td>
+
+<td class="status passed" id="test-0-0">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-1-0">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-2-0">
+    <div>HTTP status 404: {"error":"rest_no_route","error_description":"No route was found matching the URL and request method."}</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-3-0">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.direct_addressing<wbr>::SendNoteToTest</span>
+         <span class="description">Tests that a note by actor A is delivered to an actor B if A addresses the note to B.</span>
+        </td>
+
+<td class="status failed implied degraded moreinfo" id="test-0-1">
+    <div>AssertionFailure (Implied, Degraded): Expected: 'Testing sender_creates_note 2024-10-24 22:22:51.316413'</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-1-1">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+
+<td class="status failed implied degraded moreinfo" id="test-2-1">
+    <div>AssertionFailure (Implied, Degraded): Expected: 'Testing sender_creates_note 2024-10-24 22:26:51.511918'</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-3-1">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.follow_receive<wbr>::FollowReceiveTest</span>
+         <span class="description">Tests that actors on two different Fediverse Nodes can follow each other and a follower receives the followed account's posts.</span>
+        </td>
+
+<td class="status passed" id="test-0-2">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-1-2">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-2-2">
+    <div>HTTP status 404: {"error":"rest_no_route","error_description":"No route was found matching the URL and request method."}</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-3-2">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.like_single_hop<wbr>::LikeTest</span>
+         <span class="description">Tests that actor B can like a note by actor A on a different Fediverse Node
+    and both see the Like. Unlike works the reverse.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/149</span>
+        </td>
+
+<td class="status passed" id="test-0-3">
+    <div>Passed</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-1-3">
+    <div>Cannot find Note on <feditest.nodedrivers.mastodon.AuthenticatedMastodonApiClient object at 0xffff92727550>: "https://mastodon-3.83135.lan/users/feditestadmin/statuses/113364743800472092"</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-2-3">
+    <div>HTTP status 404: {"error":"rest_no_route","error_description":"No route was found matching the URL and request method."}</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-3-3">
+    <div>HTTP status 422: {"error":"mastodon_api_submit_post","error_description":"Validation failed: Text can't be blank"}</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.preserve_links<wbr>::PreserveBlockquoteTest</span>
+         <span class="description">Make sure that all hyperlinks in a note are still present on the receiving node. They may be rearranged.</span>
+        </td>
+
+<td class="status passed" id="test-0-4">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-1-4">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+
+<td class="status passed" id="test-2-4">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-3-4">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.reply_single_hop<wbr>::ReplyTest</span>
+         <span class="description">Tests that actor B can reply to a note by actor A on a different Fediverse Node and both see the reply.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/128</span>
+        </td>
+
+<td class="status failed implied degraded moreinfo" id="test-0-5">
+    <div>AssertionFailure (Implied, Degraded): Expected: 'Testing follower_replies_to_note 2024-10-24 22:23:01.819779'</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-1-5">
+    <div>Cannot find Note on <feditest.nodedrivers.mastodon.AuthenticatedMastodonApiClient object at 0xffff92727550>: "https://mastodon-3.83135.lan/users/feditestadmin/statuses/113364744183867811"</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-2-5">
+    <div>HTTP status 404: {"error":"rest_no_route","error_description":"No route was found matching the URL and request method."}</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-3-5">
+    <div>HTTP status 400: {"error":"rest_invalid_param","error_description":"Invalid parameter(s): in_reply_to_id"}</div>
+</td>
+       </tr>
+       <tr>
+        <td class="namedesc">
+         <span class="name">system2<wbr>.update_single_hop<wbr>::UpdateTest</span>
+         <span class="description">Tests that actor B's copy of a note by actor A is correctly updated when A updates it on a different Fediverse Node.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/151</span>
+        </td>
+
+<td class="status passed" id="test-0-6">
+    <div>Passed</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-1-6">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+
+<td class="status failed unspecified unknown moreinfo" id="test-2-6">
+    <div>HTTP status 404: {"error":"rest_no_route","error_description":"No route was found matching the URL and request method."}</div>
+</td>
+
+<td class="status failed must unknown moreinfo" id="test-3-6">
+    <div>AssertionFailure (Must, Unknown): Expected object has not arrived in time</div>
+</td>
+       </tr>
+      </tbody>
+      <tfoot>
+
+       <tr>
+        <th></th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.0.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.1.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.2.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>MastodonUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+        <th>
+         <div class="title">
+          <a href="system2-all.testresult.3.html">
+           <dl class="roles">
+             <dt>sender_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+             <dt>receiver_node</dt>
+             <dd>WordPressPlusPluginsUbosNodeDriver</dd>
+           </dl>
+          </a>
+         </div>
+        </th>
+       </tr>
+
+      </tfoot>
+     </table>
+    </div>
+
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:21:50.766973Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:33:09.226921Z (total: 0:11:18.459948)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+   </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

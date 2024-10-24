@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 21</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>12 <span class="percentage">(66.7%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>3</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+1
+         <span class="percentage">(5.6%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+3
+         <span class="percentage">(16.7%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">Comal</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:07:16.460318Z, ended 2024:10:24-22:07:17.024695Z (duration: 0:00:00.564377)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:07:17.024729Z, ended 2024:10:24-22:07:17.158928Z (duration: 0:00:00.134199)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:07:17.158961Z, ended 2024:10:24-22:07:17.297032Z (duration: 0:00:00.138071)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-123">AssertionFailure (Must, Problem): Accessed URI: "https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app":</label>
+    <input id="details-123" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app&quot;:
+0: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+Expected: an empty collection
+     but: was &lt;[WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;content-length&#x27;: &#x27;137&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:07:17 GMT&#x27;, &#x27;server&#x27;: &#x27;Fly/9b9e2ecb (2024-10-21)&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGC4ZJ22gQ2vsEAEP8x&#x27;, &#x27;via&#x27;: &#x27;1.1 fly.io&#x27;, &#x27;fly-request-id&#x27;: &#x27;01JB093PPJMR0FP8YYM523BS4V-sjc&#x27;)&gt;, payload=b&#x27;{&quot;links&quot;:[{&quot;type&quot;:&quot;application/activity+json&quot;,&quot;rel&quot;:&quot;self&quot;,&quot;href&quot;:&quot;https://comal.app/actors/100322892&quot;}],&quot;subject&quot;:&quot;acct:erik@comal.app&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc))))]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:07:17.302041Z, ended 2024:10:24-22:07:17.436604Z (duration: 0:00:00.134563)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-124">AssertionFailure (Must, Unaffected): Not HTTP status 400.</label>
+    <input id="details-124" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400.
+Accessed URI: &quot;https://comal.app/.well-known/webfinger&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:07:17.438387Z, ended 2024:10:24-22:07:17.575684Z (duration: 0:00:00.137297)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:07:17.575721Z, ended 2024:10:24-22:07:17.708352Z (duration: 0:00:00.132631)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-125">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-125" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &quot;https://comal.app/.well-known/webfinger?resource==acct%3Aerik%40comal.app&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:114</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:07:17.710106Z, ended 2024:10:24-22:07:17.884418Z (duration: 0:00:00.174312)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:17.884446Z, ended 2024:10:24-22:07:18.018601Z (duration: 0:00:00.134155)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-126">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-126" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &quot;https://comal.app/.well-known/webfinger?resource=erik@comal.app&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:40</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:18.019570Z, ended 2024:10:24-22:07:18.197935Z (duration: 0:00:00.178365)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:07:18.198081Z, ended 2024:10:24-22:07:18.344786Z (duration: 0:00:00.146705)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:07:18.344948Z, ended 2024:10:24-22:07:18.636508Z (duration: 0:00:00.291560)</p>
+<div class="status failed must degraded moreinfo">
+	<label for="details-127">AssertionFailure (Must, Degraded): Wrong content type.</label>
+    <input id="details-127" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Degraded): Wrong content type.
+Accessed URI: &quot;https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app&quot;.
+Expected: (&#x27;application/jrd+json&#x27; or a string starting with &#x27;application/jrd+json;&#x27;)
+     but: was &#x27;application/json; charset=utf-8&#x27;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:44</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:18.643132Z, ended 2024:10:24-22:07:18.922518Z (duration: 0:00:00.279386)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:18.922615Z, ended 2024:10:24-22:07:19.360925Z (duration: 0:00:00.438310)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:19.361000Z, ended 2024:10:24-22:07:19.796272Z (duration: 0:00:00.435272)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:19.796314Z, ended 2024:10:24-22:07:20.098712Z (duration: 0:00:00.302398)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:07:20.098804Z, ended 2024:10:24-22:07:20.166393Z (duration: 0:00:00.067589)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:07:20.166544Z, ended 2024:10:24-22:07:20.333563Z (duration: 0:00:00.167019)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:07:20.333613Z, ended 2024:10:24-22:07:20.493784Z (duration: 0:00:00.160171)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-128">AssertionFailure (Must, Problem): Missing CORS header.</label>
+    <input id="details-128" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Missing CORS header.
+Accessed URI: &quot;https://comal.app/.well-known/webfinger?resource=acct%3Aerik%40comal.app&quot;.
+Not present: &quot;access-control-allow-origin&quot;.
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:21</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:07:16.460148Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:07:20.495732Z (total: 0:00:04.035584)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

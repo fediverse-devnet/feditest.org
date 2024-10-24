@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 17</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>6 <span class="percentage">(33.3%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>7</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>5</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+12
+         <span class="percentage">(66.7%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+7
+         <span class="percentage">(38.9%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+5
+         <span class="percentage">(27.8%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+12
+         <span class="percentage">(66.7%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">catnip</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:06:33.341972Z, ended 2024:10:24-22:06:33.579070Z (duration: 0:00:00.237098)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-98">AssertionFailure (Must, Problem): Accessed URI: "https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self":</label>
+    <input id="details-98" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&quot;:
+0: Wrong HTTP status code.
+ -&gt; 521
+1: Wrong HTTP content type.
+ -&gt; &quot;text/plain; charset=UTF-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:33 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=5pDoY0RaaoaEhGqkW8srmVEwRy1aUR0XTT56LbLPXxNBy49%2FamYDqKzgo6qFLdhx6ZrOM2CU1kQc5D%2F3CMni2wxmvQZOv8BYqGSvg%2BjGaNKmuSCp8RuIOv8BsW0HfzQ%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d465309412320-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=24659&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=852&amp;delivery_rate=119422&amp;cwnd=228&amp;unsent_bytes=0&amp;cid=d0512b81b80b55a1&amp;ts=122&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:06:33.580355Z, ended 2024:10:24-22:06:33.762288Z (duration: 0:00:00.181933)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:06:33.762304Z, ended 2024:10:24-22:06:33.934418Z (duration: 0:00:00.172114)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-99">AssertionFailure (Must, Problem): Accessed URI: "https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land":</label>
+    <input id="details-99" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;:
+0: Wrong HTTP status code.
+ -&gt; 521
+1: Wrong HTTP content type.
+ -&gt; &quot;text/plain; charset=UTF-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:33 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=6wpMOnbKdNB3LEheAPvYOoieZto8FNzL2CJ0vduAv6dHiT4Hy3yRr4F0Bou0tKN17nW5RSaM1sYtjxPkV6oDRvE0gg8VekQJZPXoYp5AEwSTY16340B2we03piz01xw%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d46554ffc9e50-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=22862&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2844&amp;recv_bytes=780&amp;delivery_rate=121983&amp;cwnd=240&amp;unsent_bytes=0&amp;cid=effebcbb67a9b6ea&amp;ts=110&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:33 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=6wpMOnbKdNB3LEheAPvYOoieZto8FNzL2CJ0vduAv6dHiT4Hy3yRr4F0Bou0tKN17nW5RSaM1sYtjxPkV6oDRvE0gg8VekQJZPXoYp5AEwSTY16340B2we03piz01xw%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d46554ffc9e50-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=22862&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2844&amp;recv_bytes=780&amp;delivery_rate=121983&amp;cwnd=240&amp;unsent_bytes=0&amp;cid=effebcbb67a9b6ea&amp;ts=110&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:06:33.935970Z, ended 2024:10:24-22:06:34.111980Z (duration: 0:00:00.176010)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-100">AssertionFailure (Must, Unaffected): Not HTTP status 400.</label>
+    <input id="details-100" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:06:34.113722Z, ended 2024:10:24-22:06:34.288897Z (duration: 0:00:00.175175)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:06:34.288990Z, ended 2024:10:24-22:06:34.483508Z (duration: 0:00:00.194518)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-101">AssertionFailure (Must, Unaffected): Not HTTP status 4xx.</label>
+    <input id="details-101" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 4xx.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource==acct%3Ainstance.actor%40foxgirl.land&quot;.
+Expected: (a value greater than or equal to &lt;400&gt; and a value less than &lt;500&gt;)
+     but: a value less than &lt;500&gt; was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:106</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:06:34.489524Z, ended 2024:10:24-22:06:34.695309Z (duration: 0:00:00.205785)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:06:34.695409Z, ended 2024:10:24-22:06:34.875856Z (duration: 0:00:00.180447)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-102">AssertionFailure (Must, Unaffected): Not HTTP status 4xx.</label>
+    <input id="details-102" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 4xx.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=instance.actor@foxgirl.land&quot;.
+Expected: (a value greater than or equal to &lt;400&gt; and a value less than &lt;500&gt;)
+     but: a value less than &lt;500&gt; was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:32</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:06:34.878529Z, ended 2024:10:24-22:06:35.077003Z (duration: 0:00:00.198474)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:06:35.077877Z, ended 2024:10:24-22:06:35.270400Z (duration: 0:00:00.192523)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-103">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-103" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Adoes-not-exist%40foxgirl.land&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:06:35.272950Z, ended 2024:10:24-22:06:35.465103Z (duration: 0:00:00.192153)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-104">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-104" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;.
+Expected: &lt;200&gt;
+     but: was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:06:35.467796Z, ended 2024:10:24-22:06:35.663685Z (duration: 0:00:00.195889)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-105">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-105" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=mailto%3Aabc%40def.com&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;521&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:38</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:06:35.670114Z, ended 2024:10:24-22:06:35.854972Z (duration: 0:00:00.184858)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-106">AssertionFailure (Must, Problem): Accessed URI: "https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land":</label>
+    <input id="details-106" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;:
+0: Wrong HTTP status code.
+ -&gt; 521
+1: Wrong HTTP content type.
+ -&gt; &quot;text/plain; charset=UTF-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=0zuh3HwQsEFQyfNfE836CwbnVywJ9Vur5ojAdxEjxr08f3%2B%2BX40u%2BCTczPlEDYfcWZiIQmDROJ9rf6l92jyPhvwSAQOx9XkoGmZ%2B%2BTY1sn4%2F%2BdSuCgA3RUVquVK1tO8%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d46614b4a96dd-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=23291&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=780&amp;delivery_rate=119496&amp;cwnd=157&amp;unsent_bytes=0&amp;cid=b8904d0fff51bdb3&amp;ts=121&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:160</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:06:35.856696Z, ended 2024:10:24-22:06:36.051654Z (duration: 0:00:00.194958)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-107">AssertionFailure (Must, Problem): Accessed URI: "https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land":</label>
+    <input id="details-107" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;:
+0: Wrong HTTP status code.
+ -&gt; 521
+1: Wrong HTTP content type.
+ -&gt; &quot;text/plain; charset=UTF-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:35 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=o7IRSdQVJtECo9fcEGTFSAb57mHoORzfIPPO2UG382dPO0ESap1lLLixP1DChoPhtpEs70kP%2F8WxGFDBWGNQOJSVG6iPhwREijdWqv1rrpUkP09sGZkkQqSG1MJhCfY%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d4662791bce84-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=23234&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2843&amp;recv_bytes=780&amp;delivery_rate=119353&amp;cwnd=216&amp;unsent_bytes=0&amp;cid=c11818815f963fa6&amp;ts=125&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:06:36.053645Z, ended 2024:10:24-22:06:36.245310Z (duration: 0:00:00.191665)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-108">AssertionFailure (Must, Problem): Accessed URI: "https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land":</label>
+    <input id="details-108" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;:
+0: Wrong HTTP status code.
+ -&gt; 521
+1: Wrong HTTP content type.
+ -&gt; &quot;text/plain; charset=UTF-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=521, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:06:36 GMT&#x27;, &#x27;content-type&#x27;: &#x27;text/plain; charset=UTF-8&#x27;, &#x27;content-length&#x27;: &#x27;15&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=1%2B%2BXHyxMizn1p6dBw5KGe7d%2F9AMgTbTOfxc1UQZE%2FFCmtuRj7IUSYaILOUP6%2BxqzBusKzF%2FpS%2BjDlMW3G5okKaU3WVheVyo8yfitmR5ogMPndkKyQ230ElUn8uMAdU4%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;nel&#x27;: &#x27;{&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#x27;, &#x27;x-frame-options&#x27;: &#x27;SAMEORIGIN&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;cache-control&#x27;: &#x27;private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0&#x27;, &#x27;expires&#x27;: &#x27;Thu, 01 Jan 1970 00:00:01 GMT&#x27;, &#x27;server&#x27;: &#x27;cloudflare&#x27;, &#x27;cf-ray&#x27;: &#x27;8d7d4663bcdcceed-SJC&#x27;, &#x27;alt-svc&#x27;: &#x27;h3=&quot;:443&quot;; ma=86400&#x27;, &#x27;server-timing&#x27;: &#x27;cfL4;desc=&quot;?proto=TCP&amp;rtt=24238&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2844&amp;recv_bytes=780&amp;delivery_rate=117413&amp;cwnd=244&amp;unsent_bytes=0&amp;cid=b174aaa61cfd01cf&amp;ts=117&amp;x=0&quot;&#x27;)&gt;, payload=b&#x27;error code: 521&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:115</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:06:36.247224Z, ended 2024:10:24-22:06:36.421895Z (duration: 0:00:00.174671)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:06:36.422380Z, ended 2024:10:24-22:06:36.634110Z (duration: 0:00:00.211730)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:06:36.634230Z, ended 2024:10:24-22:06:36.820534Z (duration: 0:00:00.186304)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-109">AssertionFailure (Must, Problem): Missing CORS header.</label>
+    <input id="details-109" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Missing CORS header.
+Accessed URI: &quot;https://foxgirl.land/.well-known/webfinger?resource=acct%3Ainstance.actor%40foxgirl.land&quot;.
+Not present: &quot;access-control-allow-origin&quot;.
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:21</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:06:33.341592Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:06:36.828661Z (total: 0:00:03.487069)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

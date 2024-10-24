@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 22</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>8 <span class="percentage">(44.4%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>7</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>3</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+10
+         <span class="percentage">(55.6%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+7
+         <span class="percentage">(38.9%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+3
+         <span class="percentage">(16.7%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+10
+         <span class="percentage">(55.6%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">dailyrucks</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:07:20.495861Z, ended 2024:10:24-22:07:21.438621Z (duration: 0:00:00.942760)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-129">AssertionFailure (Must, Problem): Accessed URI: "https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self":</label>
+    <input id="details-129" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&quot;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &quot;text/html; charset=utf-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:27 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:07:21.441022Z, ended 2024:10:24-22:07:22.012799Z (duration: 0:00:00.571777)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:07:22.012833Z, ended 2024:10:24-22:07:22.581464Z (duration: 0:00:00.568631)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-130">AssertionFailure (Must, Problem): Accessed URI: "https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software":</label>
+    <input id="details-130" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &quot;text/html; charset=utf-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:28 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:28 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:07:22.583066Z, ended 2024:10:24-22:07:23.160541Z (duration: 0:00:00.577475)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-131">AssertionFailure (Must, Unaffected): Not HTTP status 400.</label>
+    <input id="details-131" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400.
+Accessed URI: &quot;https://fietkau.software/.well-known/webfinger&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:07:23.161873Z, ended 2024:10:24-22:07:23.724386Z (duration: 0:00:00.562513)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:07:23.724406Z, ended 2024:10:24-22:07:24.298884Z (duration: 0:00:00.574478)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-132">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-132" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource==acct%3ADailyRucks%40fietkau.software&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:114</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:07:24.303319Z, ended 2024:10:24-22:07:24.896673Z (duration: 0:00:00.593354)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:24.896760Z, ended 2024:10:24-22:07:25.463136Z (duration: 0:00:00.566376)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-133">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-133" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=DailyRucks@fietkau.software&quot;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:40</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:25.490502Z, ended 2024:10:24-22:07:26.063162Z (duration: 0:00:00.572660)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:07:26.063423Z, ended 2024:10:24-22:07:26.654112Z (duration: 0:00:00.590689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:07:26.654219Z, ended 2024:10:24-22:07:27.229389Z (duration: 0:00:00.575170)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-134">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-134" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;.
+Expected: &lt;200&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:07:27.234990Z, ended 2024:10:24-22:07:28.394249Z (duration: 0:00:01.159259)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:28.394292Z, ended 2024:10:24-22:07:28.963147Z (duration: 0:00:00.568855)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-135">AssertionFailure (Must, Problem): Accessed URI: "https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software":</label>
+    <input id="details-135" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &quot;text/html; charset=utf-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:35 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:160</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:28.968314Z, ended 2024:10:24-22:07:29.535260Z (duration: 0:00:00.566946)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-136">AssertionFailure (Must, Problem): Accessed URI: "https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software":</label>
+    <input id="details-136" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &quot;text/html; charset=utf-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:35 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:07:29.538590Z, ended 2024:10:24-22:07:30.126084Z (duration: 0:00:00.587494)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-137">AssertionFailure (Must, Problem): Accessed URI: "https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software":</label>
+    <input id="details-137" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &quot;text/html; charset=utf-8&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:03:36 GMT&#x27;, &#x27;server&#x27;: &#x27;Apache&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;strict-origin-when-cross-origin&#x27;, &#x27;permissions-policy&#x27;: &#x27;fullscreen=(self), picture-in-picture=(self), speaker=(self), sync-xhr=(self), browsing-topics=(), camera=(), display-capture=(), geolocation=(), microphone=(), usb=()&#x27;, &#x27;upgrade&#x27;: &#x27;h2&#x27;, &#x27;connection&#x27;: &#x27;Upgrade&#x27;, &#x27;last-modified&#x27;: &#x27;Wed, 16 Oct 2024 14:05:07 GMT&#x27;, &#x27;etag&#x27;: &#x27;&quot;1886-624988eb0c59d&quot;&#x27;, &#x27;accept-ranges&#x27;: &#x27;bytes&#x27;, &#x27;content-length&#x27;: &#x27;6278&#x27;, &#x27;content-security-policy&#x27;: &quot;default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; script-src &#x27;self&#x27;; style-src &#x27;self&#x27;; frame-ancestors &#x27;none&#x27;&quot;, &#x27;content-type&#x27;: &#x27;text/html; charset=utf-8&#x27;)&gt;, payload=b&#x27;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head prefix=&quot;og: https://ogp.me/ns#&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&lt;title&gt;Page Not Found (404) \xe2\x80\x93 Julian Fietkau&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/main.css?KSxU6I7b&quot;&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/error.css?nDz6XaqM&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-32.png?rfow5CRg&quot; sizes=&quot;32x32&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-128.png?yKnUOxyP&quot; sizes=&quot;128x128&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-192.png?n7KqGAZu&quot; sizes=&quot;192x192&quot;&gt;&lt;link rel=&quot;icon&quot; href=&quot;/assets/favicon-196.png?dJ-DK08D&quot; sizes=&quot;196x196&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-152.png?0GCFBiiD&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-167.png?H7BmUL5s&quot; sizes=&quot;167x167&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/favicon-180.png?adTDb6Yl&quot; sizes=&quot;180x180&quot;&gt;&lt;meta property=&quot;og:title&quot; content=&quot;Page Not Found (404)&quot;&gt;&lt;meta property=&quot;og:description&quot; content=&quot;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps.&quot;&gt;&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://fietkau.software/assets/favicon-600.png&quot;&gt;&lt;meta property=&quot;og:image:alt&quot; content=&quot;Website logo&quot;&gt;&lt;meta property=&quot;og:site_name&quot; content=&quot;Julian Fietkau&quot;&gt;&lt;meta name=&quot;fediverse:creator&quot; content=&quot;julian@fietkau.social&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;#f70&quot;&gt;&lt;meta name=&quot;msapplication-config&quot; content=&quot;none&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;nav class=&quot;top&quot;&gt;&lt;a href=&quot;#main&quot; class=&quot;skip_to_content&quot;&gt;Skip to content&lt;/a&gt;&lt;div&gt;&lt;input type=&quot;checkbox&quot; id=&quot;burger_menu_open&quot; class=&quot;mobile_nav&quot;&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu&quot; class=&quot;mobile_nav&quot; aria-label=&quot;Navigation&quot;&gt;&lt;svg viewbox=&quot;0 0 30 24&quot; width=&quot;30&quot; height=&quot;24&quot;&gt;&lt;rect y=&quot;0&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;9&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;rect y=&quot;18&quot; width=&quot;30&quot; height=&quot;6&quot; rx=&quot;2&quot;&gt;&lt;/rect&gt;&lt;/svg&gt;&lt;/label&gt;&lt;label for=&quot;burger_menu_open&quot; id=&quot;burger_menu_backdrop&quot; class=&quot;mobile_nav&quot;&gt;&lt;/label&gt;&lt;ul&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.me&quot;&gt;Me&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.science&quot;&gt;Science&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/publications&quot;&gt;Publications&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/teaching&quot;&gt;Teaching&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.science/community&quot;&gt;Community&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.software&quot; class=&quot;current&quot;&gt;Software&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/major_projects&quot;&gt;Major Projects&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/smaller_tools&quot;&gt;Smaller Tools&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.software/git_repositories&quot;&gt;Git Repositories&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.media&quot;&gt;Media&lt;/a&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/games&quot;&gt;Games&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/videos&quot;&gt;Videos&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://fietkau.media/misc&quot;&gt;Misc&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.blog&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;toplink&quot;&gt;&lt;a href=&quot;https://fietkau.plus&quot;&gt;+&lt;span class=&quot;mobile_nav&quot;&gt; etc.&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/nav&gt;&lt;main id=&quot;main&quot; tabindex=&quot;-1&quot;&gt;&lt;main class=&quot;error&quot;&gt;&lt;h1&gt;The page you requested could not be found.&lt;/h1&gt;&lt;section&gt;&lt;h2 class=&quot;semantic_header&quot;&gt;More Information&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Well, that\xe2\x80\x99s embarrassing. Maybe it\xe2\x80\x99s just a technical hiccup. Please try again in a few minutes, sometimes it helps. Other than that:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If there used to be something here and now it\xe2\x80\x99s gone, try asking the &lt;a href=&quot;https://web.archive.org/&quot;&gt;Internet Wayback Machine&lt;/a&gt; about it. They might still have a copy.&lt;/li&gt;&lt;li&gt;Just in case there\xe2\x80\x99s a typo or another small mistake in the link you clicked, try querying a search engine (such as &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/&quot;&gt;Google&lt;/a&gt;) about it. If there\xe2\x80\x99s a different page about the same topic, that\xe2\x80\x99s probably the easiest way to find it.&lt;/li&gt;&lt;li&gt;Want to get an overview of what\xe2\x80\x99s available here? You can start fresh from &lt;a href=&quot;/&quot;&gt;this section\xe2\x80\x99s main page&lt;/a&gt; or browse &lt;a href=&quot;/sitemap&quot;&gt;the sitemap&lt;/a&gt; for a detailed list.&lt;/li&gt;&lt;li&gt;If you\xe2\x80\x99re super certain that this link should be working and my website is broken, you can &lt;a href=&quot;mailto:julian@fietkau.me?subject=Your%20website%20is%20broken!&amp;body=I%20tried%20this%20one%20page%20and%20it%20didn%27t%20work.%20:(&quot;&gt;let me know&lt;/a&gt; directly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Best of luck on your quest for knowledge!&lt;/p&gt;&lt;/div&gt;&lt;picture&gt;&lt;source srcset=&quot;/assets/error_404.webp?uMzS5I8t&quot; type=&quot;image/webp&quot;&gt;&lt;source srcset=&quot;/assets/error_404.png?EtuXUqFc&quot; type=&quot;image/png&quot;&gt;&lt;img src=&quot;/assets/error_404.png?EtuXUqFc&quot; alt=&quot;Illustration of a confused person standing in a pile of paper sheets&quot; title=&quot;Illustration by AwkwardBex, 2015. https://awkwardbex.weebly.com/&quot;&gt;&lt;/picture&gt;&lt;/section&gt;&lt;/main&gt;&lt;script async src=&quot;/error_404.js?LhPZf40J&quot;&gt;&lt;/script&gt;&lt;/main&gt;&lt;footer&gt;&lt;span&gt;&amp;copy; 2024 Julian Fietkau&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a rel=&quot;me&quot; href=&quot;https://fietkau.social/@julian&quot;&gt;&lt;svg version=&quot;1.1&quot; viewbox=&quot;0 0 216.4 232&quot; width=&quot;16&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m107.9 0c-29.66 0.2425-58.19 3.454-74.82 11.09 0 0-32.98 14.75-32.98 65.08 0 11.52-0.2244 25.31 0.1406 39.92 1.198 49.22 9.024 97.73 54.53 109.8 20.98 5.554 39 6.715 53.51 5.918 26.31-1.459 41.08-9.389 41.08-9.389l-0.8691-19.09s-18.8 5.928-39.92 5.205c-20.92-0.7175-43.01-2.255-46.39-27.94-0.3125-2.256-0.4688-4.669-0.4688-7.203 0 0 20.54 5.02 46.56 6.213 15.92 0.73 30.84-0.9334 46-2.742 29.07-3.471 54.38-21.38 57.56-37.75 5.012-25.78 4.6-62.92 4.6-62.92 0-50.33-32.97-65.08-32.97-65.08-16.63-7.636-45.18-10.85-74.84-11.09h-0.7285zm-33.57 39.33c12.36 0 21.71 4.749 27.9 14.25l6.014 10.08 6.016-10.08c6.185-9.499 15.54-14.25 27.9-14.25 10.68 0 19.28 3.754 25.85 11.08 6.369 7.322 9.539 17.22 9.539 29.67v60.94h-24.14v-59.15c0-12.47-5.245-18.8-15.74-18.8-11.6 0-17.42 7.509-17.42 22.35v32.38h-24v-32.38c0-14.84-5.815-22.35-17.42-22.35-10.49 0-15.74 6.33-15.74 18.8v59.15h-24.14v-60.94c0-12.46 3.171-22.35 9.541-29.67 6.569-7.322 15.17-11.08 25.85-11.08z&quot;/&gt;&lt;/svg&gt; &lt;span&gt;Mastodon&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/sitemap&quot;&gt;&lt;span&gt;Sitemap&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span&gt;\xc2\xb7&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;/legal&quot;&gt;&lt;span&gt;Legal Notice&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:115</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:07:30.133479Z, ended 2024:10:24-22:07:30.516534Z (duration: 0:00:00.383055)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:07:30.516593Z, ended 2024:10:24-22:07:31.112021Z (duration: 0:00:00.595428)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:07:31.112128Z, ended 2024:10:24-22:07:31.687476Z (duration: 0:00:00.575348)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-138">AssertionFailure (Must, Problem): Missing CORS header.</label>
+    <input id="details-138" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Missing CORS header.
+Accessed URI: &quot;https://fietkau.software/.well-known/webfinger?resource=acct%3ADailyRucks%40fietkau.software&quot;.
+Not present: &quot;access-control-allow-origin&quot;.
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:21</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:07:20.495752Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:07:31.691843Z (total: 0:00:11.196091)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

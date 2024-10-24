@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 62</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>12 <span class="percentage">(66.7%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>4</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+1
+         <span class="percentage">(5.6%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+1
+         <span class="percentage">(5.6%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+4
+         <span class="percentage">(22.2%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">Mobilizon</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:15:25.527140Z, ended 2024:10:24-22:15:27.952766Z (duration: 0:00:02.425626)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:15:27.952863Z, ended 2024:10:24-22:15:28.705501Z (duration: 0:00:00.752638)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:15:28.705581Z, ended 2024:10:24-22:15:29.461826Z (duration: 0:00:00.756245)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-375">AssertionFailure (Must, Problem): Accessed URI: "https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr":</label>
+    <input id="details-375" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr&quot;:
+0: Wrong HTTP content type.
+ -&gt; &quot;application/json; charset=utf-8&quot;
+Expected: an empty collection
+     but: was &lt;[WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx/1.18.0&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:29 GMT&#x27;, &#x27;content-type&#x27;: &#x27;application/json; charset=utf-8&#x27;, &#x27;content-length&#x27;: &#x27;599&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;vary&#x27;: &#x27;Accept-Encoding, accept-encoding&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate, public, max-age=0, s-maxage=0, must-revalidate&#x27;, &#x27;report-to&#x27;: &#x27;{&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://sentry.framasoft.org/api/2/security/?sentry_key=40b6fa4d621f40efa6155d70c9618301&quot;}],&quot;group&quot;:&quot;csp-endpoint&quot;,&quot;max-age&quot;:10886400}&#x27;, &#x27;reporting-endpoints&#x27;: &#x27;csp-endpoint=&quot;https://sentry.framasoft.org/api/2/security/?sentry_key=40b6fa4d621f40efa6155d70c9618301&quot;&#x27;, &#x27;x-xss-protection&#x27;: &#x27;0&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;content-security-policy&#x27;: &quot;report-uri https://sentry.framasoft.org/api/2/security/?sentry_key=40b6fa4d621f40efa6155d70c9618301 ; report-to csp-endpoint;upgrade-insecure-requests;frame-ancestors &#x27;none&#x27;;frame-src &#x27;none&#x27;;font-src &#x27;self&#x27; ;media-src &#x27;self&#x27; ;img-src &#x27;self&#x27; data: blob: *.tile.openstreetmap.org stats.framasoft.org search.joinmobilizon.org images.unsplash.com;connect-src &#x27;self&#x27; * blob: https://mobilizon.fr wss://mobilizon.fr stats.framasoft.org sentry.framasoft.org;style-src &#x27;self&#x27; ;script-src &#x27;self&#x27; &#x27;unsafe-eval&#x27; &#x27;sha256-4RS22DYeB7U14dra4KcQYxmwt5HkOInieXK1NUMBmQI=&#x27; &#x27;sha256-zJdRXhLWm9NGI6BFr+sNmHBBrjAdJdFr7MpUq0EwK58=&#x27; stats.framasoft.org;default-src &#x27;none&#x27;;base-uri &#x27;self&#x27;;manifest-src &#x27;self&#x27;;&quot;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDVCc6DIlm8u8AeY1L&#x27;, &#x27;strict-transport-security&#x27;: &#x27;max-age=31536000; includeSubDomains; preload&#x27;)&gt;, payload=b&#x27;{&quot;aliases&quot;:[&quot;https://mobilizon.fr/@framasoft&quot;],&quot;links&quot;:[{&quot;href&quot;:&quot;https://mobilizon.fr/@framasoft&quot;,&quot;rel&quot;:&quot;self&quot;,&quot;type&quot;:&quot;application/activity+json&quot;},{&quot;rel&quot;:&quot;http://ostatus.org/schema/1.0/subscribe&quot;,&quot;template&quot;:&quot;https://mobilizon.fr/interact?uri={uri}&quot;},{&quot;href&quot;:&quot;https://mobilizon.fr/media/890f5396ef80081a6b1b18a5db969746cf8bb340e8a4e657d665e41f6646c539.jpg?name=framasoft%27s%20avatar.jpg&quot;,&quot;rel&quot;:&quot;http://webfinger.net/rel/avatar&quot;,&quot;type&quot;:&quot;image/jpeg&quot;},{&quot;href&quot;:&quot;https://mobilizon.fr/@framasoft&quot;,&quot;rel&quot;:&quot;http://webfinger.net/rel/profile-page/&quot;,&quot;type&quot;:&quot;text/html&quot;}],&quot;subject&quot;:&quot;acct:framasoft@mobilizon.fr&quot;}&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc))))]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:15:29.469140Z, ended 2024:10:24-22:15:30.217775Z (duration: 0:00:00.748635)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:15:30.217865Z, ended 2024:10:24-22:15:30.985131Z (duration: 0:00:00.767266)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:15:30.985273Z, ended 2024:10:24-22:15:31.750376Z (duration: 0:00:00.765103)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-376">AssertionFailure (Must, Unaffected): Not HTTP status 4xx.</label>
+    <input id="details-376" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 4xx.
+Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource==acct%3Aframasoft%40mobilizon.fr&quot;.
+Expected: (a value greater than or equal to &lt;400&gt; and a value less than &lt;500&gt;)
+     but: a value greater than or equal to &lt;400&gt; was &lt;200&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:106</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:15:31.756535Z, ended 2024:10:24-22:15:32.503931Z (duration: 0:00:00.747396)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-377">AssertionFailure (Must, Unaffected): Returns JRD content.</label>
+    <input id="details-377" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Returns JRD content.
+Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource==acct%3Aframasoft%40mobilizon.fr&quot;.
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:144</pre>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:32.504756Z, ended 2024:10:24-22:15:33.276308Z (duration: 0:00:00.771552)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-378">AssertionFailure (Must, Unaffected): Not HTTP status 4xx.</label>
+    <input id="details-378" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 4xx.
+Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource=framasoft@mobilizon.fr&quot;.
+Expected: (a value greater than or equal to &lt;400&gt; and a value less than &lt;500&gt;)
+     but: a value greater than or equal to &lt;400&gt; was &lt;200&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:32</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:33.282115Z, ended 2024:10:24-22:15:34.030724Z (duration: 0:00:00.748609)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-379">AssertionFailure (Must, Unaffected): Returns JRD content.</label>
+    <input id="details-379" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Returns JRD content.
+Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource=framasoft@mobilizon.fr&quot;.
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:71</pre>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:15:34.032894Z, ended 2024:10:24-22:15:34.816598Z (duration: 0:00:00.783704)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:15:34.816873Z, ended 2024:10:24-22:15:35.585039Z (duration: 0:00:00.768166)</p>
+<div class="status failed must degraded moreinfo">
+	<label for="details-380">AssertionFailure (Must, Degraded): Wrong content type.</label>
+    <input id="details-380" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Degraded): Wrong content type.
+Accessed URI: &quot;https://mobilizon.fr/.well-known/webfinger?resource=acct%3Aframasoft%40mobilizon.fr&quot;.
+Expected: (&#x27;application/jrd+json&#x27; or a string starting with &#x27;application/jrd+json;&#x27;)
+     but: was &#x27;application/json; charset=utf-8&#x27;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:44</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:35.592511Z, ended 2024:10:24-22:15:37.319656Z (duration: 0:00:01.727145)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:37.319734Z, ended 2024:10:24-22:15:39.604812Z (duration: 0:00:02.285078)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:39.604859Z, ended 2024:10:24-22:15:41.873337Z (duration: 0:00:02.268478)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:41.873374Z, ended 2024:10:24-22:15:43.401910Z (duration: 0:00:01.528536)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:15:43.402010Z, ended 2024:10:24-22:15:43.813387Z (duration: 0:00:00.411377)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:15:43.813527Z, ended 2024:10:24-22:15:44.593561Z (duration: 0:00:00.780034)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:15:44.593756Z, ended 2024:10:24-22:15:45.355433Z (duration: 0:00:00.761677)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:15:25.526637Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:15:45.355564Z (total: 0:00:19.828927)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

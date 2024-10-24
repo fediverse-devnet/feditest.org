@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 57</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td class="status error">
+    <div>
+18
+     <span class="percentage">(100.0%)</span>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">Menzoberranzan</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:14:40.996541Z, ended 2024:10:24-22:14:41.333331Z (duration: 0:00:00.336790)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-333">[Errno -2] Name or service not known</label>
+    <input id="details-333" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:33
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:14:41.341332Z, ended 2024:10:24-22:14:41.346040Z (duration: 0:00:00.004708)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-334">[Errno -2] Name or service not known</label>
+    <input id="details-334" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__14_must_only_redirect_to_https.py:17
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:14:41.348980Z, ended 2024:10:24-22:14:41.351169Z (duration: 0:00:00.002189)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-335">[Errno -2] Name or service not known</label>
+    <input id="details-335" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:18
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:14:41.353045Z, ended 2024:10:24-22:14:41.355078Z (duration: 0:00:00.002033)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-336">[Errno -2] Name or service not known</label>
+    <input id="details-336" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:27
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:14:41.356815Z, ended 2024:10:24-22:14:41.358415Z (duration: 0:00:00.001600)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-337">[Errno -2] Name or service not known</label>
+    <input id="details-337" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:60
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:14:41.359609Z, ended 2024:10:24-22:14:41.361338Z (duration: 0:00:00.001729)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-338">[Errno -2] Name or service not known</label>
+    <input id="details-338" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:102
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:14:41.362588Z, ended 2024:10:24-22:14:41.364250Z (duration: 0:00:00.001662)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-339">[Errno -2] Name or service not known</label>
+    <input id="details-339" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:136
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:14:41.365294Z, ended 2024:10:24-22:14:41.366668Z (duration: 0:00:00.001374)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-340">[Errno -2] Name or service not known</label>
+    <input id="details-340" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:28
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:14:41.367668Z, ended 2024:10:24-22:14:41.369150Z (duration: 0:00:00.001482)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-341">[Errno -2] Name or service not known</label>
+    <input id="details-341" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:63
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:14:41.370166Z, ended 2024:10:24-22:14:41.371912Z (duration: 0:00:00.001746)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-342">[Errno -2] Name or service not known</label>
+    <input id="details-342" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:21
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:14:41.373130Z, ended 2024:10:24-22:14:41.374702Z (duration: 0:00:00.001572)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-343">[Errno -2] Name or service not known</label>
+    <input id="details-343" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:23
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:14:41.375764Z, ended 2024:10:24-22:14:41.376857Z (duration: 0:00:00.001093)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-344">[Errno -2] Name or service not known</label>
+    <input id="details-344" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:25
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:14:41.377731Z, ended 2024:10:24-22:14:41.378764Z (duration: 0:00:00.001033)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-345">[Errno -2] Name or service not known</label>
+    <input id="details-345" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:158
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:14:41.379643Z, ended 2024:10:24-22:14:41.380840Z (duration: 0:00:00.001197)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-346">[Errno -2] Name or service not known</label>
+    <input id="details-346" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:68
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:14:41.381728Z, ended 2024:10:24-22:14:41.382991Z (duration: 0:00:00.001263)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-347">[Errno -2] Name or service not known</label>
+    <input id="details-347" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:14:41.383845Z, ended 2024:10:24-22:14:41.385249Z (duration: 0:00:00.001404)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-348">[Errno -2] Name or service not known</label>
+    <input id="details-348" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4__3_only_returns_jrd_in_response_to_https_requests.py:30
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:14:41.386159Z, ended 2024:10:24-22:14:41.396801Z (duration: 0:00:00.010642)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-349">[Errno -2] Name or service not known</label>
+    <input id="details-349" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/4__3_only_returns_jrd_in_response_to_https_requests.py:58
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:14:41.397549Z, ended 2024:10:24-22:14:41.398578Z (duration: 0:00:00.001029)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-350">[Errno -2] Name or service not known</label>
+    <input id="details-350" type="checkbox">
+    <pre class="stacktrace">ConnectError: [Errno -2] Name or service not known
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:17
+/usr/lib/python3.11/contextlib.py:158</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:14:40.996396Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:14:41.399159Z (total: 0:00:00.402763)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

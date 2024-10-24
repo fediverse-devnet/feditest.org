@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="system2-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 3</h1>
+      <p class="id">feditest-run-20241024-222150 [<a href="system2-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>5</div>
+       </td>
+       <td class="status must total">
+        <div>
+5
+         <span class="percentage">(71.4%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+5
+         <span class="percentage">(71.4%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+5
+         <span class="percentage">(71.4%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td class="status error">
+    <div>
+2
+     <span class="percentage">(28.6%)</span>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>7</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">sender_node</h3>
+  <div class="driver"><span title="WordPressPlusPluginsUbosNodeDriver">WordPressPlusPluginsUbosNodeDriver</span></div>
+  <div class="app">WordPress+plugins</div>
+  <div class="appversion">?</div>
+ </div>
+ <div class="role">
+  <h3 class="name">receiver_node</h3>
+  <div class="driver"><span title="WordPressPlusPluginsUbosNodeDriver">WordPressPlusPluginsUbosNodeDriver</span></div>
+  <div class="app">WordPress+plugins</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> system2.delete_single_hop::DeleteSingleHopTest</h4>
+  <div class="description">Test single-hop delete.
+    See also: https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/3</div>
+  <p class="when">Started 2024:10:24-22:29:53.355725Z, ended 2024:10:24-22:30:22.148895Z (duration: 0:00:28.793170)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-15">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-15" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/delete_single_hop.py:54</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:29:53.355725Z, ended 2024:10:24-22:30:22.148895Z (duration: 0:00:28.793170)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.follow</h5>
+   <p class="when">Started 2024:10:24-22:29:53.355725Z, ended 2024:10:24-22:30:22.148895Z (duration: 0:00:28.793170)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.wait_until_actor_is_followed_by_actor</h5>
+   <p class="when">Started 2024:10:24-22:29:53.355725Z, ended 2024:10:24-22:30:22.148895Z (duration: 0:00:28.793170)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-15step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-15step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/delete_single_hop.py:54</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> system2.direct_addressing::SendNoteToTest</h4>
+  <div class="description">Tests that a note by actor A is delivered to an actor B if A addresses the note to B.</div>
+  <p class="when">Started 2024:10:24-22:30:22.149013Z, ended 2024:10:24-22:30:49.124501Z (duration: 0:00:26.975488)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-16">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-16" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/direct_addressing.py:52</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:30:22.149013Z, ended 2024:10:24-22:30:49.124501Z (duration: 0:00:26.975488)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.sender_creates_note</h5>
+   <p class="when">Started 2024:10:24-22:30:22.149013Z, ended 2024:10:24-22:30:49.124501Z (duration: 0:00:26.975488)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:10:24-22:30:22.149013Z, ended 2024:10:24-22:30:49.124501Z (duration: 0:00:26.975488)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-16step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-16step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/direct_addressing.py:52</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> system2.follow_receive::FollowReceiveTest</h4>
+  <div class="description">Tests that actors on two different Fediverse Nodes can follow each other and a follower receives the followed account's posts.</div>
+  <p class="when">Started 2024:10:24-22:30:49.124581Z, ended 2024:10:24-22:31:16.249835Z (duration: 0:00:27.125254)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-17">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-17" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/follow_receive.py:54</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:30:49.124581Z, ended 2024:10:24-22:31:16.249835Z (duration: 0:00:27.125254)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.follow</h5>
+   <p class="when">Started 2024:10:24-22:30:49.124581Z, ended 2024:10:24-22:31:16.249835Z (duration: 0:00:27.125254)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.wait_until_actor_is_followed_by_actor</h5>
+   <p class="when">Started 2024:10:24-22:30:49.124581Z, ended 2024:10:24-22:31:16.249835Z (duration: 0:00:27.125254)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-17step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-17step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/follow_receive.py:54</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> system2.like_single_hop::LikeTest</h4>
+  <div class="description">Tests that actor B can like a note by actor A on a different Fediverse Node
+    and both see the Like. Unlike works the reverse.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/149</div>
+  <p class="when">Started 2024:10:24-22:31:16.250127Z, ended 2024:10:24-22:31:37.778374Z (duration: 0:00:21.528247)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-18">HTTP status 422: {"error":"mastodon_api_submit_post","error_description":"Validation failed: Text can't be blank"}</label>
+    <input id="details-18" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 422: {&quot;error&quot;:&quot;mastodon_api_submit_post&quot;,&quot;error_description&quot;:&quot;Validation failed: Text can&#x27;t be blank&quot;}
+../feditest-tests-fediverse/tests/system2/like_single_hop.py:50</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:31:16.250127Z, ended 2024:10:24-22:31:37.778374Z (duration: 0:00:21.528247)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.sender_creates_note</h5>
+   <p class="when">Started 2024:10:24-22:31:16.250127Z, ended 2024:10:24-22:31:37.778374Z (duration: 0:00:21.528247)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.receiver_likes_note</h5>
+   <p class="when">Started 2024:10:24-22:31:16.250127Z, ended 2024:10:24-22:31:37.778374Z (duration: 0:00:21.528247)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-18step">HTTP status 422: {"error":"mastodon_api_submit_post","error_description":"Validation failed: Text can't be blank"}</label>
+    <input id="details-18step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 422: {&quot;error&quot;:&quot;mastodon_api_submit_post&quot;,&quot;error_description&quot;:&quot;Validation failed: Text can&#x27;t be blank&quot;}
+../feditest-tests-fediverse/tests/system2/like_single_hop.py:50</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> system2.preserve_links::PreserveBlockquoteTest</h4>
+  <div class="description">Make sure that all hyperlinks in a note are still present on the receiving node. They may be rearranged.</div>
+  <p class="when">Started 2024:10:24-22:31:37.778396Z, ended 2024:10:24-22:32:05.264383Z (duration: 0:00:27.485987)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-19">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-19" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/preserve_links.py:55</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:31:37.778396Z, ended 2024:10:24-22:32:05.264383Z (duration: 0:00:27.485987)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.sender_creates_note</h5>
+   <p class="when">Started 2024:10:24-22:31:37.778396Z, ended 2024:10:24-22:32:05.264383Z (duration: 0:00:27.485987)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:10:24-22:31:37.778396Z, ended 2024:10:24-22:32:05.264383Z (duration: 0:00:27.485987)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-19step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-19step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/preserve_links.py:55</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> system2.reply_single_hop::ReplyTest</h4>
+  <div class="description">Tests that actor B can reply to a note by actor A on a different Fediverse Node and both see the reply.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/128</div>
+  <p class="when">Started 2024:10:24-22:32:05.264535Z, ended 2024:10:24-22:32:26.814756Z (duration: 0:00:21.550221)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-20">HTTP status 400: {"error":"rest_invalid_param","error_description":"Invalid parameter(s): in_reply_to_id"}</label>
+    <input id="details-20" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 400: {&quot;error&quot;:&quot;rest_invalid_param&quot;,&quot;error_description&quot;:&quot;Invalid parameter(s): in_reply_to_id&quot;}
+../feditest-tests-fediverse/tests/system2/reply_single_hop.py:60</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:32:05.264535Z, ended 2024:10:24-22:32:26.814756Z (duration: 0:00:21.550221)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.sender_creates_note</h5>
+   <p class="when">Started 2024:10:24-22:32:05.264535Z, ended 2024:10:24-22:32:26.814756Z (duration: 0:00:21.550221)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.receiver_replies_to_note</h5>
+   <p class="when">Started 2024:10:24-22:32:05.264535Z, ended 2024:10:24-22:32:26.814756Z (duration: 0:00:21.550221)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-20step">HTTP status 400: {"error":"rest_invalid_param","error_description":"Invalid parameter(s): in_reply_to_id"}</label>
+    <input id="details-20step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 400: {&quot;error&quot;:&quot;rest_invalid_param&quot;,&quot;error_description&quot;:&quot;Invalid parameter(s): in_reply_to_id&quot;}
+../feditest-tests-fediverse/tests/system2/reply_single_hop.py:60</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> system2.update_single_hop::UpdateTest</h4>
+  <div class="description">Tests that actor B's copy of a note by actor A is correctly updated when A updates it on a different Fediverse Node.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/151</div>
+  <p class="when">Started 2024:10:24-22:32:26.814843Z, ended 2024:10:24-22:32:53.241890Z (duration: 0:00:26.427047)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-21">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-21" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/update_single_hop.py:57</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.provision_actors</h5>
+   <p class="when">Started 2024:10:24-22:32:26.814843Z, ended 2024:10:24-22:32:53.241890Z (duration: 0:00:26.427047)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.sender_creates_note</h5>
+   <p class="when">Started 2024:10:24-22:32:26.814843Z, ended 2024:10:24-22:32:53.241890Z (duration: 0:00:26.427047)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:10:24-22:32:26.814843Z, ended 2024:10:24-22:32:53.241890Z (duration: 0:00:26.427047)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-21step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-21step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+../feditest-tests-fediverse/tests/system2/update_single_hop.py:57</pre>
+</div>
+  </div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:29:25.842375Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:33:09.226848Z (total: 0:03:43.384473)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title> | Feditest</title>
+ </head>
+ <body>
+    <header class="feditest title" style="text-align: center">
+      <h1><span class="prefix"><a href="https://feditest.org/">Feditest</a> Session Report:</span> Session 64</h1>
+      <p class="id">feditest-run-20241024-220237 [<a href="webfinger-server-all.testresult.html">Summary</a>]</p>
+    </header>
+
+      <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>10 <span class="percentage">(55.6%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>6</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">moon-eyed</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:10:24-22:15:49.962234Z, ended 2024:10:24-22:15:50.973066Z (duration: 0:00:01.010832)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-387">AssertionFailure (Must, Problem): Accessed URI: "https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&rel=http%3A//webfinger.net/rel/profile-page&rel=something-else&rel=self":</label>
+    <input id="details-387" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&quot;:
+0: Wrong HTTP status code.
+ -&gt; 400
+1: Wrong HTTP content type.
+ -&gt; &quot;None&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:50 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWSh0HHqIFkcAEl4C&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:10:24-22:15:50.979420Z, ended 2024:10:24-22:15:51.752373Z (duration: 0:00:00.772953)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:10:24-22:15:51.752506Z, ended 2024:10:24-22:15:52.356214Z (duration: 0:00:00.603708)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-388">AssertionFailure (Must, Problem): Accessed URI: "https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de":</label>
+    <input id="details-388" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&quot;:
+0: Wrong HTTP status code.
+ -&gt; 400
+1: Wrong HTTP content type.
+ -&gt; &quot;None&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:52 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWXsLlhlAs9MAEl6C&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:52 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWXsLlhlAs9MAEl6C&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:10:24-22:15:52.358932Z, ended 2024:10:24-22:15:53.130158Z (duration: 0:00:00.771226)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:10:24-22:15:53.130299Z, ended 2024:10:24-22:15:53.708507Z (duration: 0:00:00.578208)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:15:53.708556Z, ended 2024:10:24-22:15:54.291957Z (duration: 0:00:00.583401)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:10:24-22:15:54.292060Z, ended 2024:10:24-22:15:54.879741Z (duration: 0:00:00.587681)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:54.879881Z, ended 2024:10:24-22:15:55.451459Z (duration: 0:00:00.571578)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:55.451493Z, ended 2024:10:24-22:15:56.068400Z (duration: 0:00:00.616907)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:10:24-22:15:56.068452Z, ended 2024:10:24-22:15:56.658508Z (duration: 0:00:00.590056)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-389">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-389" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Adoes-not-exist%40social.mooneyed.de&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:35</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:10:24-22:15:56.668461Z, ended 2024:10:24-22:15:57.241344Z (duration: 0:00:00.572883)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-390">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-390" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&quot;.
+Expected: &lt;200&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:10:24-22:15:57.243081Z, ended 2024:10:24-22:15:57.808428Z (duration: 0:00:00.565347)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-391">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-391" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=mailto%3Aabc%40def.com&quot;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:38</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:57.811329Z, ended 2024:10:24-22:15:58.384714Z (duration: 0:00:00.573385)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-392">AssertionFailure (Must, Problem): Accessed URI: "https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de":</label>
+    <input id="details-392" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&quot;:
+0: Wrong HTTP status code.
+ -&gt; 400
+1: Wrong HTTP content type.
+ -&gt; &quot;None&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:58 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWuMLkRfUn3QAHmwB&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:160</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:58.387861Z, ended 2024:10:24-22:15:59.241555Z (duration: 0:00:00.853694)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-393">AssertionFailure (Must, Problem): Accessed URI: "https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de":</label>
+    <input id="details-393" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&quot;:
+0: Wrong HTTP status code.
+ -&gt; 400
+1: Wrong HTTP content type.
+ -&gt; &quot;None&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:59 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWxId-kwuM94AEmGC&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:10:24-22:15:59.248019Z, ended 2024:10:24-22:15:59.831404Z (duration: 0:00:00.583385)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-394">AssertionFailure (Must, Problem): Accessed URI: "https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de":</label>
+    <input id="details-394" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &quot;https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de&quot;:
+0: Wrong HTTP status code.
+ -&gt; 400
+1: Wrong HTTP content type.
+ -&gt; &quot;None&quot;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: an empty collection
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://social.mooneyed.de/.well-known/webfinger?resource=acct%3Akromonos%40social.mooneyed.de), method=&#x27;GET&#x27;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 10, 24, 22, 2, 37, 617816, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=400, response_headers=&lt;MultiDict(&#x27;server&#x27;: &#x27;nginx&#x27;, &#x27;date&#x27;: &#x27;Thu, 24 Oct 2024 22:15:59 GMT&#x27;, &#x27;content-length&#x27;: &#x27;11&#x27;, &#x27;connection&#x27;: &#x27;keep-alive&#x27;, &#x27;access-control-allow-credentials&#x27;: &#x27;true&#x27;, &#x27;access-control-allow-origin&#x27;: &#x27;*&#x27;, &#x27;access-control-expose-headers&#x27;: &#x27;Link,X-RateLimit-Reset,X-RateLimit-Limit,X-RateLimit-Remaining,X-Request-Id,Idempotency-Key&#x27;, &#x27;cache-control&#x27;: &#x27;max-age=0, private, must-revalidate&#x27;, &#x27;permissions-policy&#x27;: &#x27;interest-cohort=()&#x27;, &#x27;referrer-policy&#x27;: &#x27;same-origin&#x27;, &#x27;x-content-type-options&#x27;: &#x27;nosniff&#x27;, &#x27;x-download-options&#x27;: &#x27;noopen&#x27;, &#x27;x-frame-options&#x27;: &#x27;DENY&#x27;, &#x27;x-permitted-cross-domain-policies&#x27;: &#x27;none&#x27;, &#x27;x-request-id&#x27;: &#x27;GAGDWzkkBWg5uHkAEmHC&#x27;, &#x27;x-xss-protection&#x27;: &#x27;1; mode=block&#x27;)&gt;, payload=b&#x27;Bad Request&#x27;, when_completed=datetime.datetime(2024, 10, 24, 22, 2, 37, 618161, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#x27;Expecting value: line 1 column 1 (char 0)&#x27;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:115</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:10:24-22:15:59.834460Z, ended 2024:10:24-22:16:00.452753Z (duration: 0:00:00.618293)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:10:24-22:16:00.452789Z, ended 2024:10:24-22:16:01.036863Z (duration: 0:00:00.584074)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header "Access-Control-Allow-Origin".</div>
+  <p class="when">Started 2024:10:24-22:16:01.036985Z, ended 2024:10:24-22:16:01.636052Z (duration: 0:00:00.599067)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:10:24-22:15:49.961781Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:10:24-22:16:01.636461Z (total: 0:00:11.674680)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.11.3-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>Feditest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>
