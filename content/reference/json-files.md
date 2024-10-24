@@ -10,23 +10,24 @@ attempts to explain them.
   {{% gl NodeDriver %}} and potentially a number of addition parameters, such as
   names of accounts on that {{% gl Node %}} or its hostname.
 
+  Syntax for how to {{% pageref "json-files/node.md" "define Nodes" %}}.
+
 * **Constellation Definition**: A JSON file that includes one ore more {{% gl Node %}}
   definition JSON files, and arranges them into a {{% gl Constellation %}} definition
-  that can be used for a {{% gl TestPlanSession %}}.
+  that can be used in a {{% gl TestPlan %}}.
 
   A {{% gl Constellation %}} definition can be created from {{% gl Node %}} definition
   JSON files with `feditest create-constellation`.
 
-* **Test Plan Session Template**: A JSON file that contains a list of tests to run,
-  and information about the structure of the the {{% gl Constellation %}} required to
-  run those tests. The {{% gl TestPlanSessionTemplate %}} does not yet assign
-  an actual {{% gl Constellation %}} to it.
+* **Test Plan Session Template**: A JSON file that contains a list of tests to run.
+  The {{% gl TestPlanSessionTemplate %}} does assign a {{% gl Constellation %}} to it.
 
   A {{% gl TestPlanSessionTemplate %}} JSON file can be created from tests found by
   FediTest with `feditest create-session-template`.
 
-* **Test Plan**: A JSON file that defines a sequence of {{% gls TestPlanSession %}},
-  each of which is a sequence of tests to run against a particular {{% gl Constellation %}}.
+* **Test Plan**: A JSON file that combines a {{% gl TestPlanSessionTemplate %}} with
+  one or more {{% gl Constellation %}} definitions, so the tests in the
+  {{% gl TestPlanSessionTemplate %}} are run once with each {{% gl Constellation %}}.
 
   A {{% gl TestPlan %}} JSON file can be created from a {{% gl TestPlanSessionTemplate %}}
   JSON file and one more more {{% gl Constellation %}} JSON files with
@@ -39,10 +40,13 @@ attempts to explain them.
 
   A {{% gl TestRun %}} transcript is produced by `feditest run`.
 
-* **Reports** can be produced in various formats with `feditest convert-transcript` from
+* **Report**: a {{% gl report %}} can be produced in various formats with `feditest convert-transcript` from
   any {{% gl TestRun %}} Transcript.
 
 This flow is shown graphically below:
 
 {{% img style="text-align: center" src="/assets/reference/json-data-flow.png" alt="JSON data flow" %}}
 
+While it is useful to be able to run these commands separately, and for understanding
+FediTest, "later" commands now also understand the options of the "earlier" ones, so
+several steps can be run as one command.

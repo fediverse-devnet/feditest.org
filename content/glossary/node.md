@@ -4,10 +4,16 @@ plural: Nodes
 summary: An instance of an application that communicates with other Nodes during testing. Also
     an API to that Node.
 seealsoterm: [
+    'App',
     'Constellation',
     'NodeDriver'
 ]
 ---
 
-For example, an instance of Mastodon would be a Node. Nodes are generally parts of
-{{% gls constellation %}}. Nodes are instantiated by {{% gls NodeDriver %}}.
+For example, an instance of {{% gl app %}} Mastodon would be a Node. Nodes are generally parts of
+{{% gls constellation %}}.
+
+Nodes are instantiated by {{% gls NodeDriver %}}.
+
+In the code, class `Node` is the superclass of all implementation classes that know
+how to control and observe Nodes.

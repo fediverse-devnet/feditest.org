@@ -1,5 +1,5 @@
 ---
-title: "Early(est) access to work in progress on FediTest and the Fediverse test suite"
+title: "Early(est) work in progress on FediTest and the Fediverse test suite"
 date: 2024-04-09
 author: Johannes Ernst
 authorurl: https://j12t.org/

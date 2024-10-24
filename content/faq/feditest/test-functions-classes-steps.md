@@ -1,5 +1,5 @@
 ---
-title: Tests can either be defined as functions or as classes with "steps". What's that for?
+title: FediTest tests can either be defined as functions or as classes with "steps". What's that for?
 ---
 
 Consider a Fediverse test such as: "if I reply to the post of my friend, they will see my

@@ -45,7 +45,10 @@ div.news {
 div.news > h2 {
     margin-top: 1ex;
 }
-
+span.when {
+    display: inline-block;
+    min-width: 110px;
+}
 a.big {
     margin: 0 1ex;
     padding: 1ex;
