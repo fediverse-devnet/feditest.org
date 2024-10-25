@@ -24,9 +24,9 @@ Work in progress, based on {{% pageref "/release-notes/0.4.md" "FediTest V0.4" %
   each other. This is work in progress, not all the issues shown may remain real issues once
   we have discussed them with the relevant implementors.
 
-  These are essentially the results from the setup described in {{% pageref "/quickstart/evaluate/" %}}
-  (60-90 min section), but applied to more {{% gls constellation %}} beyond Mastodon
-  against Mastodon (the first column).
+  Want to run the tests yourself? Use the setup described in {{% pageref "/quickstart/evaluate/" %}}
+  (60-90 min section). Specify the one {{% gl constellation %}} described there (that gives you
+  the first column in these results) or several, as we did for these results.
 
 * **NEW: [3-Node Fediverse System Tests](/contrib/results/2024-10-24T22.02.04/system3-mastodon-mastodon-mastodon.testresult.html)**,
   running three Mastodon instances against each other for some tests that require 3 {{% gls node %}}.
