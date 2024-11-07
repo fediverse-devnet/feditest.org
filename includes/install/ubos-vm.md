@@ -1,4 +1,4 @@
-* Go to the [UBOS Developer setup](https://ubos.net/docs/development/setup/), pick
+* Go to the [UBOS Developer setup](https://ubos.net/docs/gears/developer/setup/), pick
   one of the options, and follow the instructions.
 
 * Come back here once you have your development virtual machine running, and the Linux

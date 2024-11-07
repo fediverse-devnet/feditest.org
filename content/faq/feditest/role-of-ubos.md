@@ -23,7 +23,7 @@ very helpful for testing Fediverse applications, such as:
   machine. This is also very useful for testing if you want to run several
   {{% gls Node %}} against each other.
 
-To use these features, you need to run [UBOS Linux](https://ubos.net/docs/glossary/linux/),
+To use these features, you need to run [UBOS Linux](https://ubos.net/docs/linux/),
 typically in a virtual machine or Linux container.
 
 However, the use of {{% gl ubosgears %}} is entirely optional. You can alternatively run FediTest on

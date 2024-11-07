@@ -38,8 +38,8 @@ it sounds.
   container setup is automated there. Which virtual machine to run depends on which operating
   system and CPU architecture you are on (e.g. VirtualBox or not).
 
-  Go to the [UBOS Developer setup](https://ubos.net/docs/development/setup/), pick
-  one of the options, and follow the instructions. Ignore what it says about UBOS Mesh.
+  Go to the [UBOS Developer setup](https://ubos.net/docs/gears/developer/setup/), pick
+  one of the options, and follow the instructions.
 
 * Come back here once you have your development virtual machine running, and the Linux
   container in it.
@@ -120,7 +120,7 @@ and finally, the thing you have been waiting for:
   During the test run with this test plan, both Mastodon and WordPress with the ActivityPub
   plugin arespun up
   and torn down after the test by way of `ubos-admin deploy` and `ubos-admin undeploy`
-  (see https://ubos.net/docs/operation/ubos-admin/#ubos-admin-deploy ... the Site JSON
+  (see https://ubos.net/docs/gears/ubos-admin/#ubos-admin-deploy ... the Site JSON
   file referenced there is in directory `ubos-sites` in case you are curious).
 
 * To run a non-default test plan:

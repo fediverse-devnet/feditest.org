@@ -24,7 +24,7 @@ This makes the FediTest setup more complicated. Here is one setup with moderate 
 
 * You (perhaps temporarily) run a server with {{% gl ubosgears %}} that is also publicly accessible.
   Setting this up takes only a few minutes by clicking through the Amazon EC2 wizard that is
-  described and linked to from [here](https://ubos.net/docs/operation/installation/x86_ec2/).
+  described and linked to from [here](http://localhost:1313/docs/linux/installation/x86_ec2/).
 
 * Set up a an official DNS hostname for that server and make sure you wait
   long enough for DNS information to propagate.

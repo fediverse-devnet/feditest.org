@@ -16,7 +16,7 @@ This involves creating an Arch Linux package for it with extra metadata,
 and template files or scripts that can parameterize the configuration so that
 {{% gl ubosgears %}} can successfully deploy your {{% gl app %}} at any hostname.
 
-The [ubos.net website](https://ubos.net/) has [tutorials](https://ubos.net/docs/development/tutorials-gears/)
+The [ubos.net website](https://ubos.net/) has [tutorials](https://ubos.net/docs/gears/developer/)
 for how to do that.
 
 As a side effect, your {{% gl app %}} can now also be installed, uninstalled, backed up,
