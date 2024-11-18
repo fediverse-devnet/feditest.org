@@ -65,10 +65,10 @@ own {{% gl app %}} and one running Mastodon in the cloud.
   at `leader_node`) or vice versa.
 
 * Now you fill in parameters for your application, as you probably did before
-  {{% pageref "webfinger-server-localhost.md" "here" %}}.
+  {{% pageref "webfinger-server.md" "here" %}}.
 
 * Now modify the other {{% gl Node %}} section for Mastodon which will be automatically
-  provisioned on your {{% gl ubosserver %}} in the cloud. You need to change the name of
+  provisioned on your system running {{% gl ubosgears %}} in the cloud. You need to change the name of
   the `nodedriver`, and set a few parameters, so it looks like this:
 
   ```             "follower_node": {
@@ -84,9 +84,9 @@ own {{% gl app %}} and one running Mastodon in the cloud.
 
   * `app`: the name of the application, here Mastodon, mostly for reporting purposes.
   * `hostname`: the DNS hostname at which your Mastodon instance will run. Make sure the
-    DNS record actually points to your {{% gl ubosserver %}}.
+    DNS record actually points to your system running {{% gl ubosgears %}}.
   * `sshuri`: the SSH URI used by FediTest to invoke {{% gl ubosgears %}} commands on
-    your {{% gl ubosserver %}}, so it can provision (and unprovision) your Mastodon
+    your system running {{% gl ubosgears %}}, so it can provision (and unprovision) your Mastodon
     instance.
   * `identity_file`: optionally, if you specified a key pair for your EC2 instance that's
     not your default keypair, the name of the name of the file that contains the
