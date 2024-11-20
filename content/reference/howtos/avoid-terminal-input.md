@@ -1,5 +1,5 @@
 ---
-title: How can I avoid interactive terminal input when running tests?
+title: "Q: How can I avoid interactive terminal input when running tests?"
 ---
 
 In {{% pageref "/quickstart/evaluate.md" %}}, you had to enter the hostname of the
