@@ -22,3 +22,6 @@ Draft subjects to cover:
 1. Putting FediTest to work with more applications and more test coverage
 
 Come by if you are interested.
+
+**Update 2024-11-21:** [my slides](/slides/2024-11-21-socialcg-testing/) (use Safari
+or Chrome; Firefox seems to have trouble)
