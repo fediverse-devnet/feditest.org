@@ -50,7 +50,7 @@ Your file, at the end, may look like this:
     "non_existing_accounts" : [
         {
             "role" : null,
-            "account_userid" : "does-not-exist"
+            "not_existing_account_userid" : "does-not-exist"
         }
     ]
 }
