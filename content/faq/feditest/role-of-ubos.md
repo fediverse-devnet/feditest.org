@@ -1,5 +1,5 @@
 ---
-title: What's the role of UBOS Gears in Feditest?
+title: What's the role of UBOS Gears in FediTest?
 ---
 
 {{% gl ubosgears %}} has some unique features that are
