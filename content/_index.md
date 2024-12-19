@@ -22,6 +22,8 @@ Testing distributed, heterogeneous systems...
 ## News
 
 {{% recentposts 4 %}}
+Older {{% pageref "/blog" "posts "%}} and {{% pageref "/release-notes" "release notes" %}}.
+
 {{% /box %}}
 
 {{% box "section" %}}
