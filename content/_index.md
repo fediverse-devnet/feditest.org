@@ -40,7 +40,7 @@ Older {{% pageref "/blog" "posts "%}} and {{% pageref "/release-notes" "release 
 {{% /box %}}
 
 {{% note %}}
-FediTest is at version 0.4. Given this version number, don't expect perfection 😎
+FediTest is at version 0.5. Given this version number, don't expect perfection 😎
 But it is beginning to be useful.
 {{% /note %}}
 

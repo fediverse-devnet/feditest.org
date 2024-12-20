@@ -12,7 +12,7 @@ a {{% gl Node %}}, and that can be instructed to do various terrible things, suc
 as emitting malformed messages. We tentatively call this {{% gl app %}} the
 "Hungarian Babelbox" (think of it as Douglas Adams'
 [Babelfish](https://hitchhikers.fandom.com/wiki/Babel_Fish) using Monty Python's
-[Hungarian Phrasebook](https://www.youtube.com/watch?v=grA5XmBRC6g)
+[Hungarian Phrasebook](https://www.youtube.com/watch?v=grA5XmBRC6g).)
 
 It would essentially:
 
