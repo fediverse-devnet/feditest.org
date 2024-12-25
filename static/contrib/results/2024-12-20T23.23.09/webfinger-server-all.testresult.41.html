@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title>Test Run Session 42/95 (feditest-run-20241220-232322) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 42/95</h1>
+   <p class="id">feditest-run-20241220-232322 <a href="webfinger-server-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>14 <span class="percentage">(77.8%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+4
+         <span class="percentage">(22.2%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+4
+         <span class="percentage">(22.2%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">Hubzilla</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:12:20-23:34:12.447194Z, ended 2024:12:20-23:34:13.715862Z (duration: 0:00:01.268668)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:12:20-23:34:13.715921Z, ended 2024:12:20-23:34:14.035359Z (duration: 0:00:00.319438)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:12:20-23:34:14.035486Z, ended 2024:12:20-23:34:14.366935Z (duration: 0:00:00.331449)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-302">AssertionFailure (Must, Problem): Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio&#34;:</label>
+    <input id="details-302" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio&#34;:
+0: Link type not a valid media type: &#34;&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+Expected: No exception
+     but: was &lt;[InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105046550&gt;, &#39;Link type not a valid media type: &#34;&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105046550&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:12:20-23:34:14.368341Z, ended 2024:12:20-23:34:14.689101Z (duration: 0:00:00.320760)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:12:20-23:34:14.689186Z, ended 2024:12:20-23:34:15.037113Z (duration: 0:00:00.347927)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:34:15.037192Z, ended 2024:12:20-23:34:15.364119Z (duration: 0:00:00.326927)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:34:15.364151Z, ended 2024:12:20-23:34:15.676048Z (duration: 0:00:00.311897)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:34:15.676116Z, ended 2024:12:20-23:34:15.999941Z (duration: 0:00:00.323825)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:34:16.000034Z, ended 2024:12:20-23:34:16.331825Z (duration: 0:00:00.331791)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:12:20-23:34:16.331857Z, ended 2024:12:20-23:34:16.639150Z (duration: 0:00:00.307293)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-303">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-303" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=acct%3Adoes-not-exist%40authorship.studio&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:12:20-23:34:16.640654Z, ended 2024:12:20-23:34:17.019256Z (duration: 0:00:00.378602)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:12:20-23:34:17.019311Z, ended 2024:12:20-23:34:17.331268Z (duration: 0:00:00.311957)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-304">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-304" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=mailto%3Aabc%40def.com&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:34:17.332249Z, ended 2024:12:20-23:34:18.462915Z (duration: 0:00:01.130666)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:12:20-23:34:18.462957Z, ended 2024:12:20-23:34:19.423326Z (duration: 0:00:00.960369)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:34:19.423412Z, ended 2024:12:20-23:34:19.800556Z (duration: 0:00:00.377144)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-305">AssertionFailure (Must, Problem): Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio&#34;:</label>
+    <input id="details-305" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio&#34;:
+0: Link type not a valid media type: &#34;&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;WebFingerQueryDiagResponse(http_request_response_pair=HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://authorship.studio/.well-known/webfinger?resource=acct%3Ascott%40authorship.studio), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:34:19 GMT&#39;, &#39;server&#39;: &#39;Apache&#39;, &#39;expires&#39;: &#39;Thu, 19 Nov 1981 08:52:00 GMT&#39;, &#39;cache-control&#39;: &#39;no-store, no-cache, must-revalidate&#39;, &#39;pragma&#39;: &#39;no-cache&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;set-cookie&#39;: &#39;PHPSESSID=cb5ebd6851c493f5bfd9429caf611144; path=/; secure; HttpOnly; SameSite=None&#39;, &#39;upgrade&#39;: &#39;h2,h2c&#39;, &#39;connection&#39;: &#39;Upgrade&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;transfer-encoding&#39;: &#39;chunked&#39;, &#39;content-type&#39;: &#39;application/jrd+json&#39;)&gt;, payload=b&#39;{&#34;subject&#34;:&#34;acct:scott@authorship.studio&#34;,&#34;aliases&#34;:[&#34;https:\\/\\/authorship.studio\\/channel\\/scott&#34;,&#34;https:\\/\\/authorship.studio\\/~scott&#34;,&#34;https:\\/\\/authorship.studio\\/@scott&#34;,&#34;acct:scott@biztechtonics.net&#34;,&#34;acct:scott@completehostingguide.com&#34;,&#34;acct:scott@wistex.biz&#34;,&#34;acct:scott@scottstolz.com&#34;,&#34;acct:scott@hubzilla.monster&#34;,&#34;acct:scott@loves.tech&#34;],&#34;properties&#34;:{&#34;http:\\/\\/webfinger.net\\/ns\\/name&#34;:&#34;Scott M. Stolz&#34;,&#34;http:\\/\\/xmlns.com\\/foaf\\/0.1\\/name&#34;:&#34;Scott M. Stolz&#34;,&#34;https:\\/\\/w3id.org\\/security\\/v1#publicKeyPem&#34;:&#34;-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvBaccO+wjQ9hQ6cb23a1\\nCV0cv8QVH7Cu\\/KR55ogX5uJ+IW4uMcxmLQkyw\\/5oFbZOgjvDxm7zDqkDp45R2aIC\\nyRmcpjSy2+sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe\\/UbwoEzXzM4lcvut\\nZGqgjoo\\/42j1eaAYGG\\/Wyzs7K3GFVJBOwYS6us\\/k9noF8sUE+vJI0c9UEbODNfyU\\nsPC+R\\/n++lECAkV04a\\/FDqCztkqExtz2xpXnNs+yuHij4e1g3QAvcaUmIKhD2DzG\\nU70pt1y4q9vZ+U\\/D092wGQ6fQ48r6\\/GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4\\nOKkW3UFhTWFlBK\\/7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13\\/KdF2iRzlCS\\nBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa\\n1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR\\n1khiDmjxN+OZLgJ7PpJM6C7xKj1V\\/YxP8lD5uCFFUlD9v4F1j1wa0aQ+I9nOfVwJ\\nRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em+RMlFM7eY+YAnxcs\\nRAMnWdbqj5wXroPxEypQn60CAwEAAQ==\\n-----END PUBLIC KEY-----\\n&#34;,&#34;http:\\/\\/purl.org\\/zot\\/federation&#34;:&#34;zot6,activitypub&#34;},&#34;links&#34;:[{&#34;rel&#34;:&#34;http:\\/\\/webfinger.net\\/rel\\/avatar&#34;,&#34;type&#34;:&#34;&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/photo\\/profile\\/l\\/4&#34;},{&#34;rel&#34;:&#34;http:\\/\\/microformats.org\\/profile\\/hcard&#34;,&#34;type&#34;:&#34;text\\/html&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/hcard\\/scott&#34;},{&#34;rel&#34;:&#34;http:\\/\\/openid.net\\/specs\\/connect\\/1.0\\/issuer&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio&#34;},{&#34;rel&#34;:&#34;http:\\/\\/webfinger.net\\/rel\\/profile-page&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/profile\\/scott&#34;},{&#34;rel&#34;:&#34;http:\\/\\/webfinger.net\\/rel\\/blog&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/channel\\/scott&#34;},{&#34;rel&#34;:&#34;http:\\/\\/ostatus.org\\/schema\\/1.0\\/subscribe&#34;,&#34;template&#34;:&#34;https:\\/\\/authorship.studio\\/follow?f=&amp;url={uri}&#34;},{&#34;rel&#34;:&#34;http:\\/\\/purl.org\\/zot\\/protocol\\/6.0&#34;,&#34;type&#34;:&#34;application\\/x-zot+json&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/channel\\/scott&#34;},{&#34;rel&#34;:&#34;http:\\/\\/purl.org\\/openwebauth\\/v1&#34;,&#34;type&#34;:&#34;application\\/x-zot+json&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/owa&#34;},{&#34;rel&#34;:&#34;magic-public-key&#34;,&#34;href&#34;:&#34;data:application\\/magic-public-key,RSA.vBaccO-wjQ9hQ6cb23a1CV0cv8QVH7Cu_KR55ogX5uJ-IW4uMcxmLQkyw_5oFbZOgjvDxm7zDqkDp45R2aICyRmcpjSy2-sREM7OBzin9GY3N4EYrXNdl6eamrSk8v3gArIe_UbwoEzXzM4lcvutZGqgjoo_42j1eaAYGG_Wyzs7K3GFVJBOwYS6us_k9noF8sUE-vJI0c9UEbODNfyUsPC-R_n--lECAkV04a_FDqCztkqExtz2xpXnNs-yuHij4e1g3QAvcaUmIKhD2DzGU70pt1y4q9vZ-U_D092wGQ6fQ48r6_GG9c4yWwOxeKZfT0E8Bg5YP3NW6aGxrZA4OKkW3UFhTWFlBK_7DNcsuzZBA8Svt5kjJYO89xYfTAQ3ywgkKQG13_KdF2iRzlCSBv5qq2obBsdqOfoibd9la4tC0RY6R934DLlhHvGX57gKtbm1Fc1fOXwCYd5YMXPa1ewG2dD02fZ4h1zeZL2uqlzkrSEE6tiMcaux7I63q1y0MW2NFIp8i65BeSsHDcKR1khiDmjxN-OZLgJ7PpJM6C7xKj1V_YxP8lD5uCFFUlD9v4F1j1wa0aQ-I9nOfVwJRcfCyQvXDWyen9vne8XOXV1Kb8qm7FCyrUs4WHt5AZaXC5em-RMlFM7eY-YAnxcsRAMnWdbqj5wXroPxEypQn60.AQAB&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application\\/ld+json; profile=\\&#34;https:\\/\\/www.w3.org\\/ns\\/activitystreams\\&#34;&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/channel\\/scott&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application\\/activity+json&#34;,&#34;href&#34;:&#34;https:\\/\\/authorship.studio\\/channel\\/scott&#34;}]}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))), jrd=&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x104d93590&gt;, exceptions=[InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x104d93590&gt;, &#39;Link type not a valid media type: &#34;&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x104d93590&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;)])&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:12:20-23:34:19.802163Z, ended 2024:12:20-23:34:20.017270Z (duration: 0:00:00.215107)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:12:20-23:34:20.017326Z, ended 2024:12:20-23:34:20.401948Z (duration: 0:00:00.384622)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header &#34;Access-Control-Allow-Origin&#34;.</div>
+  <p class="when">Started 2024:12:20-23:34:20.402152Z, ended 2024:12:20-23:34:20.720676Z (duration: 0:00:00.318524)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:20-23:34:12.447067Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:20-23:34:20.720829Z (total: 0:00:08.273762)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>macOS-15.2-arm64-arm-64bit</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

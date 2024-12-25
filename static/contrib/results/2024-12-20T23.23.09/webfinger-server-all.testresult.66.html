@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title>Test Run Session 67/95 (feditest-run-20241220-232322) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 67/95</h1>
+   <p class="id">feditest-run-20241220-232322 <a href="webfinger-server-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>13 <span class="percentage">(72.2%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>3</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+5
+         <span class="percentage">(27.8%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+3
+         <span class="percentage">(16.7%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+1
+         <span class="percentage">(5.6%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+1
+         <span class="percentage">(5.6%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+5
+         <span class="percentage">(27.8%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">NodeBB</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:12:20-23:40:06.781467Z, ended 2024:12:20-23:40:07.927106Z (duration: 0:00:01.145639)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:12:20-23:40:07.927139Z, ended 2024:12:20-23:40:08.286990Z (duration: 0:00:00.359851)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:12:20-23:40:08.287069Z, ended 2024:12:20-23:40:08.682710Z (duration: 0:00:00.395641)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-514">AssertionFailure (Must, Problem): Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;:</label>
+    <input id="details-514" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;:
+0: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=utf-8&#34;
+Expected: No exception
+     but: was &lt;[WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:08 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=utf-8&#39;, &#39;transfer-encoding&#39;: &#39;chunked&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;cross-origin-opener-policy&#39;: &#39;same-origin&#39;, &#39;cross-origin-resource-policy&#39;: &#39;same-site&#39;, &#39;origin-agent-cluster&#39;: &#39;?1&#39;, &#39;referrer-policy&#39;: &#39;strict-origin-when-cross-origin&#39;, &#39;strict-transport-security&#39;: &#39;max-age=15552000; includeSubDomains&#39;, &#39;x-content-type-options&#39;: &#39;nosniff, nosniff&#39;, &#39;x-dns-prefetch-control&#39;: &#39;off&#39;, &#39;x-download-options&#39;: &#39;noopen&#39;, &#39;x-frame-options&#39;: &#39;SAMEORIGIN&#39;, &#39;x-permitted-cross-domain-policies&#39;: &#39;none&#39;, &#39;x-xss-protection&#39;: &#39;0&#39;, &#39;x-powered-by&#39;: &#39;NodeBB&#39;, &#39;access-control-allow-headers&#39;: &#39;X-Requested-With&#39;, &#39;content-security-policy&#39;: &#34;frame-ancestors &#39;self&#39;&#34;, &#39;etag&#39;: &#39;W/&#34;164-/dmlDAqe0iNFaYrC1IGDpDsUZfM&#34;&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;vary&#39;: &#39;accept-encoding&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=%2BDqkRhhy%2BpwXVfHqdIOZ8bc4SYZFL7iv3%2BzrDNFCDYomkpmzlHrjRTRk5v7WL2Cw4rPvc2vpEdNxkYz%2FF676GHJNszn7ozm8j%2FpB5fxJgbfpfVQbwe3jXrP3uk0zyF%2Ff21l5T2262g%3D%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379c8ca41aab5-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=27226&amp;min_rtt=26027&amp;rtt_var=9399&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2839&amp;recv_bytes=787&amp;delivery_rate=92975&amp;cwnd=186&amp;unsent_bytes=0&amp;cid=363aad9a15c7b8ee&amp;ts=321&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;subject&#34;:&#34;acct:baris@community.nodebb.org&#34;,&#34;aliases&#34;:[&#34;https://community.nodebb.org/uid/1&#34;,&#34;https://community.nodebb.org/user/baris&#34;],&#34;links&#34;:[{&#34;rel&#34;:&#34;http://webfinger.net/rel/profile-page&#34;,&#34;type&#34;:&#34;text/html&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/user/baris&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application/activity+json&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/uid/1&#34;}]}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))))]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:12:20-23:40:08.685525Z, ended 2024:12:20-23:40:09.081557Z (duration: 0:00:00.396032)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:12:20-23:40:09.081654Z, ended 2024:12:20-23:40:09.464484Z (duration: 0:00:00.382830)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:40:09.464574Z, ended 2024:12:20-23:40:09.656589Z (duration: 0:00:00.192015)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:40:09.656675Z, ended 2024:12:20-23:40:10.054262Z (duration: 0:00:00.397587)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:10.054347Z, ended 2024:12:20-23:40:10.426017Z (duration: 0:00:00.371670)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:10.426108Z, ended 2024:12:20-23:40:10.770613Z (duration: 0:00:00.344505)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:12:20-23:40:10.770744Z, ended 2024:12:20-23:40:11.163647Z (duration: 0:00:00.392903)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:12:20-23:40:11.163732Z, ended 2024:12:20-23:40:11.512299Z (duration: 0:00:00.348567)</p>
+<div class="status failed must degraded moreinfo">
+	<label for="details-515">AssertionFailure (Must, Degraded): Wrong content type.</label>
+    <input id="details-515" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Degraded): Wrong content type.
+Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;.
+Expected: (&#39;application/jrd+json&#39; or a string starting with &#39;application/jrd+json;&#39;)
+     but: was &#39;application/json; charset=utf-8&#39;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:43</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:11.513859Z, ended 2024:12:20-23:40:11.862042Z (duration: 0:00:00.348183)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-516">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-516" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=mailto%3Aabc%40def.com&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:11.863497Z, ended 2024:12:20-23:40:13.106339Z (duration: 0:00:01.242842)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:13.106371Z, ended 2024:12:20-23:40:14.184548Z (duration: 0:00:01.078177)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:14.184594Z, ended 2024:12:20-23:40:14.558663Z (duration: 0:00:00.374069)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-517">AssertionFailure (Must, Problem): Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;:</label>
+    <input id="details-517" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;:
+0: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=utf-8&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;WebFingerQueryDiagResponse(http_request_response_pair=HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:14 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=utf-8&#39;, &#39;transfer-encoding&#39;: &#39;chunked&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;cross-origin-opener-policy&#39;: &#39;same-origin&#39;, &#39;cross-origin-resource-policy&#39;: &#39;same-site&#39;, &#39;origin-agent-cluster&#39;: &#39;?1&#39;, &#39;referrer-policy&#39;: &#39;strict-origin-when-cross-origin&#39;, &#39;strict-transport-security&#39;: &#39;max-age=15552000; includeSubDomains&#39;, &#39;x-content-type-options&#39;: &#39;nosniff, nosniff&#39;, &#39;x-dns-prefetch-control&#39;: &#39;off&#39;, &#39;x-download-options&#39;: &#39;noopen&#39;, &#39;x-frame-options&#39;: &#39;SAMEORIGIN&#39;, &#39;x-permitted-cross-domain-policies&#39;: &#39;none&#39;, &#39;x-xss-protection&#39;: &#39;0&#39;, &#39;x-powered-by&#39;: &#39;NodeBB&#39;, &#39;access-control-allow-headers&#39;: &#39;X-Requested-With&#39;, &#39;content-security-policy&#39;: &#34;frame-ancestors &#39;self&#39;&#34;, &#39;etag&#39;: &#39;W/&#34;164-/dmlDAqe0iNFaYrC1IGDpDsUZfM&#34;&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;vary&#39;: &#39;accept-encoding&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=aOCfSWwou%2BgXLCHkUiKSouSaQ6YXfAJzqH49N1gpp%2BXPjgzXfkbhbRB1KZwOS0JGoYRnt1V5TmMVbpucaAglAcvJbdMOBRCeAMgR5fzpv7nuBURwR2XKxtDEtOhL9rjk6LNwteDAIQ%3D%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379eda87815b2-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=26290&amp;min_rtt=24379&amp;rtt_var=8464&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2838&amp;recv_bytes=787&amp;delivery_rate=117346&amp;cwnd=182&amp;unsent_bytes=0&amp;cid=a14e8adf9401255d&amp;ts=305&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;subject&#34;:&#34;acct:baris@community.nodebb.org&#34;,&#34;aliases&#34;:[&#34;https://community.nodebb.org/uid/1&#34;,&#34;https://community.nodebb.org/user/baris&#34;],&#34;links&#34;:[{&#34;rel&#34;:&#34;http://webfinger.net/rel/profile-page&#34;,&#34;type&#34;:&#34;text/html&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/user/baris&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application/activity+json&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/uid/1&#34;}]}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))), jrd=&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105571a10&gt;, exceptions=[WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:14 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=utf-8&#39;, &#39;transfer-encoding&#39;: &#39;chunked&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;cross-origin-opener-policy&#39;: &#39;same-origin&#39;, &#39;cross-origin-resource-policy&#39;: &#39;same-site&#39;, &#39;origin-agent-cluster&#39;: &#39;?1&#39;, &#39;referrer-policy&#39;: &#39;strict-origin-when-cross-origin&#39;, &#39;strict-transport-security&#39;: &#39;max-age=15552000; includeSubDomains&#39;, &#39;x-content-type-options&#39;: &#39;nosniff, nosniff&#39;, &#39;x-dns-prefetch-control&#39;: &#39;off&#39;, &#39;x-download-options&#39;: &#39;noopen&#39;, &#39;x-frame-options&#39;: &#39;SAMEORIGIN&#39;, &#39;x-permitted-cross-domain-policies&#39;: &#39;none&#39;, &#39;x-xss-protection&#39;: &#39;0&#39;, &#39;x-powered-by&#39;: &#39;NodeBB&#39;, &#39;access-control-allow-headers&#39;: &#39;X-Requested-With&#39;, &#39;content-security-policy&#39;: &#34;frame-ancestors &#39;self&#39;&#34;, &#39;etag&#39;: &#39;W/&#34;164-/dmlDAqe0iNFaYrC1IGDpDsUZfM&#34;&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;vary&#39;: &#39;accept-encoding&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=aOCfSWwou%2BgXLCHkUiKSouSaQ6YXfAJzqH49N1gpp%2BXPjgzXfkbhbRB1KZwOS0JGoYRnt1V5TmMVbpucaAglAcvJbdMOBRCeAMgR5fzpv7nuBURwR2XKxtDEtOhL9rjk6LNwteDAIQ%3D%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379eda87815b2-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=26290&amp;min_rtt=24379&amp;rtt_var=8464&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2838&amp;recv_bytes=787&amp;delivery_rate=117346&amp;cwnd=182&amp;unsent_bytes=0&amp;cid=a14e8adf9401255d&amp;ts=305&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;subject&#34;:&#34;acct:baris@community.nodebb.org&#34;,&#34;aliases&#34;:[&#34;https://community.nodebb.org/uid/1&#34;,&#34;https://community.nodebb.org/user/baris&#34;],&#34;links&#34;:[{&#34;rel&#34;:&#34;http://webfinger.net/rel/profile-page&#34;,&#34;type&#34;:&#34;text/html&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/user/baris&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application/activity+json&#34;,&#34;href&#34;:&#34;https://community.nodebb.org/uid/1&#34;}]}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))))])&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:12:20-23:40:14.559487Z, ended 2024:12:20-23:40:14.768073Z (duration: 0:00:00.208586)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:12:20-23:40:14.768103Z, ended 2024:12:20-23:40:15.124365Z (duration: 0:00:00.356262)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header &#34;Access-Control-Allow-Origin&#34;.</div>
+  <p class="when">Started 2024:12:20-23:40:15.124425Z, ended 2024:12:20-23:40:15.474846Z (duration: 0:00:00.350421)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-518">AssertionFailure (Must, Problem): Missing CORS header.</label>
+    <input id="details-518" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Missing CORS header.
+Accessed URI: &#34;https://community.nodebb.org/.well-known/webfinger?resource=acct%3Abaris%40community.nodebb.org&#34;.
+Not present: &#34;access-control-allow-origin&#34;.
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:21</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:20-23:40:06.781207Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:20-23:40:15.476668Z (total: 0:00:08.695461)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>macOS-15.2-arm64-arm-64bit</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

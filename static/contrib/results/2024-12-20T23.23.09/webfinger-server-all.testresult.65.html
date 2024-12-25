@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title>Test Run Session 66/95 (feditest-run-20241220-232322) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 66/95</h1>
+   <p class="id">feditest-run-20241220-232322 <a href="webfinger-server-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>10 <span class="percentage">(55.6%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>6</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>2</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+6
+         <span class="percentage">(33.3%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+2
+         <span class="percentage">(11.1%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+8
+         <span class="percentage">(44.4%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">mostr</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:12:20-23:40:01.982214Z, ended 2024:12:20-23:40:02.952355Z (duration: 0:00:00.970141)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-506">AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:</label>
+    <input id="details-506" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=UTF-8&#34;
+2: Invalid key: error
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:02 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=tajXRTNEDXiibeFRUpJPTvc%2FBbXaihsusXMKOpWjZaB3cELS7w5ggEcfzXf7LcR9mOK9J68Y9iXMxYM9liu2RYUUlxCraMpYP%2FChbbWhMKwKR9wQ0MOeA0Ul%2Fqc%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379a3099515fd-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=27350&amp;min_rtt=25298&amp;rtt_var=8775&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2833&amp;recv_bytes=896&amp;delivery_rate=112239&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=f34a0eae17a472d9&amp;ts=617&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:02 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=tajXRTNEDXiibeFRUpJPTvc%2FBbXaihsusXMKOpWjZaB3cELS7w5ggEcfzXf7LcR9mOK9J68Y9iXMxYM9liu2RYUUlxCraMpYP%2FChbbWhMKwKR9wQ0MOeA0Ul%2Fqc%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379a3099515fd-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=27350&amp;min_rtt=25298&amp;rtt_var=8775&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2833&amp;recv_bytes=896&amp;delivery_rate=112239&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=f34a0eae17a472d9&amp;ts=617&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10566e610&gt;, &#39;Invalid key: error&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:12:20-23:40:02.957334Z, ended 2024:12:20-23:40:03.774406Z (duration: 0:00:00.817072)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:12:20-23:40:03.774464Z, ended 2024:12:20-23:40:03.954791Z (duration: 0:00:00.180327)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-507">AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:</label>
+    <input id="details-507" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=UTF-8&#34;
+2: Invalid key: error
+Expected: No exception
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:04 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=p2OXsHnYR6GwrBs6Rz13sUeeT%2B1e%2F9u%2FVRPcWt8rszVj%2BroUhltvpy6qbUlikCp7agPJTrfjED2p%2Fr7qwPMuYhHgwl26G3xOfliQsPIcEvVFEBGBtGLuMszXKKQ%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379ac8a4c15fd-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25606&amp;min_rtt=25415&amp;rtt_var=9914&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=107462&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=0d07b472d6acc3bf&amp;ts=108&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:04 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=p2OXsHnYR6GwrBs6Rz13sUeeT%2B1e%2F9u%2FVRPcWt8rszVj%2BroUhltvpy6qbUlikCp7agPJTrfjED2p%2Fr7qwPMuYhHgwl26G3xOfliQsPIcEvVFEBGBtGLuMszXKKQ%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379ac8a4c15fd-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25606&amp;min_rtt=25415&amp;rtt_var=9914&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=107462&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=0d07b472d6acc3bf&amp;ts=108&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105657c10&gt;, &#39;Invalid key: error&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:12:20-23:40:03.955220Z, ended 2024:12:20-23:40:04.130594Z (duration: 0:00:00.175374)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:12:20-23:40:04.130621Z, ended 2024:12:20-23:40:04.312756Z (duration: 0:00:00.182135)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:40:04.312793Z, ended 2024:12:20-23:40:04.511932Z (duration: 0:00:00.199139)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:40:04.512067Z, ended 2024:12:20-23:40:04.701643Z (duration: 0:00:00.189576)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:04.701674Z, ended 2024:12:20-23:40:04.875300Z (duration: 0:00:00.173626)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:04.875350Z, ended 2024:12:20-23:40:05.053577Z (duration: 0:00:00.178227)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:12:20-23:40:05.053624Z, ended 2024:12:20-23:40:05.252566Z (duration: 0:00:00.198942)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-508">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-508" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3Adoes-not-exist%40mostr.pub&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:12:20-23:40:05.254103Z, ended 2024:12:20-23:40:05.431099Z (duration: 0:00:00.176996)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-509">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-509" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;.
+Expected: &lt;200&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:12:20-23:40:05.431771Z, ended 2024:12:20-23:40:05.611381Z (duration: 0:00:00.179610)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-510">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-510" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=mailto%3Aabc%40def.com&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:05.612582Z, ended 2024:12:20-23:40:05.791547Z (duration: 0:00:00.178965)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-511">AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:</label>
+    <input id="details-511" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=UTF-8&#34;
+2: Invalid key: error
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:05 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=liP%2F85%2FoLiZFKvsWVIP8cRdkOGYx0twmdZg81q6Ie63EluxJPHvmWPDZtbZHRlEF%2B88fWX3PZbc8Y6iYY7MWe%2BPtMHgFgQL8qbtNx4ZjqxDIsZ%2BnBB5F%2F0S4JWU%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379b809feceb9-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25158&amp;min_rtt=24812&amp;rtt_var=7579&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=110139&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=c52e465fbbe42c0c&amp;ts=110&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:05 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=liP%2F85%2FoLiZFKvsWVIP8cRdkOGYx0twmdZg81q6Ie63EluxJPHvmWPDZtbZHRlEF%2B88fWX3PZbc8Y6iYY7MWe%2BPtMHgFgQL8qbtNx4ZjqxDIsZ%2BnBB5F%2F0S4JWU%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379b809feceb9-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25158&amp;min_rtt=24812&amp;rtt_var=7579&amp;sent=4&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=110139&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=c52e465fbbe42c0c&amp;ts=110&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105657a50&gt;, &#39;Invalid key: error&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:156</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:05.793592Z, ended 2024:12:20-23:40:05.963510Z (duration: 0:00:00.169918)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-512">AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:</label>
+    <input id="details-512" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=UTF-8&#34;
+2: Invalid key: error
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:06 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=S0wHkhJ0216EfexJn1eZ5LpZIEX%2Bj5jwisxjS1yQQmDqGhHeyYSXTl3sLi4%2BaWtVfpgp3%2FTU4qVtCdT%2BlGosTkL9UvdsOQt0Xk%2FBqjArmzHK6GIcHrPdIBA1Vp8%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379b92b1eceb9-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25670&amp;min_rtt=25222&amp;rtt_var=9778&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=114820&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=1e71e7a55daa80e0&amp;ts=107&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:06 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=S0wHkhJ0216EfexJn1eZ5LpZIEX%2Bj5jwisxjS1yQQmDqGhHeyYSXTl3sLi4%2BaWtVfpgp3%2FTU4qVtCdT%2BlGosTkL9UvdsOQt0Xk%2FBqjArmzHK6GIcHrPdIBA1Vp8%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379b92b1eceb9-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=25670&amp;min_rtt=25222&amp;rtt_var=9778&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=114820&amp;cwnd=222&amp;unsent_bytes=0&amp;cid=1e71e7a55daa80e0&amp;ts=107&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10568ba90&gt;, &#39;Invalid key: error&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:40:05.965650Z, ended 2024:12:20-23:40:06.161931Z (duration: 0:00:00.196281)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-513">AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:</label>
+    <input id="details-513" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;application/json; charset=UTF-8&#34;
+2: Invalid key: error
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;WebFingerQueryDiagResponse(http_request_response_pair=HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:06 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=rJPZGyKeMKaDFVWozMnQvJKZMTLBbh988lHY9Ly%2B8EV7IxEAPTGT%2FyGIKto%2Byis16zYCK%2FqERzicrdfhTFNy7xyKwGxyUqnlgvSsJkjTqDLldf8n6uuVNCrgG1Q%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379ba49ec964f-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=30978&amp;min_rtt=24186&amp;rtt_var=13921&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=119738&amp;cwnd=247&amp;unsent_bytes=0&amp;cid=e94034df33ee0617&amp;ts=109&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))), jrd=&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105586fd0&gt;, exceptions=[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:06 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=rJPZGyKeMKaDFVWozMnQvJKZMTLBbh988lHY9Ly%2B8EV7IxEAPTGT%2FyGIKto%2Byis16zYCK%2FqERzicrdfhTFNy7xyKwGxyUqnlgvSsJkjTqDLldf8n6uuVNCrgG1Q%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379ba49ec964f-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=30978&amp;min_rtt=24186&amp;rtt_var=13921&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=119738&amp;cwnd=247&amp;unsent_bytes=0&amp;cid=e94034df33ee0617&amp;ts=109&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://mostr.pub/.well-known/webfinger?resource=acct%3A614aee83d7eaffc7bc6bbf02feda0cc53e7f97eeceac08a897c4cea3c023b804%40mostr.pub), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;date&#39;: &#39;Fri, 20 Dec 2024 23:40:06 GMT&#39;, &#39;content-type&#39;: &#39;application/json; charset=UTF-8&#39;, &#39;content-length&#39;: &#39;21&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding&#39;, &#39;cf-cache-status&#39;: &#39;DYNAMIC&#39;, &#39;report-to&#39;: &#39;{&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=rJPZGyKeMKaDFVWozMnQvJKZMTLBbh988lHY9Ly%2B8EV7IxEAPTGT%2FyGIKto%2Byis16zYCK%2FqERzicrdfhTFNy7xyKwGxyUqnlgvSsJkjTqDLldf8n6uuVNCrgG1Q%3D&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;nel&#39;: &#39;{&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}&#39;, &#39;server&#39;: &#39;cloudflare&#39;, &#39;cf-ray&#39;: &#39;8f5379ba49ec964f-SJC&#39;, &#39;alt-svc&#39;: &#39;h3=&#34;:443&#34;; ma=86400&#39;, &#39;server-timing&#39;: &#39;cfL4;desc=&#34;?proto=TCP&amp;rtt=30978&amp;min_rtt=24186&amp;rtt_var=13921&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2832&amp;recv_bytes=824&amp;delivery_rate=119738&amp;cwnd=247&amp;unsent_bytes=0&amp;cid=e94034df33ee0617&amp;ts=109&amp;x=0&#34;&#39;)&gt;, payload=b&#39;{&#34;error&#34;:&#34;Not found&#34;}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JrdError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105586fd0&gt;, &#39;Invalid key: error&#39;)])&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:12:20-23:40:06.164185Z, ended 2024:12:20-23:40:06.243087Z (duration: 0:00:00.078902)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:12:20-23:40:06.243166Z, ended 2024:12:20-23:40:06.583667Z (duration: 0:00:00.340501)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header &#34;Access-Control-Allow-Origin&#34;.</div>
+  <p class="when">Started 2024:12:20-23:40:06.583854Z, ended 2024:12:20-23:40:06.781070Z (duration: 0:00:00.197216)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:20-23:40:01.981907Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:20-23:40:06.781181Z (total: 0:00:04.799274)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>macOS-15.2-arm64-arm-64bit</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

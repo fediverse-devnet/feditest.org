@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title>Test Run Session 4/95 (feditest-run-20241220-232322) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 4/95</h1>
+   <p class="id">feditest-run-20241220-232322 <a href="webfinger-server-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>8 <span class="percentage">(44.4%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>7</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>3</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+10
+         <span class="percentage">(55.6%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+7
+         <span class="percentage">(38.9%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+3
+         <span class="percentage">(16.7%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+10
+         <span class="percentage">(55.6%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">aoderelay</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:12:20-23:24:16.905569Z, ended 2024:12:20-23:24:17.465704Z (duration: 0:00:00.560135)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-23">AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:</label>
+    <input id="details-23" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;None&#34;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:17 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:17 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#39;Expecting value: line 1 column 1 (char 0)&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:12:20-23:24:17.470186Z, ended 2024:12:20-23:24:18.003712Z (duration: 0:00:00.533526)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:12:20-23:24:18.003802Z, ended 2024:12:20-23:24:18.514210Z (duration: 0:00:00.510408)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-24">AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:</label>
+    <input id="details-24" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;None&#34;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: No exception
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:18 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:18 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#39;Expecting value: line 1 column 1 (char 0)&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:12:20-23:24:18.521882Z, ended 2024:12:20-23:24:19.067732Z (duration: 0:00:00.545850)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:12:20-23:24:19.067839Z, ended 2024:12:20-23:24:19.566535Z (duration: 0:00:00.498696)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:24:19.566662Z, ended 2024:12:20-23:24:20.070272Z (duration: 0:00:00.503610)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-25">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-25" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource==acct%3Arelay%40relay.orphaned.monster&#34;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:112</pre>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:24:20.072979Z, ended 2024:12:20-23:24:20.586942Z (duration: 0:00:00.513963)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:24:20.587033Z, ended 2024:12:20-23:24:21.115717Z (duration: 0:00:00.528684)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-26">AssertionFailure (Must, Unaffected): Not HTTP status 400</label>
+    <input id="details-26" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400
+Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=relay@relay.orphaned.monster&#34;.
+Expected: &lt;400&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:39</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:24:21.117505Z, ended 2024:12:20-23:24:21.649289Z (duration: 0:00:00.531784)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:12:20-23:24:21.649554Z, ended 2024:12:20-23:24:22.383613Z (duration: 0:00:00.734059)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:12:20-23:24:22.383749Z, ended 2024:12:20-23:24:23.494217Z (duration: 0:00:01.110468)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-27">AssertionFailure (Must, Problem): Not HTTP status 200.</label>
+    <input id="details-27" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Not HTTP status 200.
+Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;.
+Expected: &lt;200&gt;
+     but: was &lt;404&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__9_content_type.py:27</pre>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:12:20-23:24:23.497733Z, ended 2024:12:20-23:24:25.654180Z (duration: 0:00:02.156447)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-28">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-28" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=foo%3A//relay.orphaned.monster&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:24:25.655418Z, ended 2024:12:20-23:24:26.219808Z (duration: 0:00:00.564390)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-29">AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:</label>
+    <input id="details-29" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;None&#34;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:26 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:26 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#39;Expecting value: line 1 column 1 (char 0)&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:156</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:12:20-23:24:26.222124Z, ended 2024:12:20-23:24:26.779857Z (duration: 0:00:00.557733)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-30">AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:</label>
+    <input id="details-30" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;None&#34;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:26 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:26 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#39;Expecting value: line 1 column 1 (char 0)&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:24:26.784150Z, ended 2024:12:20-23:24:27.321802Z (duration: 0:00:00.537652)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-31">AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:</label>
+    <input id="details-31" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;:
+0: Wrong HTTP status code.
+ -&gt; 404
+1: Wrong HTTP content type.
+ -&gt; &#34;None&#34;
+2: Expecting value: line 1 column 1 (char 0)
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;WebFingerQueryDiagResponse(http_request_response_pair=HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:27 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))), jrd=None, exceptions=[WrongHttpStatusError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:27 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), WrongContentTypeError(HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=404, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx/1.18.0 (Ubuntu)&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:24:27 GMT&#39;, &#39;content-length&#39;: &#39;0&#39;, &#39;connection&#39;: &#39;keep-alive&#39;)&gt;, payload=b&#39;&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc)))), JSONDecodeError(&#39;Expecting value: line 1 column 1 (char 0)&#39;)])&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:12:20-23:24:27.323093Z, ended 2024:12:20-23:24:27.738799Z (duration: 0:00:00.415706)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:12:20-23:24:27.738929Z, ended 2024:12:20-23:24:28.393116Z (duration: 0:00:00.654187)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header &#34;Access-Control-Allow-Origin&#34;.</div>
+  <p class="when">Started 2024:12:20-23:24:28.393234Z, ended 2024:12:20-23:24:28.936479Z (duration: 0:00:00.543245)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-32">AssertionFailure (Must, Problem): Missing CORS header.</label>
+    <input id="details-32" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Missing CORS header.
+Accessed URI: &#34;https://relay.orphaned.monster/.well-known/webfinger?resource=acct%3Arelay%40relay.orphaned.monster&#34;.
+Not present: &#34;access-control-allow-origin&#34;.
+../feditest-tests-fediverse/tests/webfinger/server/5_1_cors_header_required.py:21</pre>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:20-23:24:16.905147Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:20-23:24:28.937485Z (total: 0:00:12.032338)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>macOS-15.2-arm64-arm-64bit</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

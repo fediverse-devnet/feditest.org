@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="webfinger-server-all.testresult.css">
+  <title>Test Run Session 37/95 (feditest-run-20241220-232322) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 37/95</h1>
+   <p class="id">feditest-run-20241220-232322 <a href="webfinger-server-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>9 <span class="percentage">(50.0%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>5</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>4</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+9
+         <span class="percentage">(50.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+5
+         <span class="percentage">(27.8%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+4
+         <span class="percentage">(22.2%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+9
+         <span class="percentage">(50.0%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>18</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">client</h3>
+  <div class="driver"><span title="ImpInProcessNodeDriver">ImpInProcessNodeDriver</span></div>
+  <div class="app">Imp</div>
+  <div class="appversion">0.4</div>
+ </div>
+ <div class="role">
+  <h3 class="name">server</h3>
+  <div class="driver"><span title="FediverseSaasNodeDriver">FediverseSaasNodeDriver</span></div>
+  <div class="app">GNU Social</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_1__2_parameter_ordering_not_significant::parameter_ordering</h4>
+  <div class="description">Parameter ordering is not significant.</div>
+  <p class="when">Started 2024:12:20-23:33:10.623085Z, ended 2024:12:20-23:33:11.959345Z (duration: 0:00:01.336260)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-272">AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:</label>
+    <input id="details-272" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&amp;rel=http%3A//webfinger.net/rel/profile-page&amp;rel=something-else&amp;rel=self&#34;:
+0: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;
+2: Link type not a valid media type: &#34;RSA&#34;
+3: Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;
+4: Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;
+5: Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;&#39;), InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link type not a valid media type: &#34;RSA&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050b4dd0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_1__2_parameter_ordering_not_significant.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__14_must_only_redirect_to_https::must_only_redirect_to_https</h4>
+  <div class="description">Test that if the server redirected, the final URL is an HTTPS URL.</div>
+  <p class="when">Started 2024:12:20-23:33:11.962723Z, ended 2024:12:20-23:33:12.682831Z (duration: 0:00:00.720108)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__2_perform_query::normal_query</h4>
+  <div class="description">Perform a normal, simple query on an existing account.</div>
+  <p class="when">Started 2024:12:20-23:33:12.682891Z, ended 2024:12:20-23:33:13.384828Z (duration: 0:00:00.701937)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-273">AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:</label>
+    <input id="details-273" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:
+0: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;
+2: Link type not a valid media type: &#34;RSA&#34;
+3: Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;
+4: Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;
+5: Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;
+Expected: No exception
+     but: was &lt;[InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;&#39;), InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link type not a valid media type: &#34;RSA&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ff110&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__2_perform_query.py:20</pre>
+</div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_http_status</h4>
+  <div class="description">Do not accept requests with missing resource parameter: HTTP status.</div>
+  <p class="when">Started 2024:12:20-23:33:13.386477Z, ended 2024:12:20-23:33:14.063562Z (duration: 0:00:00.677085)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-274">AssertionFailure (Must, Unaffected): Not HTTP status 400.</label>
+    <input id="details-274" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 400.
+Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger&#34;.
+Expected: &lt;400&gt;
+     but: was &lt;500&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__3_requires_resource_uri.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__3_requires_resource_uri::requires_resource_uri_jrd</h4>
+  <div class="description">Do not accept requests with missing resource parameter: JRD content.</div>
+  <p class="when">Started 2024:12:20-23:33:14.064650Z, ended 2024:12:20-23:33:14.766313Z (duration: 0:00:00.701663)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:33:14.766424Z, ended 2024:12:20-23:33:15.464107Z (duration: 0:00:00.697683)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::double_equals_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for inserting an extra = character.</div>
+  <p class="when">Started 2024:12:20-23:33:15.464138Z, ended 2024:12:20-23:33:16.182579Z (duration: 0:00:00.718441)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-7">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_http_status</h4>
+  <div class="description">Do not accept malformed resource parameters. Test HTTP status for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:33:16.182632Z, ended 2024:12:20-23:33:16.883913Z (duration: 0:00:00.701281)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-275">AssertionFailure (Must, Unaffected): Not HTTP status 4xx.</label>
+    <input id="details-275" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 4xx.
+Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=administrator@gnusocial.net&#34;.
+Expected: (a value greater than or equal to &lt;400&gt; and a value less than &lt;500&gt;)
+     but: a value greater than or equal to &lt;400&gt; was &lt;200&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__4_do_not_accept_malformed_resource_parameters.py:32</pre>
+</div>
+ </div>
+ <div class="test" id="test-8">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__4_do_not_accept_malformed_resource_parameters::requires_valid_resource_uri_jrd</h4>
+  <div class="description">Do not accept malformed resource parameters. Test JRD content for missing acct: scheme.</div>
+  <p class="when">Started 2024:12:20-23:33:16.891274Z, ended 2024:12:20-23:33:17.597551Z (duration: 0:00:00.706277)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-9">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__5_status_404_for_nonexisting_resources::status_404_for_nonexisting_resources</h4>
+  <div class="description">The server responds with 404 when the resource parameter identifies a non-existent resource.</div>
+  <p class="when">Started 2024:12:20-23:33:17.597632Z, ended 2024:12:20-23:33:18.264066Z (duration: 0:00:00.666434)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-276">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-276" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Adoes-not-exist%40gnusocial.net&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;400&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_2__5_status_404_for_nonexisting_resources.py:34</pre>
+</div>
+ </div>
+ <div class="test" id="test-10">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_2__9_content_type::returns_jrd_in_response_to_https</h4>
+  <div class="description">Test that a query over HTTPS produces a JRD.</div>
+  <p class="when">Started 2024:12:20-23:33:18.264881Z, ended 2024:12:20-23:33:18.929638Z (duration: 0:00:00.664757)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-11">
+  <h4><span class="prefix">Test:</span> webfinger.server.4_5__1_any_uri_scheme_for_resource_identifiers::any_uri_scheme_for_resource_identifiers</h4>
+  <div class="description">The server must accept resource identifiers provided in the query that use any scheme.</div>
+  <p class="when">Started 2024:12:20-23:33:18.929690Z, ended 2024:12:20-23:33:19.580986Z (duration: 0:00:00.651296)</p>
+<div class="status failed must unaffected moreinfo">
+	<label for="details-277">AssertionFailure (Must, Unaffected): Not HTTP status 404.</label>
+    <input id="details-277" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unaffected): Not HTTP status 404.
+Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=mailto%3Aabc%40def.com&#34;.
+Expected: &lt;404&gt;
+     but: was &lt;500&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4_5__1_any_uri_scheme_for_resource_identifiers.py:37</pre>
+</div>
+ </div>
+ <div class="test" id="test-12">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_combined_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests several known an unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:33:19.582746Z, ended 2024:12:20-23:33:20.363377Z (duration: 0:00:00.780631)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-278">AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:</label>
+    <input id="details-278" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:
+0: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;
+2: Link type not a valid media type: &#34;RSA&#34;
+3: Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;
+4: Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;
+5: Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;&#39;), InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link type not a valid media type: &#34;RSA&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x1050ca750&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:156</pre>
+</div>
+ </div>
+ <div class="test" id="test-13">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_known_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one known link rel at a time.</div>
+  <p class="when">Started 2024:12:20-23:33:20.366235Z, ended 2024:12:20-23:33:21.049210Z (duration: 0:00:00.682975)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-279">AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:</label>
+    <input id="details-279" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:
+0: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;
+2: Link type not a valid media type: &#34;RSA&#34;
+3: Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;
+4: Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;
+5: Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;[InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;&#39;), InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link type not a valid media type: &#34;RSA&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x10502e6d0&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;&#39;)]&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:70</pre>
+</div>
+ </div>
+ <div class="test" id="test-14">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__1_accepts_all_link_rels_in_query::accepts_unknown_link_rels_in_query</h4>
+  <div class="description">A server must accept all link rels in the query, even if it does not understand them.
+    Tests one unknown link rels at a time.</div>
+  <p class="when">Started 2024:12:20-23:33:21.051544Z, ended 2024:12:20-23:33:21.736107Z (duration: 0:00:00.684563)</p>
+<div class="status failed must problem moreinfo">
+	<label for="details-280">AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:</label>
+    <input id="details-280" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Problem): Accessed URI: &#34;https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net&#34;:
+0: Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;
+1: Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;
+2: Link type not a valid media type: &#34;RSA&#34;
+3: Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;
+4: Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;
+5: Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;
+Expected: No exception other than: WrongContentTypeError,InvalidMediaTypeError,InvalidRelError
+     but: was &lt;WebFingerQueryDiagResponse(http_request_response_pair=HttpRequestResponsePair(request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), final_request=HttpRequest(parsed_uri=ParsedNonAcctUri(https://gnusocial.net/.well-known/webfinger?resource=acct%3Aadministrator%40gnusocial.net), method=&#39;GET&#39;, accept_header=None, payload=None, content_type=None, when_started=datetime.datetime(2024, 12, 20, 23, 23, 22, 633292, tzinfo=datetime.timezone.utc)), response=HttpResponse(http_status=200, response_headers=&lt;MultiDict(&#39;server&#39;: &#39;nginx&#39;, &#39;date&#39;: &#39;Fri, 20 Dec 2024 23:33:21 GMT&#39;, &#39;content-type&#39;: &#39;application/jrd+json&#39;, &#39;transfer-encoding&#39;: &#39;chunked&#39;, &#39;connection&#39;: &#39;keep-alive&#39;, &#39;access-control-allow-origin&#39;: &#39;*&#39;, &#39;vary&#39;: &#39;Accept-Encoding,Cookie&#39;, &#39;strict-transport-security&#39;: &#39;max-age=15768000; preload; includeSubdomains;&#39;, &#39;x-content-type-options&#39;: &#39;nosniff&#39;, &#39;referrer-policy&#39;: &#39;strict-origin-when-cross-origin&#39;, &#39;content-security-policy&#39;: &#34;script-src &#39;self&#39; &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;; frame-src &#39;self&#39;; object-src &#39;self&#39;; frame-ancestors &#39;self&#39;; upgrade-insecure-requests&#34;, &#39;x-frame-options&#39;: &#39;SAMEORIGIN&#39;, &#39;x-xss-protection&#39;: &#39;1; mode=block&#39;, &#39;set-cookie&#39;: &#39;SameSite=Lax, Path=/; HttpOnly; Secure&#39;, &#39;x-download-options&#39;: &#39;noopen&#39;, &#39;x-permitted-cross-domain-policies&#39;: &#39;none&#39;, &#39;x-robots-tag&#39;: &#39;noindex, nofollow&#39;, &#39;permissions-policy&#39;: &#39;geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=(),interest-cohort=()&#39;)&gt;, payload=b&#39;{&#34;subject&#34;:&#34;acct:administrator@gnusocial.net&#34;,&#34;aliases&#34;:[&#34;https:\\/\\/gnusocial.net\\/index.php\\/user\\/1&#34;,&#34;https:\\/\\/gnusocial.net\\/administrator&#34;,&#34;https:\\/\\/gnusocial.net\\/user\\/1&#34;,&#34;https:\\/\\/gnusocial.net\\/index.php\\/administrator&#34;],&#34;links&#34;:[{&#34;rel&#34;:&#34;http:\\/\\/webfinger.net\\/rel\\/profile-page&#34;,&#34;type&#34;:&#34;text\\/html&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/administrator&#34;},{&#34;rel&#34;:&#34;http:\\/\\/gmpg.org\\/xfn\\/11&#34;,&#34;type&#34;:&#34;text\\/html&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/administrator&#34;},{&#34;rel&#34;:&#34;describedby&#34;,&#34;type&#34;:&#34;application\\/rdf+xml&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/administrator\\/foaf&#34;},{&#34;rel&#34;:&#34;http:\\/\\/apinamespace.org\\/atom&#34;,&#34;type&#34;:&#34;application\\/atomsvc+xml&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/api\\/statusnet\\/app\\/service\\/administrator.xml&#34;},{&#34;rel&#34;:&#34;http:\\/\\/apinamespace.org\\/twitter&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/api\\/&#34;},{&#34;rel&#34;:&#34;http:\\/\\/schemas.google.com\\/g\\/2010#updates-from&#34;,&#34;type&#34;:&#34;application\\/atom+xml&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/api\\/statuses\\/user_timeline\\/1.atom&#34;},{&#34;rel&#34;:&#34;magic-public-key&#34;,&#34;href&#34;:&#34;data:application\\/magic-public-key,RSA.lrWlx-ufdZ3OgBuV1ZKHQ1T4Rx99QcThod8Bpn1jhmpOufts8oQ1CV7YK0SKTCHLFU6ZQSjm8f3aftoHnW6W51WxqCFD6VFFpQYO6ur8Vf0rYRIpgLVKKS1dl5OdVdQ0Rtj1fsUC2QMD9f7r4tEJQmHnjM8t7twjlN_x83gxwis=.AQAB&#34;},{&#34;rel&#34;:&#34;diaspora-public-key&#34;,&#34;type&#34;:&#34;RSA&#34;,&#34;href&#34;:&#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;},{&#34;rel&#34;:&#34;http:\\/\\/joindiaspora.com\\/guid&#34;,&#34;href&#34;:&#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;},{&#34;rel&#34;:&#34;salmon&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/main\\/salmon\\/user\\/1&#34;},{&#34;rel&#34;:&#34;http:\\/\\/salmon-protocol.org\\/ns\\/salmon-replies&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/main\\/salmon\\/user\\/1&#34;},{&#34;rel&#34;:&#34;http:\\/\\/salmon-protocol.org\\/ns\\/salmon-mention&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/main\\/salmon\\/user\\/1&#34;},{&#34;rel&#34;:&#34;http:\\/\\/specs.openid.net\\/auth\\/2.0\\/provider&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/administrator&#34;},{&#34;rel&#34;:&#34;http:\\/\\/ostatus.org\\/schema\\/1.0\\/subscribe&#34;,&#34;template&#34;:&#34;https:\\/\\/gnusocial.net\\/main\\/remotefollowsub?profile={uri}&#34;},{&#34;rel&#34;:&#34;self&#34;,&#34;type&#34;:&#34;application\\/activity+json&#34;,&#34;href&#34;:&#34;https:\\/\\/gnusocial.net\\/index.php\\/user\\/1&#34;}]}&#39;, when_completed=datetime.datetime(2024, 12, 20, 23, 23, 22, 633769, tzinfo=datetime.timezone.utc))), jrd=&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, exceptions=[InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;magic-public-key&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;diaspora-public-key&#34;&#39;), InvalidMediaTypeError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link type not a valid media type: &#34;RSA&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link href not a URI: &#34;LS0tLS1CRUdJTiBSU0EgUFVCTElDIEtFWS0tLS0tDQpNSUdKQW9HQkFKYTFwY2ZybjNXZHpvQWJsZFdTaDBOVStFY2ZmVUhFNGFIZkFhWjlZNFpxVHJuN2JQS0VOUWxlDQoyQ3RFaWt3aHl4Vk9tVUVvNXZIOTJuN2FCNTF1bHVkVnNhZ2hRK2xSUmFVR0R1cnEvRlg5SzJFU0tZQzFTaWt0DQpYWmVUblZYVU5FYlk5WDdGQXRrREEvWCs2K0xSQ1VKaDU0elBMZTdjSTVUZjhmTjRNY0lyQWdNQkFBRT0NCi0tLS0tRU5EIFJTQSBQVUJMSUMgS0VZLS0tLS0=&#34;&#39;), InvalidUriError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link href not a URI: &#34;a7ea2e0f4f4b270d6a1b59638171309d5d1225b0a8dfd2473e375ded45bd4982&#34;&#39;), InvalidRelError(&lt;feditest.protocols.webfinger.diag.ClaimedJrd object at 0x105116d50&gt;, &#39;Link rel value not absolute URI nor registered relation type: &#34;salmon&#34;&#39;)])&gt;
+../feditest-tests-fediverse/tests/webfinger/server/4__1_accepts_all_link_rels_in_query.py:113</pre>
+</div>
+ </div>
+ <div class="test" id="test-15">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::does_not_return_jrd_in_response_to_http</h4>
+  <div class="description">Test that a query over HTTP does not produce a JRD.</div>
+  <p class="when">Started 2024:12:20-23:33:21.738325Z, ended 2024:12:20-23:33:22.152267Z (duration: 0:00:00.413942)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-16">
+  <h4><span class="prefix">Test:</span> webfinger.server.4__3_only_returns_jrd_in_response_to_https_requests::uses_valid_https_certificate</h4>
+  <div class="description">Test that the server uses a valid HTTPS certificate.</div>
+  <p class="when">Started 2024:12:20-23:33:22.152379Z, ended 2024:12:20-23:33:22.851199Z (duration: 0:00:00.698820)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+ <div class="test" id="test-17">
+  <h4><span class="prefix">Test:</span> webfinger.server.5_1_cors_header_required::cors_header_required</h4>
+  <div class="description">The server must provide a valid value for HTTP Header &#34;Access-Control-Allow-Origin&#34;.</div>
+  <p class="when">Started 2024:12:20-23:33:22.851260Z, ended 2024:12:20-23:33:23.525230Z (duration: 0:00:00.673970)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:20-23:33:10.622765Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:20-23:33:23.527223Z (total: 0:00:12.904458)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>macOS-15.2-arm64-arm-64bit</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.4</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

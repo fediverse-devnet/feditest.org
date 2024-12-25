@@ -1,0 +1,197 @@
+{
+    "plan": {
+        "session_template": {
+            "tests": [
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.direct_addressing::SendNoteToTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.preserve_links::PreserveBlockquoteTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest",
+                    "rolemapping": null,
+                    "skip": null
+                }
+            ],
+            "name": "All two-Node Fediverse system tests"
+        },
+        "constellations": [
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "Mastodon vs Mastodon"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "Mastodon vs WordPress+plugins"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "WordPress+plugins vs Mastodon"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "WordPress+plugins vs WordPress+plugins"
+            }
+        ],
+        "name": "Two-Node Fediverse System Tests",
+        "type": "feditest-testplan",
+        "feditest_version": "0.4"
+    },
+    "id": "feditest-run-20241220-234505",
+    "started": "2024-12-20T23:45:05.242438Z",
+    "ended": "2024-12-20T23:45:05.245586Z",
+    "sessions": [
+        {
+            "run_session_index": 0,
+            "total_sessions": 4,
+            "started": "2024-12-20T23:45:05.242514Z",
+            "ended": "2024-12-20T23:45:05.244092Z",
+            "constellation": {
+                "nodes": {}
+            },
+            "run_tests": [],
+            "result": {
+                "type": "OSError",
+                "spec_level": "UNSPECIFIED",
+                "interop_level": "UNKNOWN",
+                "stacktrace": [],
+                "msg": "MastodonUbosNodeDriver without an rshcmd requires a local system running UBOS Gears (see https://feditest.org/glossary/ubosgears/)."
+            }
+        },
+        {
+            "run_session_index": 1,
+            "total_sessions": 4,
+            "started": "2024-12-20T23:45:05.244250Z",
+            "ended": "2024-12-20T23:45:05.244731Z",
+            "constellation": {
+                "nodes": {}
+            },
+            "run_tests": [],
+            "result": {
+                "type": "OSError",
+                "spec_level": "UNSPECIFIED",
+                "interop_level": "UNKNOWN",
+                "stacktrace": [],
+                "msg": "MastodonUbosNodeDriver without an rshcmd requires a local system running UBOS Gears (see https://feditest.org/glossary/ubosgears/)."
+            }
+        },
+        {
+            "run_session_index": 2,
+            "total_sessions": 4,
+            "started": "2024-12-20T23:45:05.244760Z",
+            "ended": "2024-12-20T23:45:05.245153Z",
+            "constellation": {
+                "nodes": {}
+            },
+            "run_tests": [],
+            "result": {
+                "type": "OSError",
+                "spec_level": "UNSPECIFIED",
+                "interop_level": "UNKNOWN",
+                "stacktrace": [],
+                "msg": "WordPressPlusPluginsUbosNodeDriver without an rshcmd requires a local system running UBOS Gears (see https://feditest.org/glossary/ubosgears/)."
+            }
+        },
+        {
+            "run_session_index": 3,
+            "total_sessions": 4,
+            "started": "2024-12-20T23:45:05.245181Z",
+            "ended": "2024-12-20T23:45:05.245562Z",
+            "constellation": {
+                "nodes": {}
+            },
+            "run_tests": [],
+            "result": {
+                "type": "OSError",
+                "spec_level": "UNSPECIFIED",
+                "interop_level": "UNKNOWN",
+                "stacktrace": [],
+                "msg": "WordPressPlusPluginsUbosNodeDriver without an rshcmd requires a local system running UBOS Gears (see https://feditest.org/glossary/ubosgears/)."
+            }
+        }
+    ],
+    "test_meta": {},
+    "result": null,
+    "platform": "macOS-15.2-arm64-arm-64bit",
+    "username": null,
+    "hostname": null,
+    "type": "feditest-testrun-transcript",
+    "feditest_version": "0.4"
+}

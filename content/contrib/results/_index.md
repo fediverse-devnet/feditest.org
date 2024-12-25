@@ -9,13 +9,18 @@ But we may link to some interesting results produced by the community here.
 
 Have some? {{% pageref "/" "Catch us" %}} in the Fediverse or on Matrix.
 
-## June 16, 2024 (Steve Bate and Johannes Ernst)
+## December 20, 2024
 
-Work in progress, based on {{% pageref "/release-notes/0.3.md" "FediTest V0.3" %}}.
+Work in progress, based on {{% pageref "/release-notes/0.5.md" "FediTest V0.5" %}}.
 
-* **[WebFinger Server tests of 94 Fediverse SaaS applications](/contrib/results/2024-06-16/)**.
+* **[Webfinger Server tests](/contrib/results/2024-12-20T23.23.09/webfinger-server-all.testresult.html).**
+* **[2-Node Fediverse System Tests](/contrib/results/2024-12-24T23.45.00/mastodon-mastodon.html)**: Mastodon vs Mastodon.
+* **[3-Node Fediverse System Tests](/contrib/results/2024-12-24T23.45.00/mastodon-mastodon-mastodon.html)**:
+  three instances of Mastodon against each other.
 
-## October 24, 2024 (Johannes Ernst)
+Contributed by [Johannes Ernst](https://j12t.org/).
+
+## October 24, 2024
 
 Work in progress, based on {{% pageref "/release-notes/0.4.md" "FediTest V0.4" %}}.
 
@@ -40,3 +45,14 @@ Work in progress, based on {{% pageref "/release-notes/0.4.md" "FediTest V0.4" %
   do not reflect the tested {{% gl app %}}, so it's a bit harder to figure out
   what is what. Sorry about that. Will be fixed in
   [FediTest 0.5](https://github.com/fediverse-devnet/feditest/milestone/7).
+
+Contributed by [Johannes Ernst](https://j12t.org/).
+
+## June 16, 2024
+
+Work in progress, based on {{% pageref "/release-notes/0.3.md" "FediTest V0.3" %}}.
+
+* **[WebFinger Server tests of 94 Fediverse SaaS applications](/contrib/results/2024-06-16/)**.
+
+Contributed by [Steve Bate](https://www.stevebate.net/) and [Johannes Ernst](https://j12t.org/).
+

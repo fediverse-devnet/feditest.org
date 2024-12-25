@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="mastodon-mastodon-mastodon.css">
+  <title>Mastodon vs Mastodon vs Mastodon | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a> Report:</span> Mastodon vs Mastodon vs Mastodon</h1>
+   <p class="id">feditest-run-20241225-010100</p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>3 <span class="percentage">(100.0%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>3</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">node1</h3>
+  <div class="driver"><span title="MastodonUbosNodeDriver">MastodonUbosNodeDriver</span></div>
+  <div class="app">Mastodon</div>
+  <div class="appversion">?</div>
+ </div>
+ <div class="role">
+  <h3 class="name">node2</h3>
+  <div class="driver"><span title="MastodonUbosNodeDriver">MastodonUbosNodeDriver</span></div>
+  <div class="app">Mastodon</div>
+  <div class="appversion">?</div>
+ </div>
+ <div class="role">
+  <h3 class="name">node3</h3>
+  <div class="driver"><span title="MastodonUbosNodeDriver">MastodonUbosNodeDriver</span></div>
+  <div class="app">Mastodon</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> system3.announce::AnnounceTest</h4>
+  <div class="description">Tests that if actor B announces a note by actor A, actor C that is following B on a different Fediverse Node receives the note.</div>
+  <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.provision_actors</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.follow</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.wait_until_actors_are_followed</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.wait_until_actors_are_following</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.boost_note</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.announce::AnnounceTest.wait_until_boost_received</h5>
+   <p class="when">Started 2024:12:25-01:02:18.531496Z, ended 2024:12:25-01:02:23.417037Z (duration: 0:00:04.885541)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> system3.delete_double_hop::DeleteDoubleHopTest</h4>
+  <div class="description">Test double-hop delete.</div>
+  <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.provision_actors</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.follow</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.wait_until_actors_are_followed</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.wait_until_actors_are_following</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.boost_note</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.wait_until_boost_received</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.delete_note</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.delete_double_hop::DeleteDoubleHopTest.wait_until_note_disappeared</h5>
+   <p class="when">Started 2024:12:25-01:02:23.417083Z, ended 2024:12:25-01:02:28.009213Z (duration: 0:00:04.592130)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> system3.update_double_hop::UpdateDoubleHopTest</h4>
+  <div class="description">Test double-hop update.</div>
+  <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.provision_actors</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.follow</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.wait_until_actors_are_followed</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.wait_until_actors_are_following</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.update_note</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.boost_note</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.wait_until_boost_received</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system3.update_double_hop::UpdateDoubleHopTest.wait_until_update_received</h5>
+   <p class="when">Started 2024:12:25-01:02:28.009268Z, ended 2024:12:25-01:02:31.710957Z (duration: 0:00:03.701689)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:25-01:01:00.641069Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:25-01:03:07.971272Z (total: 0:02:07.330203)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.8.0-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.5</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>
