@@ -9,13 +9,18 @@ But we may link to some interesting results produced by the community here.
 
 Have some? {{% pageref "/" "Catch us" %}} in the Fediverse or on Matrix.
 
-## December 20, 2024
+## December 29, 2024
 
-Work in progress, based on {{% pageref "/release-notes/0.5.md" "FediTest V0.5" %}}.
+Work in progress, based on {{% pageref "/release-notes/0.5.md" "FediTest V0.5" %}} with
+a few extra bug fixes:
 
-* **[Webfinger Server tests](/contrib/results/2024-12-20T23.23.09/webfinger-server-all.testresult.html).**
-* **[2-Node Fediverse System Tests](/contrib/results/2024-12-24T23.45.00/mastodon-mastodon.html)**: Mastodon vs Mastodon.
-* **[3-Node Fediverse System Tests](/contrib/results/2024-12-24T23.45.00/mastodon-mastodon-mastodon.html)**:
+* **[Webfinger Server tests](/contrib/results/2024-12-29T19.12.46/webfinger-server-all.testresult.html)**
+  of 84 systems.
+
+* **[2-Node Fediverse System Tests](/contrib/results/2024-12-29T19.12.46/system2-all.testresult.html)**:
+  Mastodon and WordPress with plugins.
+
+* **[3-Node Fediverse System Tests](/contrib/results/2024-12-29T19.12.46/mastodon-mastodon-mastodon.html)**:
   three instances of Mastodon against each other.
 
 Contributed by [Johannes Ernst](https://j12t.org/).
