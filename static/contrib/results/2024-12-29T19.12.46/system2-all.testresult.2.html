@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="system2-all.testresult.css">
+  <title>Test Run Session 3/4 (feditest-run-20241229-193003) | FediTest</title>
+ </head>
+ <body>
+  <header class="feditest title" style="text-align: center">
+   <h1><span class="prefix"><a href="https://feditest.org/">FediTest</a>:</span> Test Run Session 3/4</h1>
+   <p class="id">feditest-run-20241229-193003 <a href="system2-all.testresult.html">&#x21e7;</a></p>
+  </header>
+  <div class="feditest mobile">
+   <p>This FediTest report requires a desktop or laptop-class monitor.</p>
+   <p>It cannot be viewed on a mobile device with a small screen.</p>
+   <p>Sorry about that. But then, you weren't going to use a phone to fix reported bugs, either, right?</p>
+  </div>
+  <nav class="feditest matrix">
+   <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#metadata">Metadata</a></li>
+   </ul>
+  </nav>
+  <div id="summary" class="feditest module summary">
+   <h2>Test Run Session Summary</h2>
+
+<table class="feditest summary">
+ <thead>
+  <tr>
+   <th>Status</th>
+   <th>Count</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Passed</th>
+   <td class="status passed">
+    <div>1 <span class="percentage">(14.3%)</span></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Failed</th>
+   <td class="status failed">
+    <table class="failed">
+     <thead>
+      <tr>
+       <td colspan="2" rowspan="2"></td>
+       <th colspan="5">Interoperability</th>
+      </tr>
+      <tr>
+       <th>Compromised</th>
+       <th>Degraded</th>
+       <th>Unaffected</th>
+       <th>Unknown</th>
+       <th>Total</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <th rowspan="5">Conformance</th>
+       <th>Must</th>
+       <td class="status must problem moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must degraded moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unaffected moreinfo">
+        <div>0</div>
+       </td>
+       <td class="status must unknown moreinfo">
+        <div>1</div>
+       </td>
+       <td class="status must total">
+        <div>
+1
+         <span class="percentage">(14.3%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Should</th>
+       <td class="status should problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status should total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Implied</th>
+       <td class="status implied problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied degraded moreinfo">
+        <div>
+1
+        </div>
+       </td>
+       <td class="status implied unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status implied total">
+        <div>
+1
+         <span class="percentage">(14.3%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Unspecified</th>
+       <td class="status unspecified problem moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified degraded moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unaffected moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified unknown moreinfo">
+        <div>
+0
+        </div>
+       </td>
+       <td class="status unspecified total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+      </tr>
+      <tr>
+       <th>Total</th>
+       <td class="status problem total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status degraded total">
+        <div>
+1
+         <span class="percentage">(14.3%)</span>
+        </div>
+       </td>
+       <td class="status unaffected total">
+        <div>
+0
+         <span class="percentage">(0.0%)</span>
+        </div>
+       </td>
+       <td class="status unknown total">
+        <div>
+1
+         <span class="percentage">(14.3%)</span>
+        </div>
+       </td>
+       <td class="status total">
+        <div>
+2
+         <span class="percentage">(28.6%)</span>
+        </div>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <th>Skipped</th>
+   <td>
+    <div>0</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Errors</th>
+   <td class="status error">
+    <div>
+4
+     <span class="percentage">(57.1%)</span>
+    </div>
+   </td>
+  </tr>
+ </tbody>
+ <tfoot>
+  <tr>
+   <th>Total</th>
+   <td>
+    <div>7</div>
+   </td>
+  </tr>
+ </tfoot>
+</table>
+  </div>
+  <div id="results" class="feditest module results">
+<h2>Constellation</h2>
+<div class="roles">
+ <div class="role">
+  <h3 class="name">sender_node</h3>
+  <div class="driver"><span title="WordPressPlusPluginsUbosNodeDriver">WordPressPlusPluginsUbosNodeDriver</span></div>
+  <div class="app">WordPress+plugins</div>
+  <div class="appversion">?</div>
+ </div>
+ <div class="role">
+  <h3 class="name">receiver_node</h3>
+  <div class="driver"><span title="MastodonUbosNodeDriver">MastodonUbosNodeDriver</span></div>
+  <div class="app">Mastodon</div>
+  <div class="appversion">?</div>
+ </div>
+</div>
+
+<h2>Test Results</h2>
+<div class="feditest tests">
+ <div class="test" id="test-0">
+  <h4><span class="prefix">Test:</span> system2.delete_single_hop::DeleteSingleHopTest</h4>
+  <div class="description">Test single-hop delete.
+    See also: https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/3</div>
+  <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-9">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-9" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+./tests/system2/delete_single_hop.py:71</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.follow</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.wait_until_actor_is_followed_by_actor</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.wait_until_actor_is_following_actor</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.delete_single_hop::DeleteSingleHopTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:29-19:34:33.938442Z, ended 2024:12:29-19:35:02.792523Z (duration: 0:00:28.854081)</p>
+<div class="status failed must unknown moreinfo">
+	<label for="details-9step">AssertionFailure (Must, Unknown): Expected object has not arrived in time</label>
+    <input id="details-9step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Must, Unknown): Expected object has not arrived in time
+./tests/system2/delete_single_hop.py:71</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-1">
+  <h4><span class="prefix">Test:</span> system2.direct_addressing::SendNoteToTest</h4>
+  <div class="description">Tests that a note by actor A is delivered to an actor B if A addresses the note to B.</div>
+  <p class="when">Started 2024:12:29-19:35:02.792576Z, ended 2024:12:29-19:35:24.409322Z (duration: 0:00:21.616746)</p>
+<div class="status failed implied degraded moreinfo">
+	<label for="details-10">AssertionFailure (Implied, Degraded): Expected: &#39;Testing sender_creates_note 2024-12-29 19:35:02.792751&#39;</label>
+    <input id="details-10" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Implied, Degraded): Expected: &#39;Testing sender_creates_note 2024-12-29 19:35:02.792751&#39;
+     but: was &#39;&lt;p&gt;Testing sender_creates_note 2024-12-29 19:35:02.792751 &lt;a rel=&#34;nofollow noopener noreferrer&#34; class=&#34;u-url mention&#34; href=&#34;https://wordpress-2.38807.lan/author/feditestadmin/&#34; target=&#34;_blank&#34;&gt;@&lt;span&gt;feditestadmin&lt;/span&gt;&lt;/a&gt;@mastodon-4.38807.lan&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://wordpress-2.38807.lan/2024/12/29/10/&#34; class=&#34;&#34; rel=&#34;nofollow noopener noreferrer&#34; target=&#34;_blank&#34;&gt;https://wordpress-2.38807.lan/2024/12/29/10/&lt;/a&gt;&lt;/p&gt;&#39;
+./tests/system2/direct_addressing.py:56</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:35:02.792576Z, ended 2024:12:29-19:35:24.409322Z (duration: 0:00:21.616746)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:35:02.792576Z, ended 2024:12:29-19:35:24.409322Z (duration: 0:00:21.616746)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.direct_addressing::SendNoteToTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:29-19:35:02.792576Z, ended 2024:12:29-19:35:24.409322Z (duration: 0:00:21.616746)</p>
+<div class="status failed implied degraded moreinfo">
+	<label for="details-10step">AssertionFailure (Implied, Degraded): Expected: &#39;Testing sender_creates_note 2024-12-29 19:35:02.792751&#39;</label>
+    <input id="details-10step" type="checkbox">
+    <pre class="stacktrace">AssertionFailure: AssertionFailure (Implied, Degraded): Expected: &#39;Testing sender_creates_note 2024-12-29 19:35:02.792751&#39;
+     but: was &#39;&lt;p&gt;Testing sender_creates_note 2024-12-29 19:35:02.792751 &lt;a rel=&#34;nofollow noopener noreferrer&#34; class=&#34;u-url mention&#34; href=&#34;https://wordpress-2.38807.lan/author/feditestadmin/&#34; target=&#34;_blank&#34;&gt;@&lt;span&gt;feditestadmin&lt;/span&gt;&lt;/a&gt;@mastodon-4.38807.lan&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://wordpress-2.38807.lan/2024/12/29/10/&#34; class=&#34;&#34; rel=&#34;nofollow noopener noreferrer&#34; target=&#34;_blank&#34;&gt;https://wordpress-2.38807.lan/2024/12/29/10/&lt;/a&gt;&lt;/p&gt;&#39;
+./tests/system2/direct_addressing.py:56</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-2">
+  <h4><span class="prefix">Test:</span> system2.follow_receive::FollowReceiveTest</h4>
+  <div class="description">Tests that actors on two different Fediverse Nodes can follow each other and a follower receives the followed account&#39;s posts.</div>
+  <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-11">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-11" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/follow_receive.py:81
+./tests/system2/follow_receive.py:81</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.follow</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.wait_until_actor_is_followed_by_actor</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.wait_until_actor_is_following_actor</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.sender_creates_note_while_following</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.unfollow</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.follow_receive::FollowReceiveTest.wait_until_actor_is_unfollowed_by_actor</h5>
+   <p class="when">Started 2024:12:29-19:35:24.409338Z, ended 2024:12:29-19:35:46.660733Z (duration: 0:00:22.251395)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-11step">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-11step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/follow_receive.py:81
+./tests/system2/follow_receive.py:81</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-3">
+  <h4><span class="prefix">Test:</span> system2.like_single_hop::LikeTest</h4>
+  <div class="description">Tests that actor B can like a note by actor A on a different Fediverse Node
+    and both see the Like. Unlike works the reverse.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/149</div>
+  <p class="when">Started 2024:12:29-19:35:46.660763Z, ended 2024:12:29-19:36:07.957322Z (duration: 0:00:21.296559)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-12">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-12" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/like_single_hop.py:55
+./tests/system2/like_single_hop.py:55</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:35:46.660763Z, ended 2024:12:29-19:36:07.957322Z (duration: 0:00:21.296559)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:35:46.660763Z, ended 2024:12:29-19:36:07.957322Z (duration: 0:00:21.296559)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.receiver_likes_note</h5>
+   <p class="when">Started 2024:12:29-19:35:46.660763Z, ended 2024:12:29-19:36:07.957322Z (duration: 0:00:21.296559)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.like_single_hop::LikeTest.wait_until_like_received</h5>
+   <p class="when">Started 2024:12:29-19:35:46.660763Z, ended 2024:12:29-19:36:07.957322Z (duration: 0:00:21.296559)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-12step">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-12step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/like_single_hop.py:55
+./tests/system2/like_single_hop.py:55</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-4">
+  <h4><span class="prefix">Test:</span> system2.preserve_links::PreserveBlockquoteTest</h4>
+  <div class="description">Make sure that all hyperlinks in a note are still present on the receiving node. They may be rearranged.</div>
+  <p class="when">Started 2024:12:29-19:36:07.957338Z, ended 2024:12:29-19:36:29.685738Z (duration: 0:00:21.728400)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:36:07.957338Z, ended 2024:12:29-19:36:29.685738Z (duration: 0:00:21.728400)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:36:07.957338Z, ended 2024:12:29-19:36:29.685738Z (duration: 0:00:21.728400)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.preserve_links::PreserveBlockquoteTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:29-19:36:07.957338Z, ended 2024:12:29-19:36:29.685738Z (duration: 0:00:21.728400)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-5">
+  <h4><span class="prefix">Test:</span> system2.reply_single_hop::ReplyTest</h4>
+  <div class="description">Tests that actor B can reply to a note by actor A on a different Fediverse Node and both see the reply.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/128</div>
+  <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-13">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-13" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/reply_single_hop.py:73
+./tests/system2/reply_single_hop.py:73</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.receiver_replies_to_note</h5>
+   <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.wait_until_reply_received_by_receiver</h5>
+   <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.reply_single_hop::ReplyTest.wait_until_reply_received_by_sender</h5>
+   <p class="when">Started 2024:12:29-19:36:29.685751Z, ended 2024:12:29-19:36:50.973267Z (duration: 0:00:21.287516)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-13step">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-13step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/reply_single_hop.py:73
+./tests/system2/reply_single_hop.py:73</pre>
+</div>
+  </div>
+ </div>
+ <div class="test" id="test-6">
+  <h4><span class="prefix">Test:</span> system2.update_single_hop::UpdateTest</h4>
+  <div class="description">Tests that actor B&#39;s copy of a note by actor A is correctly updated when A updates it on a different Fediverse Node.
+
+    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/151</div>
+  <p class="when">Started 2024:12:29-19:36:50.973283Z, ended 2024:12:29-19:37:12.125826Z (duration: 0:00:21.152543)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-14">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-14" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/update_single_hop.py:66</pre>
+</div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.provision_actors</h5>
+   <p class="when">Started 2024:12:29-19:36:50.973283Z, ended 2024:12:29-19:37:12.125826Z (duration: 0:00:21.152543)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.sender_creates_note</h5>
+   <p class="when">Started 2024:12:29-19:36:50.973283Z, ended 2024:12:29-19:37:12.125826Z (duration: 0:00:21.152543)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.wait_until_note_received</h5>
+   <p class="when">Started 2024:12:29-19:36:50.973283Z, ended 2024:12:29-19:37:12.125826Z (duration: 0:00:21.152543)</p>
+<div class="status passed">
+    <div>Passed</div>
+</div>
+  </div>
+  <div class="step">
+
+   <h5><span class="prefix">Test step:</span> system2.update_single_hop::UpdateTest.sender_updates_note</h5>
+   <p class="when">Started 2024:12:29-19:36:50.973283Z, ended 2024:12:29-19:37:12.125826Z (duration: 0:00:21.152543)</p>
+<div class="status failed unspecified unknown moreinfo">
+	<label for="details-14step">HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}</label>
+    <input id="details-14step" type="checkbox">
+    <pre class="stacktrace">HTTPError: HTTP status 404: {&#34;error&#34;:&#34;rest_no_route&#34;,&#34;error_description&#34;:&#34;No route was found matching the URL and request method.&#34;}
+./tests/system2/update_single_hop.py:66</pre>
+</div>
+  </div>
+ </div>
+</div>
+  </div>
+  <div id="metadata" class="feditest module metadata">
+   <h2>Test Run Session Metadata</h2>
+  <div class="feditest metadata">
+   <table>
+    <tbody>
+     <tr>
+      <th>Started</th>
+      <td>2024:12:29-19:33:54.126798Z</td>
+     </tr>
+     <tr>
+      <th>Ended</th>
+      <td>2024:12:29-19:37:31.508054Z (total: 0:03:37.381256)</td>
+     </tr>
+     <tr>
+      <th>Platform</th>
+      <td>Linux-6.8.0-1-aarch64-ARCH-aarch64-with-glibc2.35</td>
+     </tr>
+     <tr>
+      <th>FediTest&nbsp;version</th>
+      <td>0.6.dev20241229191155</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  </div>
+  <footer>
+   <p>Note: No guarantees are made about accuracy of results created with <a href="https://feditest.org/">FediTest</a>.
+      <a href="https://github.com/fediverse-devnet/feditest/">Issues and merge requests</a> welcome.</p>
+  </footer>
+ </body>
+</html>

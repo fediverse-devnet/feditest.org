@@ -1,0 +1,1646 @@
+{
+    "plan": {
+        "session_template": {
+            "tests": [
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.direct_addressing::SendNoteToTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.preserve_links::PreserveBlockquoteTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest",
+                    "rolemapping": null,
+                    "skip": null
+                }
+            ],
+            "name": "All two-Node Fediverse system tests"
+        },
+        "constellations": [
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "Mastodon vs Mastodon"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "Mastodon vs WordPress+plugins"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "WordPress+plugins vs Mastodon"
+            },
+            {
+                "roles": {
+                    "sender_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "receiver_node": {
+                        "nodedriver": "WordPressPlusPluginsUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "WordPress+plugins vs WordPress+plugins"
+            }
+        ],
+        "name": "Two-Node Fediverse System Tests",
+        "type": "feditest-testplan",
+        "feditest_version": "0.6.dev20241228034952"
+    },
+    "id": "feditest-run-20241229-193003",
+    "started": "2024-12-29T19:30:03.883817Z",
+    "ended": "2024-12-29T19:41:12.657919Z",
+    "sessions": [
+        {
+            "run_session_index": 0,
+            "total_sessions": 4,
+            "started": "2024-12-29T19:30:03.883828Z",
+            "ended": "2024-12-29T19:31:40.323988Z",
+            "constellation": {
+                "nodes": {
+                    "sender_node": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    },
+                    "receiver_node": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    }
+                }
+            },
+            "run_tests": [
+                {
+                    "plan_test_index": 0,
+                    "started": "2024-12-29T19:31:00.059056Z",
+                    "ended": "2024-12-29T19:31:04.078998Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:00.059309Z",
+                            "ended": "2024-12-29T19:31:00.059339Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:00.059347Z",
+                            "ended": "2024-12-29T19:31:00.625710Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:00.625726Z",
+                            "ended": "2024-12-29T19:31:01.812360Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:31:01.812376Z",
+                            "ended": "2024-12-29T19:31:01.836419Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:31:01.836433Z",
+                            "ended": "2024-12-29T19:31:01.896080Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:31:01.896096Z",
+                            "ended": "2024-12-29T19:31:02.986035Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:31:02.986051Z",
+                            "ended": "2024-12-29T19:31:03.027449Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:31:03.027467Z",
+                            "ended": "2024-12-29T19:31:04.078965Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 1,
+                    "started": "2024-12-29T19:31:04.079028Z",
+                    "ended": "2024-12-29T19:31:05.195471Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:04.079180Z",
+                            "ended": "2024-12-29T19:31:04.079215Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:04.079218Z",
+                            "ended": "2024-12-29T19:31:04.131972Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:04.131986Z",
+                            "ended": "2024-12-29T19:31:05.186985Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "IMPLIED",
+                                "interop_level": "DEGRADED",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/direct_addressing.py",
+                                        56
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Implied, Degraded): Expected: 'Testing sender_creates_note 2024-12-29 19:31:04.079163'\n     but: was '<p>Testing sender_creates_note 2024-12-29 19:31:04.079163 <span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon-2.38807.lan/@feditestadmin\" class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">@<span>feditestadmin@mastodon-2.38807.lan</span></a></span></p>'"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 2,
+                    "started": "2024-12-29T19:31:05.195505Z",
+                    "ended": "2024-12-29T19:31:12.717207Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:05.195609Z",
+                            "ended": "2024-12-29T19:31:05.195640Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:05.195652Z",
+                            "ended": "2024-12-29T19:31:05.223457Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:05.223470Z",
+                            "ended": "2024-12-29T19:31:06.252773Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:31:06.252804Z",
+                            "ended": "2024-12-29T19:31:06.270992Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:31:06.271012Z",
+                            "ended": "2024-12-29T19:31:06.301050Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:31:06.301063Z",
+                            "ended": "2024-12-29T19:31:07.391494Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:31:07.391517Z",
+                            "ended": "2024-12-29T19:31:07.426069Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:31:07.426082Z",
+                            "ended": "2024-12-29T19:31:07.433910Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 8,
+                            "started": "2024-12-29T19:31:07.433921Z",
+                            "ended": "2024-12-29T19:31:07.441363Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 9,
+                            "started": "2024-12-29T19:31:07.441374Z",
+                            "ended": "2024-12-29T19:31:07.465874Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 10,
+                            "started": "2024-12-29T19:31:07.465886Z",
+                            "ended": "2024-12-29T19:31:12.716809Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 3,
+                    "started": "2024-12-29T19:31:12.717440Z",
+                    "ended": "2024-12-29T19:31:13.117073Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:12.717911Z",
+                            "ended": "2024-12-29T19:31:12.717998Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:12.718005Z",
+                            "ended": "2024-12-29T19:31:12.780956Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:12.780970Z",
+                            "ended": "2024-12-29T19:31:12.988262Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:31:12.988274Z",
+                            "ended": "2024-12-29T19:31:13.033899Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:31:13.033911Z",
+                            "ended": "2024-12-29T19:31:13.085289Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:31:13.085302Z",
+                            "ended": "2024-12-29T19:31:13.117062Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 4,
+                    "started": "2024-12-29T19:31:13.117088Z",
+                    "ended": "2024-12-29T19:31:14.227447Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:13.117130Z",
+                            "ended": "2024-12-29T19:31:13.117150Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:13.117152Z",
+                            "ended": "2024-12-29T19:31:13.152948Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:13.152959Z",
+                            "ended": "2024-12-29T19:31:14.227430Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 5,
+                    "started": "2024-12-29T19:31:14.227464Z",
+                    "ended": "2024-12-29T19:31:14.687589Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:14.227545Z",
+                            "ended": "2024-12-29T19:31:14.227560Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:14.227562Z",
+                            "ended": "2024-12-29T19:31:14.254579Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:14.254592Z",
+                            "ended": "2024-12-29T19:31:14.328615Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:31:14.328626Z",
+                            "ended": "2024-12-29T19:31:14.403619Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:31:14.403636Z",
+                            "ended": "2024-12-29T19:31:14.685670Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "IMPLIED",
+                                "interop_level": "DEGRADED",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/reply_single_hop.py",
+                                        79
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Implied, Degraded): Expected: 'Testing follower_replies_to_note 2024-12-29 19:31:14.254618'\n     but: was '<p>Testing follower_replies_to_note 2024-12-29 19:31:14.254618</p>'"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 6,
+                    "started": "2024-12-29T19:31:14.687603Z",
+                    "ended": "2024-12-29T19:31:15.965130Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:31:14.687646Z",
+                            "ended": "2024-12-29T19:31:14.687659Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:31:14.687664Z",
+                            "ended": "2024-12-29T19:31:14.726125Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:31:14.726154Z",
+                            "ended": "2024-12-29T19:31:15.841094Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:31:15.841107Z",
+                            "ended": "2024-12-29T19:31:15.903886Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:31:15.903898Z",
+                            "ended": "2024-12-29T19:31:15.965119Z",
+                            "result": null
+                        }
+                    ]
+                }
+            ],
+            "result": null
+        },
+        {
+            "run_session_index": 1,
+            "total_sessions": 4,
+            "started": "2024-12-29T19:31:40.324040Z",
+            "ended": "2024-12-29T19:33:54.126626Z",
+            "constellation": {
+                "nodes": {
+                    "sender_node": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    },
+                    "receiver_node": {
+                        "appdata": {
+                            "app": "WordPress+plugins",
+                            "app_version": null
+                        },
+                        "node_driver": "WordPressPlusPluginsUbosNodeDriver"
+                    }
+                }
+            },
+            "run_tests": [
+                {
+                    "plan_test_index": 0,
+                    "started": "2024-12-29T19:32:20.411654Z",
+                    "ended": "2024-12-29T19:32:48.511276Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:32:20.411829Z",
+                            "ended": "2024-12-29T19:32:20.411878Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:32:20.411882Z",
+                            "ended": "2024-12-29T19:32:42.145418Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:32:42.145647Z",
+                            "ended": "2024-12-29T19:32:48.498937Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/delete_single_hop.py",
+                                        54
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 1,
+                    "started": "2024-12-29T19:32:48.511373Z",
+                    "ended": "2024-12-29T19:32:54.827555Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:32:48.511716Z",
+                            "ended": "2024-12-29T19:32:48.511827Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:32:48.511844Z",
+                            "ended": "2024-12-29T19:32:49.362999Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:32:49.363013Z",
+                            "ended": "2024-12-29T19:32:54.816446Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/direct_addressing.py",
+                                        52
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 2,
+                    "started": "2024-12-29T19:32:54.827608Z",
+                    "ended": "2024-12-29T19:33:22.143678Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:32:54.827762Z",
+                            "ended": "2024-12-29T19:32:54.827837Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:32:54.827840Z",
+                            "ended": "2024-12-29T19:33:15.861586Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:33:15.861631Z",
+                            "ended": "2024-12-29T19:33:22.131700Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/follow_receive.py",
+                                        54
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 3,
+                    "started": "2024-12-29T19:33:22.143790Z",
+                    "ended": "2024-12-29T19:33:22.601243Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:33:22.144061Z",
+                            "ended": "2024-12-29T19:33:22.144171Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:33:22.144178Z",
+                            "ended": "2024-12-29T19:33:22.277587Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:33:22.277599Z",
+                            "ended": "2024-12-29T19:33:22.597568Z",
+                            "result": {
+                                "type": "ValueError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/like_single_hop.py",
+                                        50
+                                    ]
+                                ],
+                                "msg": "Cannot find Note on <feditest.nodedrivers.mastodon.AuthenticatedMastodonApiClient object at 0xffff996bd990>: \"https://mastodon-3.38807.lan/users/feditestadmin/statuses/113737780573600194\""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 4,
+                    "started": "2024-12-29T19:33:22.601257Z",
+                    "ended": "2024-12-29T19:33:28.074091Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:33:22.601307Z",
+                            "ended": "2024-12-29T19:33:22.601323Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:33:22.601336Z",
+                            "ended": "2024-12-29T19:33:22.650356Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:33:22.650369Z",
+                            "ended": "2024-12-29T19:33:28.068198Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/preserve_links.py",
+                                        55
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 5,
+                    "started": "2024-12-29T19:33:28.074166Z",
+                    "ended": "2024-12-29T19:33:28.182766Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:33:28.074309Z",
+                            "ended": "2024-12-29T19:33:28.074344Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:33:28.074348Z",
+                            "ended": "2024-12-29T19:33:28.123922Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:33:28.123936Z",
+                            "ended": "2024-12-29T19:33:28.181764Z",
+                            "result": {
+                                "type": "ValueError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/reply_single_hop.py",
+                                        60
+                                    ]
+                                ],
+                                "msg": "Cannot find Note on <feditest.nodedrivers.mastodon.AuthenticatedMastodonApiClient object at 0xffff996bd990>: \"https://mastodon-3.38807.lan/users/feditestadmin/statuses/113737780959615992\""
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 6,
+                    "started": "2024-12-29T19:33:28.182801Z",
+                    "ended": "2024-12-29T19:33:33.678641Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:33:28.182887Z",
+                            "ended": "2024-12-29T19:33:28.182905Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:33:28.182907Z",
+                            "ended": "2024-12-29T19:33:28.259241Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:33:28.259256Z",
+                            "ended": "2024-12-29T19:33:33.666331Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/update_single_hop.py",
+                                        57
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "result": null
+        },
+        {
+            "run_session_index": 2,
+            "total_sessions": 4,
+            "started": "2024-12-29T19:33:54.126798Z",
+            "ended": "2024-12-29T19:37:31.508054Z",
+            "constellation": {
+                "nodes": {
+                    "sender_node": {
+                        "appdata": {
+                            "app": "WordPress+plugins",
+                            "app_version": null
+                        },
+                        "node_driver": "WordPressPlusPluginsUbosNodeDriver"
+                    },
+                    "receiver_node": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    }
+                }
+            },
+            "run_tests": [
+                {
+                    "plan_test_index": 0,
+                    "started": "2024-12-29T19:34:33.938442Z",
+                    "ended": "2024-12-29T19:35:02.792523Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:34:33.938596Z",
+                            "ended": "2024-12-29T19:34:33.938627Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:34:33.938630Z",
+                            "ended": "2024-12-29T19:34:35.053999Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:34:35.054014Z",
+                            "ended": "2024-12-29T19:34:36.543931Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:34:36.543945Z",
+                            "ended": "2024-12-29T19:34:36.569615Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:34:36.569626Z",
+                            "ended": "2024-12-29T19:34:57.613499Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:34:57.613522Z",
+                            "ended": "2024-12-29T19:35:02.788446Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/delete_single_hop.py",
+                                        71
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 1,
+                    "started": "2024-12-29T19:35:02.792576Z",
+                    "ended": "2024-12-29T19:35:24.409322Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:35:02.792778Z",
+                            "ended": "2024-12-29T19:35:02.792823Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:35:02.792829Z",
+                            "ended": "2024-12-29T19:35:24.311669Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:35:24.311709Z",
+                            "ended": "2024-12-29T19:35:24.408260Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "IMPLIED",
+                                "interop_level": "DEGRADED",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/direct_addressing.py",
+                                        56
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Implied, Degraded): Expected: 'Testing sender_creates_note 2024-12-29 19:35:02.792751'\n     but: was '<p>Testing sender_creates_note 2024-12-29 19:35:02.792751 <a rel=\"nofollow noopener noreferrer\" class=\"u-url mention\" href=\"https://wordpress-2.38807.lan/author/feditestadmin/\" target=\"_blank\">@<span>feditestadmin</span></a>@mastodon-4.38807.lan</p><p><a href=\"https://wordpress-2.38807.lan/2024/12/29/10/\" class=\"\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">https://wordpress-2.38807.lan/2024/12/29/10/</a></p>'"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 2,
+                    "started": "2024-12-29T19:35:24.409338Z",
+                    "ended": "2024-12-29T19:35:46.660733Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:35:24.409384Z",
+                            "ended": "2024-12-29T19:35:24.409399Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:35:24.409401Z",
+                            "ended": "2024-12-29T19:35:24.452044Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:35:24.452061Z",
+                            "ended": "2024-12-29T19:35:25.499348Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:35:25.499361Z",
+                            "ended": "2024-12-29T19:35:25.511811Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:35:25.511823Z",
+                            "ended": "2024-12-29T19:35:46.540084Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:35:46.540132Z",
+                            "ended": "2024-12-29T19:35:46.609248Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:35:46.609264Z",
+                            "ended": "2024-12-29T19:35:46.636500Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:35:46.636512Z",
+                            "ended": "2024-12-29T19:35:46.658285Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/follow_receive.py",
+                                        81
+                                    ],
+                                    [
+                                        "./tests/system2/follow_receive.py",
+                                        81
+                                    ]
+                                ],
+                                "msg": "HTTP status 404: {\"error\":\"rest_no_route\",\"error_description\":\"No route was found matching the URL and request method.\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 3,
+                    "started": "2024-12-29T19:35:46.660763Z",
+                    "ended": "2024-12-29T19:36:07.957322Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:35:46.660827Z",
+                            "ended": "2024-12-29T19:35:46.660857Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:35:46.660861Z",
+                            "ended": "2024-12-29T19:36:07.660903Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:36:07.660924Z",
+                            "ended": "2024-12-29T19:36:07.766330Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:36:07.766345Z",
+                            "ended": "2024-12-29T19:36:07.955679Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/like_single_hop.py",
+                                        55
+                                    ],
+                                    [
+                                        "./tests/system2/like_single_hop.py",
+                                        55
+                                    ]
+                                ],
+                                "msg": "HTTP status 404: {\"error\":\"rest_no_route\",\"error_description\":\"No route was found matching the URL and request method.\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 4,
+                    "started": "2024-12-29T19:36:07.957338Z",
+                    "ended": "2024-12-29T19:36:29.685738Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:36:07.957389Z",
+                            "ended": "2024-12-29T19:36:07.957405Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:36:07.957406Z",
+                            "ended": "2024-12-29T19:36:29.637964Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:36:29.637979Z",
+                            "ended": "2024-12-29T19:36:29.685726Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 5,
+                    "started": "2024-12-29T19:36:29.685751Z",
+                    "ended": "2024-12-29T19:36:50.973267Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:36:29.685799Z",
+                            "ended": "2024-12-29T19:36:29.685811Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:36:29.685812Z",
+                            "ended": "2024-12-29T19:36:50.708774Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:36:50.708807Z",
+                            "ended": "2024-12-29T19:36:50.814068Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:36:50.814082Z",
+                            "ended": "2024-12-29T19:36:50.898595Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:36:50.898607Z",
+                            "ended": "2024-12-29T19:36:50.971761Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/reply_single_hop.py",
+                                        73
+                                    ],
+                                    [
+                                        "./tests/system2/reply_single_hop.py",
+                                        73
+                                    ]
+                                ],
+                                "msg": "HTTP status 404: {\"error\":\"rest_no_route\",\"error_description\":\"No route was found matching the URL and request method.\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 6,
+                    "started": "2024-12-29T19:36:50.973283Z",
+                    "ended": "2024-12-29T19:37:12.125826Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:36:50.973331Z",
+                            "ended": "2024-12-29T19:36:50.973345Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:36:50.973347Z",
+                            "ended": "2024-12-29T19:37:11.994003Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:37:11.994033Z",
+                            "ended": "2024-12-29T19:37:12.054042Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:37:12.054054Z",
+                            "ended": "2024-12-29T19:37:12.124408Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/update_single_hop.py",
+                                        66
+                                    ]
+                                ],
+                                "msg": "HTTP status 404: {\"error\":\"rest_no_route\",\"error_description\":\"No route was found matching the URL and request method.\"}"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "result": null
+        },
+        {
+            "run_session_index": 3,
+            "total_sessions": 4,
+            "started": "2024-12-29T19:37:31.508118Z",
+            "ended": "2024-12-29T19:41:12.657897Z",
+            "constellation": {
+                "nodes": {
+                    "sender_node": {
+                        "appdata": {
+                            "app": "WordPress+plugins",
+                            "app_version": null
+                        },
+                        "node_driver": "WordPressPlusPluginsUbosNodeDriver"
+                    },
+                    "receiver_node": {
+                        "appdata": {
+                            "app": "WordPress+plugins",
+                            "app_version": null
+                        },
+                        "node_driver": "WordPressPlusPluginsUbosNodeDriver"
+                    }
+                }
+            },
+            "run_tests": [
+                {
+                    "plan_test_index": 0,
+                    "started": "2024-12-29T19:37:58.413627Z",
+                    "ended": "2024-12-29T19:38:26.992223Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:37:58.413732Z",
+                            "ended": "2024-12-29T19:37:58.413747Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:37:58.413749Z",
+                            "ended": "2024-12-29T19:38:20.403739Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:38:20.403757Z",
+                            "ended": "2024-12-29T19:38:26.986015Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/delete_single_hop.py",
+                                        54
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 1,
+                    "started": "2024-12-29T19:38:26.992298Z",
+                    "ended": "2024-12-29T19:38:53.927238Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:38:26.992547Z",
+                            "ended": "2024-12-29T19:38:26.992596Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:38:26.992602Z",
+                            "ended": "2024-12-29T19:38:48.523335Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:38:48.523356Z",
+                            "ended": "2024-12-29T19:38:53.921768Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/direct_addressing.py",
+                                        52
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 2,
+                    "started": "2024-12-29T19:38:53.927302Z",
+                    "ended": "2024-12-29T19:39:21.057537Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:38:53.927471Z",
+                            "ended": "2024-12-29T19:38:53.927517Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:38:53.927522Z",
+                            "ended": "2024-12-29T19:39:14.794500Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:39:14.794535Z",
+                            "ended": "2024-12-29T19:39:21.052969Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/follow_receive.py",
+                                        54
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 3,
+                    "started": "2024-12-29T19:39:21.057606Z",
+                    "ended": "2024-12-29T19:39:42.202764Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:39:21.057754Z",
+                            "ended": "2024-12-29T19:39:21.057789Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:39:21.057794Z",
+                            "ended": "2024-12-29T19:39:42.110769Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:39:42.110795Z",
+                            "ended": "2024-12-29T19:39:42.201351Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/like_single_hop.py",
+                                        50
+                                    ]
+                                ],
+                                "msg": "HTTP status 422: {\"error\":\"mastodon_api_submit_post\",\"error_description\":\"Validation failed: Text can't be blank\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 4,
+                    "started": "2024-12-29T19:39:42.202779Z",
+                    "ended": "2024-12-29T19:40:09.334544Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:39:42.202820Z",
+                            "ended": "2024-12-29T19:39:42.202833Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:39:42.202835Z",
+                            "ended": "2024-12-29T19:40:03.965280Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:40:03.965321Z",
+                            "ended": "2024-12-29T19:40:09.329647Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/preserve_links.py",
+                                        55
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 5,
+                    "started": "2024-12-29T19:40:09.334624Z",
+                    "ended": "2024-12-29T19:40:30.524869Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:40:09.334808Z",
+                            "ended": "2024-12-29T19:40:09.334846Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:40:09.334851Z",
+                            "ended": "2024-12-29T19:40:30.434954Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:40:30.434992Z",
+                            "ended": "2024-12-29T19:40:30.523721Z",
+                            "result": {
+                                "type": "HTTPError",
+                                "spec_level": "UNSPECIFIED",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/reply_single_hop.py",
+                                        60
+                                    ]
+                                ],
+                                "msg": "HTTP status 400: {\"error\":\"rest_invalid_param\",\"error_description\":\"Invalid parameter(s): in_reply_to_id\"}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 6,
+                    "started": "2024-12-29T19:40:30.524884Z",
+                    "ended": "2024-12-29T19:40:56.910289Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:40:30.524923Z",
+                            "ended": "2024-12-29T19:40:30.524936Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:40:30.524938Z",
+                            "ended": "2024-12-29T19:40:51.517045Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:40:51.517105Z",
+                            "ended": "2024-12-29T19:40:56.901920Z",
+                            "result": {
+                                "type": "AssertionFailure",
+                                "spec_level": "MUST",
+                                "interop_level": "UNKNOWN",
+                                "stacktrace": [
+                                    [
+                                        "./tests/system2/update_single_hop.py",
+                                        57
+                                    ]
+                                ],
+                                "msg": "AssertionFailure (Must, Unknown): Expected object has not arrived in time"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "result": null
+        }
+    ],
+    "test_meta": {
+        "system2.delete_single_hop::DeleteSingleHopTest": {
+            "name": "system2.delete_single_hop::DeleteSingleHopTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.follow",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.wait_until_actor_is_followed_by_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.wait_until_actor_is_following_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.delete_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.delete_single_hop::DeleteSingleHopTest.wait_until_note_disappeared",
+                    "description": null
+                }
+            ],
+            "description": "Test single-hop delete.\n    See also: https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/3"
+        },
+        "system2.direct_addressing::SendNoteToTest": {
+            "name": "system2.direct_addressing::SendNoteToTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.direct_addressing::SendNoteToTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.direct_addressing::SendNoteToTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.direct_addressing::SendNoteToTest.wait_until_note_received",
+                    "description": null
+                }
+            ],
+            "description": "Tests that a note by actor A is delivered to an actor B if A addresses the note to B."
+        },
+        "system2.follow_receive::FollowReceiveTest": {
+            "name": "system2.follow_receive::FollowReceiveTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.follow",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_actor_is_followed_by_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_actor_is_following_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.sender_creates_note_while_following",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.unfollow",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_actor_is_unfollowed_by_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_actor_is_unfollowing_actor",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.sender_creates_note_after_unfollow",
+                    "description": null
+                },
+                {
+                    "name": "system2.follow_receive::FollowReceiveTest.wait_until_timeout",
+                    "description": null
+                }
+            ],
+            "description": "Tests that actors on two different Fediverse Nodes can follow each other and a follower receives the followed account's posts."
+        },
+        "system2.like_single_hop::LikeTest": {
+            "name": "system2.like_single_hop::LikeTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.like_single_hop::LikeTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest.receiver_likes_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest.wait_until_like_received",
+                    "description": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest.receiver_unlikes_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.like_single_hop::LikeTest.wait_until_unlike_received",
+                    "description": null
+                }
+            ],
+            "description": "Tests that actor B can like a note by actor A on a different Fediverse Node\n    and both see the Like. Unlike works the reverse.\n\n    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/149"
+        },
+        "system2.preserve_links::PreserveBlockquoteTest": {
+            "name": "system2.preserve_links::PreserveBlockquoteTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.preserve_links::PreserveBlockquoteTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.preserve_links::PreserveBlockquoteTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.preserve_links::PreserveBlockquoteTest.wait_until_note_received",
+                    "description": null
+                }
+            ],
+            "description": "Make sure that all hyperlinks in a note are still present on the receiving node. They may be rearranged."
+        },
+        "system2.reply_single_hop::ReplyTest": {
+            "name": "system2.reply_single_hop::ReplyTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.reply_single_hop::ReplyTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest.receiver_replies_to_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest.wait_until_reply_received_by_receiver",
+                    "description": null
+                },
+                {
+                    "name": "system2.reply_single_hop::ReplyTest.wait_until_reply_received_by_sender",
+                    "description": null
+                }
+            ],
+            "description": "Tests that actor B can reply to a note by actor A on a different Fediverse Node and both see the reply.\n\n    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/128"
+        },
+        "system2.update_single_hop::UpdateTest": {
+            "name": "system2.update_single_hop::UpdateTest",
+            "roles": [
+                "receiver_node",
+                "sender_node"
+            ],
+            "steps": [
+                {
+                    "name": "system2.update_single_hop::UpdateTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest.sender_updates_note",
+                    "description": null
+                },
+                {
+                    "name": "system2.update_single_hop::UpdateTest.wait_until_note_updated",
+                    "description": null
+                }
+            ],
+            "description": "Tests that actor B's copy of a note by actor A is correctly updated when A updates it on a different Fediverse Node.\n\n    https://github.com/fediverse-devnet/feditest-tests-fediverse/issues/151"
+        }
+    },
+    "result": null,
+    "platform": "Linux-6.8.0-1-aarch64-ARCH-aarch64-with-glibc2.35",
+    "username": null,
+    "hostname": null,
+    "type": "feditest-testrun-transcript",
+    "feditest_version": "0.6.dev20241229191155"
+}

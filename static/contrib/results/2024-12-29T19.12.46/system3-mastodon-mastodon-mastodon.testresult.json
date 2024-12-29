@@ -1,0 +1,436 @@
+{
+    "plan": {
+        "session_template": {
+            "tests": [
+                {
+                    "name": "system3.announce::AnnounceTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest",
+                    "rolemapping": null,
+                    "skip": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest",
+                    "rolemapping": null,
+                    "skip": null
+                }
+            ],
+            "name": "All three-Node Fediverse system tests"
+        },
+        "constellations": [
+            {
+                "roles": {
+                    "node1": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "node2": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    },
+                    "node3": {
+                        "nodedriver": "MastodonUbosNodeDriver",
+                        "parameters": null,
+                        "accounts": null,
+                        "non_existing_accounts": null
+                    }
+                },
+                "name": "Mastodon vs Mastodon vs Mastodon"
+            }
+        ],
+        "name": "Three-Node Fediverse System Tests",
+        "type": "feditest-testplan",
+        "feditest_version": "0.6.dev20241228034952"
+    },
+    "id": "feditest-run-20241229-194113",
+    "started": "2024-12-29T19:41:13.464627Z",
+    "ended": "2024-12-29T19:43:17.136200Z",
+    "sessions": [
+        {
+            "run_session_index": 0,
+            "total_sessions": 1,
+            "started": "2024-12-29T19:41:13.464637Z",
+            "ended": "2024-12-29T19:43:17.136172Z",
+            "constellation": {
+                "nodes": {
+                    "node1": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    },
+                    "node2": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    },
+                    "node3": {
+                        "appdata": {
+                            "app": "Mastodon",
+                            "app_version": null
+                        },
+                        "node_driver": "MastodonUbosNodeDriver"
+                    }
+                }
+            },
+            "run_tests": [
+                {
+                    "plan_test_index": 0,
+                    "started": "2024-12-29T19:42:27.494381Z",
+                    "ended": "2024-12-29T19:42:32.464630Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:42:27.494598Z",
+                            "ended": "2024-12-29T19:42:27.494639Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:42:27.494647Z",
+                            "ended": "2024-12-29T19:42:28.666238Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:42:28.666267Z",
+                            "ended": "2024-12-29T19:42:29.881894Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:42:29.881911Z",
+                            "ended": "2024-12-29T19:42:29.915456Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:42:29.915470Z",
+                            "ended": "2024-12-29T19:42:29.977153Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:42:29.977173Z",
+                            "ended": "2024-12-29T19:42:31.081484Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:42:31.081501Z",
+                            "ended": "2024-12-29T19:42:31.372189Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:42:31.372212Z",
+                            "ended": "2024-12-29T19:42:32.464616Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 1,
+                    "started": "2024-12-29T19:42:32.464646Z",
+                    "ended": "2024-12-29T19:42:36.974632Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:42:32.464721Z",
+                            "ended": "2024-12-29T19:42:32.464741Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:42:32.464743Z",
+                            "ended": "2024-12-29T19:42:32.508102Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:42:32.508114Z",
+                            "ended": "2024-12-29T19:42:33.559786Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:42:33.559799Z",
+                            "ended": "2024-12-29T19:42:33.581180Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:42:33.581192Z",
+                            "ended": "2024-12-29T19:42:33.605503Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:42:33.605515Z",
+                            "ended": "2024-12-29T19:42:34.675578Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:42:34.675593Z",
+                            "ended": "2024-12-29T19:42:34.760414Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:42:34.760428Z",
+                            "ended": "2024-12-29T19:42:35.831197Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 8,
+                            "started": "2024-12-29T19:42:35.831211Z",
+                            "ended": "2024-12-29T19:42:35.876228Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 9,
+                            "started": "2024-12-29T19:42:35.876239Z",
+                            "ended": "2024-12-29T19:42:36.974621Z",
+                            "result": null
+                        }
+                    ]
+                },
+                {
+                    "plan_test_index": 2,
+                    "started": "2024-12-29T19:42:36.974651Z",
+                    "ended": "2024-12-29T19:42:40.635349Z",
+                    "result": null,
+                    "run_steps": [
+                        {
+                            "plan_step_index": 0,
+                            "started": "2024-12-29T19:42:36.974722Z",
+                            "ended": "2024-12-29T19:42:36.974739Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 1,
+                            "started": "2024-12-29T19:42:36.974741Z",
+                            "ended": "2024-12-29T19:42:37.018334Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 2,
+                            "started": "2024-12-29T19:42:37.018346Z",
+                            "ended": "2024-12-29T19:42:38.065249Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 3,
+                            "started": "2024-12-29T19:42:38.065266Z",
+                            "ended": "2024-12-29T19:42:38.086121Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 4,
+                            "started": "2024-12-29T19:42:38.086133Z",
+                            "ended": "2024-12-29T19:42:38.109087Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 5,
+                            "started": "2024-12-29T19:42:38.109099Z",
+                            "ended": "2024-12-29T19:42:39.176316Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 6,
+                            "started": "2024-12-29T19:42:39.176331Z",
+                            "ended": "2024-12-29T19:42:39.242307Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 7,
+                            "started": "2024-12-29T19:42:39.242319Z",
+                            "ended": "2024-12-29T19:42:39.334122Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 8,
+                            "started": "2024-12-29T19:42:39.334133Z",
+                            "ended": "2024-12-29T19:42:40.408657Z",
+                            "result": null
+                        },
+                        {
+                            "plan_step_index": 9,
+                            "started": "2024-12-29T19:42:40.408671Z",
+                            "ended": "2024-12-29T19:42:40.635339Z",
+                            "result": null
+                        }
+                    ]
+                }
+            ],
+            "result": null
+        }
+    ],
+    "test_meta": {
+        "system3.announce::AnnounceTest": {
+            "name": "system3.announce::AnnounceTest",
+            "roles": [
+                "node1",
+                "node2",
+                "node3"
+            ],
+            "steps": [
+                {
+                    "name": "system3.announce::AnnounceTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.follow",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.wait_until_actors_are_followed",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.wait_until_actors_are_following",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.boost_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.announce::AnnounceTest.wait_until_boost_received",
+                    "description": null
+                }
+            ],
+            "description": "Tests that if actor B announces a note by actor A, actor C that is following B on a different Fediverse Node receives the note."
+        },
+        "system3.delete_double_hop::DeleteDoubleHopTest": {
+            "name": "system3.delete_double_hop::DeleteDoubleHopTest",
+            "roles": [
+                "node1",
+                "node2",
+                "node3"
+            ],
+            "steps": [
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.follow",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.wait_until_actors_are_followed",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.wait_until_actors_are_following",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.boost_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.wait_until_boost_received",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.delete_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.delete_double_hop::DeleteDoubleHopTest.wait_until_note_disappeared",
+                    "description": null
+                }
+            ],
+            "description": "Test double-hop delete."
+        },
+        "system3.update_double_hop::UpdateDoubleHopTest": {
+            "name": "system3.update_double_hop::UpdateDoubleHopTest",
+            "roles": [
+                "node1",
+                "node2",
+                "node3"
+            ],
+            "steps": [
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.provision_actors",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.follow",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.wait_until_actors_are_followed",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.wait_until_actors_are_following",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.sender_creates_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.wait_until_note_received",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.update_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.boost_note",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.wait_until_boost_received",
+                    "description": null
+                },
+                {
+                    "name": "system3.update_double_hop::UpdateDoubleHopTest.wait_until_update_received",
+                    "description": null
+                }
+            ],
+            "description": "Test double-hop update."
+        }
+    },
+    "result": null,
+    "platform": "Linux-6.8.0-1-aarch64-ARCH-aarch64-with-glibc2.35",
+    "username": null,
+    "hostname": null,
+    "type": "feditest-testrun-transcript",
+    "feditest_version": "0.6.dev20241229191155"
+}
