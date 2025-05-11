@@ -79,7 +79,7 @@ experience what they expect from social media: users can follow other users on o
 instances, posts get distributed to followers, not mangled in the process, they can like
 posts, boost them, reply etc.
 
-We will use a Linux container in which to run the tests. (If you are unfamiliar with the
+We will use a Linux container in which to run the tests. (If you are unfamiliar with
 Linux containers, Red Hat has a high-level
 [explanation here](https://www.redhat.com/en/topics/containers/whats-a-linux-container).)
 Our container needs to run {{% gl ubosgears %}}, which automates the installation

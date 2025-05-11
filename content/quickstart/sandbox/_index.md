@@ -129,7 +129,7 @@ We suggest you follow an approach such as this:
 
 * Identify the roles of {{% gls Node %}} that you have in your system. You may have a traditional
   client-server system, or you may have a P2P system, or a more complex architecture
-  (such as a [Peer Computing Architecture](https://peercomputing.net./) as in the
+  (such as a [Peer Computing Architecture](https://peercomputing.org/) as in the
   ActivityPub-based Fediverse).
 
 * Identify the interaction patterns between the {{% gls Node %}} with the different roles.
